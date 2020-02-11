@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,4 +8,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 })
 export class AppComponent {
   title = 'videoLib';
+  constructor(  public router: Router){}
+  home(){
+  	this.router.navigateByUrl('/home')
+  	alert('Calm down.. teremos um login aqui')
+  }
+
+  videos(){
+  	this.router.navigateByUrl('/list')
+  	alert('Calm down.. teremos um login aqui')
+  }
 }
