@@ -1,0 +1,62 @@
+<mat-toolbar color="#dac84c">
+  <span><img src="/assets/gsk_branco.png"></span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+
+  <span>
+  		<div class="btn-group" role="group" aria-label="Basic example">
+  			<button type="button" class="btn btn-light" (click)="home()">Home</button>
+  			<button type="button" class="btn btn-light" >Vídeos
+			</button>
+		</div>
+  </span>
+</mat-toolbar>
+
+
+<mat-card class="transparent-card">
+
+	<mat-card-title>
+		<div>
+			<h1>Escolha a área terapêutica</h1>	
+		</div>
+		
+	</mat-card-title>
+	<mat-card-subtitle style="text-align-last: center !important;">	
+		<div class="btn-group" role="group" aria-label="Basic example">
+  			<button type="button" class="btn btn-outline-light">Respiratória</button>
+  			<button type="button" class="btn btn-outline-light" >Oncologia
+			</button>
+		</div>
+	</mat-card-subtitle>
+</mat-card>
+
+
+<div class="container">
+  <div class="row" style="text-align: -webkit-center;">
+    <div class="col-sm" *ngFor="let items of allList">
+		<div class="card card-videos" style="width: 20rem; ">
+			 
+		  <div class="card-body">
+		  	<video controls id="mainVideo" style="margin:auto!important; max-width: 100%!important" height="240" oncontextmenu="return false;"   >
+                    <source src="{{items.source}}" type="video/mp4">
+                        <source src="GSK_Our_story.ogg" type="video/ogg">
+
+                Your browser does not support the video tag.
+            </video>
+		    	<h5 class="card-title">{{items.video}}</h5>
+		    	<h6 class="card-subtitle mb-2 text-muted">{{items.videoArea}}</h6>
+		    	<p class="card-text">{{items.description}}</p>
+				<button type="button" style="margin-right: 3%" class="btn btn-outline-info">Info</button>
+				<button type="button" class="btn btn-info">Produto</button>
+
+
+		  </div>
+		</div> 
+	</div>
+  </div>
+</div>
+
+<nav class="navbar sticky-bottom navbar-light bg-light">
+  <a class="navbar-brand" href="#">GSK - GlaxoSmithKline</a>
+</nav>
