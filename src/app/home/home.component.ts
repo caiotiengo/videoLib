@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
 		      		id:1,
 		      		videoArea:'Respiratory'
 		   		 },{
-		      		video:'Secound Video',
+		      		video:'Second Video',
 		      		source:'/assets/GSK_Our_story.mp4',
 		      		description:'This is a Demo Video',
 		      		id:2,
@@ -34,6 +34,10 @@ export class HomeComponent implements OnInit {
     	}
 
   ngOnInit(): void {
+  }
+
+    home(){
+  	this.router.navigateByUrl('/home')
   }
 
   videos(){

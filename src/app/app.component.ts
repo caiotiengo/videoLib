@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'videoLib';
-  constructor(  public router: Router){}
+  constructor(  public router: Router){
+    this.router.navigateByUrl('/login')
+  }
   home(){
   	this.router.navigateByUrl('/home')
   	alert('Calm down.. teremos um login aqui')
@@ -18,4 +20,5 @@ export class AppComponent {
   	this.router.navigateByUrl('/list')
   	alert('Calm down.. teremos um login aqui')
   }
+
 }

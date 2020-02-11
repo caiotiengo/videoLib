@@ -18,7 +18,7 @@ export class ListComponent implements OnInit {
 		      		id:1,
 		      		videoArea:'Respiratória'
 		   		 },{
-		      		video:'Secound Video',
+		      		video:'Second Video',
 		      		source:'/assets/GSK_Our_story.mp4',
 		      		description:'This is a Demo Video',
 		      		id:2,
@@ -40,6 +40,9 @@ export class ListComponent implements OnInit {
 
   home(){
   	this.router.navigateByUrl('/home')
+  }
+  videos(){
+
   }
 
 }
