@@ -531,19 +531,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.sanitizer = sanitizer;
         this.allList = [{
           video: 'First video',
-          source: 'https://player.vimeo.com/video/390480005?app_id=122963',
+          source: 'http://videos.gskstatic.com/pharma/cursosenlinea_gsk_com/emwVideoLab/GSK_Our_story.mp4',
           description: 'This is a Demo Video',
           id: 1,
           videoArea: 'Respiratory'
         }, {
           video: 'Second Video',
-          source: 'https://player.vimeo.com/video/390480005?app_id=122963',
+          source: 'http://videos.gskstatic.com/pharma/cursosenlinea_gsk_com/emwVideoLab/1080p V2 - 4447 - GSK -  Rap Meetings - Elisama Baisch - Video Aula 01.mp4',
           description: 'This is a Demo Video',
           id: 2,
           videoArea: 'Oncologist'
         }, {
           video: 'Third Video',
-          source: 'https://www.youtube.com/embed/zpOULjyy-n8?rel=0',
+          source: 'http://videos.gskstatic.com/pharma/cursosenlinea_gsk_com/emwVideoLab/720p 4447 - GSK -  Rap Meetings - Elisama Baisch - Video Aula 01.mp4',
           description: 'This is a Demo Video',
           id: 3,
           videoArea: 'Respiratory'
@@ -860,19 +860,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.allList = [];
         this.allList = [{
           video: 'First video',
-          source: 'https://player.vimeo.com/video/390480005?app_id=122963',
+          source: 'http://videos.gskstatic.com/pharma/cursosenlinea_gsk_com/emwVideoLab/GSK_Our_story.mp4',
           description: 'This is a Demo Video',
           id: 1,
           videoArea: 'Respiratory'
         }, {
           video: 'Second Video',
-          source: 'https://player.vimeo.com/video/390480005?app_id=122963',
+          source: 'http://videos.gskstatic.com/pharma/cursosenlinea_gsk_com/emwVideoLab/1080p V2 - 4447 - GSK -  Rap Meetings - Elisama Baisch - Video Aula 01.mp4',
           description: 'This is a Demo Video',
           id: 2,
           videoArea: 'Oncologist'
         }, {
           video: 'Third Video',
-          source: 'https://www.youtube.com/embed/zpOULjyy-n8?rel=0',
+          source: 'http://videos.gskstatic.com/pharma/cursosenlinea_gsk_com/emwVideoLab/720p 4447 - GSK -  Rap Meetings - Elisama Baisch - Video Aula 01.mp4',
           description: 'This is a Demo Video',
           id: 3,
           videoArea: 'Respiratory'
