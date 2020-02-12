@@ -24,6 +24,7 @@
     "bootstrap-icons": "^1.0.0-alpha2",
     "cors": "2.8.5",
     "express": "4.17.1",
+    "mssql": "^6.0.1",
     "mysql": "2.17.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
