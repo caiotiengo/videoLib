@@ -13,22 +13,22 @@ export class ListComponent implements OnInit {
   constructor(private router: Router) { 
   	 this.allList=[{
 		      		video:'First video',
-		      		source:'/assets/GSK_Our_story.mp4',
+		      		source:'https://player.vimeo.com/video/390480005?app_id=122963',
 		      		description:'This is a Demo Video',
 		      		id:1,
-		      		videoArea:'Respiratória'
+		      		videoArea:'Respiratory'
 		   		 },{
 		      		video:'Second Video',
-		      		source:'/assets/GSK_Our_story.mp4',
+		      		source:'https://player.vimeo.com/video/390480005?app_id=122963',
 		      		description:'This is a Demo Video',
 		      		id:2,
-		      		videoArea:'Oncologia'
+		      		videoArea:'Oncologist'
 		   		 },{
 		      		video:'Third Video',
-		      		source:'/assets/GSK_Our_story.mp4',
+		      		source:'https://www.youtube.com/embed/zpOULjyy-n8?rel=0',
 		      		description:'This is a Demo Video',
 		      		id:3,
-		      		videoArea:'Respiratória'
+		      		videoArea:'Respiratory'
 		    		}];
 
 

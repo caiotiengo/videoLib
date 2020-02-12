@@ -13,13 +13,15 @@ import {MatMenuModule} from '@angular/material/menu';
 import {AppRoutingModule, routingComponents} from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VideoComponent } from './video/video.component';
+import { SecureUrlPipe } from './secure-url.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     routingComponents,
-    VideoComponent
+    VideoComponent,
+    SecureUrlPipe
   ],
   imports: [
     BrowserModule,
