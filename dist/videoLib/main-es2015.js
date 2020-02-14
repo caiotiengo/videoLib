@@ -282,14 +282,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 class DbService {
     constructor(http) {
         this.http = http;
         this.users = [];
     }
     data() {
+        const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
+        });
         return new Promise(resolve => {
-            this.http.get('../assets/codebeautify.json').subscribe(data => {
+            this.http.get('https://gskvideolib.azure-api.net/users').subscribe(data => {
                 resolve(data);
                 console.log(data);
                 this.users = data;

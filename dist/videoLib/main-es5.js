@@ -550,8 +550,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function data() {
           var _this = this;
 
+          var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
+          });
           return new Promise(function (resolve) {
-            _this.http.get('../assets/codebeautify.json').subscribe(function (data) {
+            _this.http.get('https://gskvideolib.azure-api.net/users').subscribe(function (data) {
               resolve(data);
               console.log(data);
               _this.users = data;
