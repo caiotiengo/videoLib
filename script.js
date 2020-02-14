@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+const router = express.Router();
 
 app.get('/', function (req, res) {
    
@@ -7,10 +8,11 @@ app.get('/', function (req, res) {
 
     // config for your database
     var config = {
-        user: 'brpuser',
-        password: 'brp_23072019',
-        server: 'US1SXWNSQL0133', 
-        database: 'usprd2294' 
+        user: 'emwadmin',
+        password: 'E#Mwadmin',
+        server: 'rxemwtech.database.windows.net', 
+        database: 'rxemwvideolab',
+        encrypt: true
     };
 
     // connect to your database
@@ -22,12 +24,14 @@ app.get('/', function (req, res) {
         var request = new sql.Request();
            
         // query to the database and get the records
-        request.query('select * from vlab.vlab_User', function (err, recordset) {
+        request.query('select Usr_Id, Mudid, Usr_Name from vlab_User', function (err, record) {
             
             if (err) console.log(err)
 
             // send records as a response
-            res.send(recordset);
+            console.log("queeee")
+            res.send(record + {"usr":1});
+            
             
         });
     });

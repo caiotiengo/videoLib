@@ -10,8 +10,10 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'videoLib';
+
   constructor(  public router: Router){
-    this.router.navigateByUrl('/login')
+    this.router.navigateByUrl('/access')
+    
   }
   home(){
   	this.router.navigateByUrl('/home')

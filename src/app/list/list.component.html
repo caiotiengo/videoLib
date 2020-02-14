@@ -3,7 +3,10 @@
   <span><img src="/assets/gsk_branco.png"></span>
 
   <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space"></span>
+  <span class="example-fill-remaining-space">  	<p style="margin-top: 10%;
+    margin-bottom: 1rem;
+    margin-right: 15px;">Olá Usuario</p>
+</span>
 
   <span>
   		<div class="btn-group" role="group" aria-label="Basic example">
@@ -40,9 +43,13 @@
 		<div class="card card-videos" style="width: 20rem; ">
 			 
 		  <div class="card-body">
-		  	<div class="embed-responsive embed-responsive-16by9">
-  						<iframe class="embed-responsive-item" [src]="items.source | secureUrl" allowfullscreen></iframe>
-			</div>
+		  	<div class="embed-responsive embed-responsive-16by9" >
+  							<!--iframe class="embed-responsive-item" id="mainVideo" [src]="items.source | secureUrl" allowfullscreen autoplay="false"></iframe-->
+						<video id="mainVideo"width="320" height="240"  controls  preload="yes">
+							<source [src]="items.source | secureUrl" autostart="false" type="">
+  						Your browser does not support the video tag.
+						</video>
+				</div>	
 		    	<h5 class="card-title">{{items.video}}</h5>
 		    	<h6 class="card-subtitle mb-2 text-muted">{{items.videoArea}}</h6>
 		    	<p class="card-text">{{items.description}}</p>

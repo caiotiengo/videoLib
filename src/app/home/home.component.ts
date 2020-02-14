@@ -46,8 +46,8 @@ export class HomeComponent implements OnInit {
   }
   cordiv(){
     let mainVideo = <HTMLMediaElement>document.getElementById('mainVideo');
-    mainVideo.play();
-  	alert('contaria o play')
+    mainVideo.autoplay = false;
+  	mainVideo.load();
   	console.log('conta play')
   }
     home(){

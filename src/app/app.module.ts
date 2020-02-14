@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
 
 import {MatMenuModule} from '@angular/material/menu';
 
@@ -14,6 +15,7 @@ import {AppRoutingModule, routingComponents} from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VideoComponent } from './video/video.component';
 import { SecureUrlPipe } from './secure-url.pipe';
+import { AccessComponent } from './access/access.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { SecureUrlPipe } from './secure-url.pipe';
     LoginComponent,
     routingComponents,
     VideoComponent,
-    SecureUrlPipe
+    SecureUrlPipe,
+    AccessComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { SecureUrlPipe } from './secure-url.pipe';
         MatMenuModule,
         MatButtonModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule
   ],
   providers: [],  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
