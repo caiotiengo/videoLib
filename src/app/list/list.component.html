@@ -3,11 +3,11 @@
   <span><img src="/assets/gsk_branco.png"></span>
 
   <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space">  	<p style="margin-top: 10%;
-    margin-bottom: 1rem;
-    margin-right: 15px;">Olá Usuario</p>
+  <span class="example-fill-remaining-space">  	
 </span>
-
+<p style="margin-top: 18px;
+    margin-bottom: 1rem;
+    margin-right: 15px;">Olá, {{usuario.Nombre_del_representa}}</p>
   <span>
   		<div class="btn-group" role="group" aria-label="Basic example">
   			<button type="button" class="btn btn-light" (click)="home()">Home</button>
@@ -27,38 +27,42 @@
 		</div>
 		
 	</mat-card-title>
-	<mat-card-subtitle style="text-align-last: center !important;">	
-		<div class="btn-group" role="group" aria-label="Basic example">
-  			<button type="button" class="btn btn-outline-light">Respiratória</button>
-  			<button type="button" class="btn btn-outline-light" >Oncologia
-			</button>
+	<mat-card-subtitle style="text-align-last: center !important; ">	
+		<div class="btn-group" role="group" aria-label="Basic example" *ngFor="let items of videos">
+			<label style="margin-right: 10px;" *ngIf="items.Pais == usuario.Pais">
+				  			<button #uname type="button" id="uname" value="{{items.Codigo_de_Division}}" (click)="filtro(items.Codigo_de_Division)" class="btn btn-outline-light">{{items.Codigo_de_Division}}</button>
+
+			</label>
+		
 		</div>
 	</mat-card-subtitle>
 </mat-card>
 
 
-<div class="container">
-  <div class="row" style="text-align: -webkit-center;">
-    <div class="col-sm" *ngFor="let items of allList">
-		<div class="card card-videos" style="width: 20rem; ">
+<div class="container" style="text-align: -webkit-center;">
+  <div class="row"  >
+    <div class="col-sm">
+    	<label  *ngFor="let items of videos" style="text-align: -webkit-center;" >
+			<div class="card card-videos" *ngIf="items.Pais == usuario.Pais" style="width: 30rem; margin-right: 15px; height: 30rem;">
 			 
-		  <div class="card-body">
-		  	<div class="embed-responsive embed-responsive-16by9" >
-  							<!--iframe class="embed-responsive-item" id="mainVideo" [src]="items.source | secureUrl" allowfullscreen autoplay="false"></iframe-->
-						<video id="mainVideo"width="320" height="240"  controls  preload="yes">
-							<source [src]="items.source | secureUrl" autostart="false" type="">
-  						Your browser does not support the video tag.
-						</video>
-				</div>	
-		    	<h5 class="card-title">{{items.video}}</h5>
-		    	<h6 class="card-subtitle mb-2 text-muted">{{items.videoArea}}</h6>
-		    	<p class="card-text">{{items.description}}</p>
-				<button type="button" style="margin-right: 3%" class="btn btn-outline-info">Info</button>
-				<button type="button" class="btn btn-info">Produto</button>
+		  	<div class="card-body">
+		  		<div class="embed-responsive embed-responsive-16by9" >
+  							<!--iframe class="embed-responsive-item" id="mainVideo" [src]="items.source | secureUrl" allowfullscreen autoplay="false"> mca49771      </iframe--> 
+							<video id="mainVideo"width="320" height="240"  controls  preload="yes">
+								<source [src]="items.URL | secureUrl" autostart="false" type="">
+  							Your browser does not support the video tag.
+							</video>
+					</div>	
+		    		<h5 class="card-title">{{items.Nombre_del_video}}</h5>
+		    		<h6 class="card-subtitle mb-2 text-muted">{{items.Codigo_de_Division}}</h6>
+		    		<p class="card-text">{{items.URL}}</p>
+					<button type="button" style="margin-right: 3%" class="btn btn-outline-info">Info</button>
+					<button type="button" class="btn btn-info">Produto</button>
 
 
-		  </div>
-		</div> 
+		  	</div>
+			</div> 
+		</label>
 	</div>
   </div>
 </div>

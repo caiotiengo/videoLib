@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VideoComponent } from './video/video.component';
 import { SecureUrlPipe } from './secure-url.pipe';
 import { AccessComponent } from './access/access.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AccessComponent } from './access/access.component';
     routingComponents,
     VideoComponent,
     SecureUrlPipe,
-    AccessComponent
+    AccessComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

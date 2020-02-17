@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DomSanitizer} from '@angular/platform-browser';
 import {Pipe} from '@angular/core'
-
+import {DbService} from '../db.service'
+import {User} from "../User";
+import {ListComponent} from "../list/list.component"
 
 @Component({
   selector: 'app-home',
@@ -13,30 +15,23 @@ import {Pipe} from '@angular/core'
 
 export class HomeComponent implements OnInit {
 	public allList:any =[];
-
+  result: any = [];
 	link
-  constructor(private router: Router,private sanitizer: DomSanitizer) { 
-  	    this.sanitizer = sanitizer;
-		  this.allList=[{
-		      		video:'First video',
-		      		source:'http://videos.gskstatic.com/pharma/cursosenlinea_gsk_com/emwVideoLab/GSK_Our_story.mp4',
-		      		description:'This is a Demo Video',
-		      		id:1,
-		      		videoArea:'Respiratory'
-		   		 },{
-		      		video:'Second Video',
-		      		source:'http://videos.gskstatic.com/pharma/cursosenlinea_gsk_com/emwVideoLab/1080p V2 - 4447 - GSK -  Rap Meetings - Elisama Baisch - Video Aula 01.mp4',
-		      		description:'This is a Demo Video',
-		      		id:2,
-		      		videoArea:'Oncologist'
-		   		 },{
-		      		video:'Third Video',
-		      		source:'http://videos.gskstatic.com/pharma/cursosenlinea_gsk_com/emwVideoLab/720p 4447 - GSK -  Rap Meetings - Elisama Baisch - Video Aula 01.mp4',
-		      		description:'This is a Demo Video',
-		      		id:3,
-		      		videoArea:'Respiratory'
-		    		}];
+  usuario: any =[];
+  user
+  videos: any = [];
 
+
+  constructor(private router: Router,private sanitizer: DomSanitizer, private db: DbService) { 
+      this.usuario = JSON.parse(localStorage.getItem('user'))
+      console.log(this.usuario)
+       this.db.data().then(data => {
+      this.result = data.valueOf();
+      console.log(this.result.videos);
+      this.videos = this.result.videos;
+      
+      });
+   
     	}
 
   ngOnInit(): void {
@@ -54,7 +49,7 @@ export class HomeComponent implements OnInit {
   	this.router.navigateByUrl('/home')
   }
 
-  videos(){
+  videoss(){
   	this.router.navigateByUrl('/list')
   }
 }

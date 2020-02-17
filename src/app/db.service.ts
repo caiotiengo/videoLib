@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators';
 })
 export class DbService {
   users: any = [];
+  videos: any = [];
 
   constructor(private http: HttpClient) {
 
@@ -13,30 +14,23 @@ export class DbService {
 
   }
 
+  	
   	data(){
-  	const headers = new HttpHeaders({
-  		'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
+    const headers = new HttpHeaders({
+      'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
 
 
-  		 })
-  	  return new Promise(resolve => {
-      this.http.get<any[]>('https://gskvideolib.azure-api.net/users').subscribe(data => {
+       })
+      return new Promise(resolve => {
+      this.http.get<any[]>('https://gskvideolib.azure-api.net/videos').subscribe(data => {
         resolve(data);
         console.log(data);
-        this.users = data;
+        this.videos = data;
       }, err => {
         console.log(err);
       });
     });
-  	}
-  /*
+    }
+  
 
-		rxemwtech.database.windows.net
-		emwadmin
-		E#Mwadmin
-
-  */
-
-  getUser(){
-  }
 }
