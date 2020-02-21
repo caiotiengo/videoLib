@@ -1,0 +1,96 @@
+{
+  "configVersion": 1,
+  "timestamp": 1582245827379,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main-es2015.30c5ac24941e5e214fb1.js",
+        "/main-es5.30c5ac24941e5e214fb1.js",
+        "/manifest.webmanifest",
+        "/polyfills-es2015.ca64e4516afbb1b890d5.js",
+        "/polyfills-es5.277e2e1d6fb2daf91a5c.js",
+        "/runtime-es2015.0811dcefd377500b5b1a.js",
+        "/runtime-es5.0811dcefd377500b5b1a.js",
+        "/styles.e0b7cc407831bc93a51d.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/GSK_Our_story.mp4",
+        "/assets/back.png",
+        "/assets/codebeautify.json",
+        "/assets/gsk.png",
+        "/assets/gsk_branco.png",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/sd-integrations-logo-jira.png",
+        "/assets/video.png",
+        "/back.f6d25e4a36704d9dbbaf.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/GSK_Our_story.mp4": "55fec77aff9c2c3326cf669e58433be8748db2d4",
+    "/assets/back.png": "b31e928114125e627e66437c7b6794874bab8145",
+    "/assets/codebeautify.json": "1d3d6b0457f5d71654d68657c5834ac465addf7f",
+    "/assets/gsk.png": "7a970bddd5801ecf81d2d1c1d8cadd683243324c",
+    "/assets/gsk_branco.png": "cd8e785641ef7c53d4c66ddccca745c6c7edaab0",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/sd-integrations-logo-jira.png": "d903e67346c8a83a3c7a59dfca42f0fdc8b7c65e",
+    "/assets/video.png": "7d46fb77f5e48a14c6c0fb7fab215941d848ed6f",
+    "/back.f6d25e4a36704d9dbbaf.png": "b31e928114125e627e66437c7b6794874bab8145",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/index.html": "f037eb7f50523c065ff1b82bc114418bb8f68822",
+    "/main-es2015.30c5ac24941e5e214fb1.js": "d8761f883597886245af6d4d78c783549902cad9",
+    "/main-es5.30c5ac24941e5e214fb1.js": "175d3d4d988e1640e6600a0bb9abede40be6cad9",
+    "/manifest.webmanifest": "34686d3b1ab68dde062083038d260afd1c342a21",
+    "/polyfills-es2015.ca64e4516afbb1b890d5.js": "8779ed8d9bf0580e1b50b352a9b8fd520be24433",
+    "/polyfills-es5.277e2e1d6fb2daf91a5c.js": "8d03638471d7374e81cf33adfdea439f84ac3873",
+    "/runtime-es2015.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/runtime-es5.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/styles.e0b7cc407831bc93a51d.css": "22c9ff3eab49df4759be597d3e50891da83ad4f9"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
