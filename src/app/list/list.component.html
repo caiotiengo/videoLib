@@ -7,7 +7,7 @@
 </span>
 <p style="margin-top: 18px;
     margin-bottom: 1rem;
-    margin-right: 15px;">Olá, {{usuario.Nombre_del_representa}}</p>
+    margin-right: 15px;">Olá, {{usuario[0].Nombre_del_representa}}</p>
   <span>
   		<div class="btn-group" role="group" aria-label="Basic example">
   			<button type="button" class="btn btn-light" (click)="home()">Home</button>
@@ -28,10 +28,11 @@
 		
 	</mat-card-title>
 	<mat-card-subtitle style="text-align-last: center !important; ">	
-		<div class="btn-group" role="group" aria-label="Basic example" *ngFor="let items of videos">
-			<label style="margin-right: 10px;" *ngIf="items.Pais == usuario.Pais">
-				  			<button #uname type="button" id="uname" value="{{items.Codigo_de_Division}}" (click)="filtro(items.Codigo_de_Division)" class="btn btn-outline-light">{{items.Codigo_de_Division}}</button>
-
+		<div class="btn-group" role="group" aria-label="Basic example" *ngFor="let items of division">
+			<label style="margin-right: 10px;" *ngIf="items.Pais == usuario[0].Pais">
+				<label >
+				  			<button #uname type="button" id="uname" value="{{items.Descripcion_de_Division}}" (click)="filtro(items.Descripcion_de_Division)" class="btn btn-outline-light">{{items.Descripcion_de_Division}}</button>
+				</label>
 			</label>
 		
 		</div>
@@ -41,28 +42,30 @@
 
 <div class="container" style="text-align: -webkit-center;">
   <div class="row"  >
-    <div class="col-sm">
-    	<label  *ngFor="let items of videos" style="text-align: -webkit-center;" >
-			<div class="card card-videos" *ngIf="items.Pais == usuario.Pais" style="width: 30rem; margin-right: 15px; height: 30rem;">
+    <div class="col-xl" >
+    	<ul  class="list-group">
+    			<li style="list-style-type: none;" *ngFor="let items of filtrei">
+
+					<div class="card card-videos" *ngIf="items.Pais == usuario[0].Pais" style="width:100%; margin-right: 5px; height: auto; ">
 			 
-		  	<div class="card-body">
-		  		<div class="embed-responsive embed-responsive-16by9" >
-  							<!--iframe class="embed-responsive-item" id="mainVideo" [src]="items.source | secureUrl" allowfullscreen autoplay="false"> mca49771      </iframe--> 
-							<video id="mainVideo"width="320" height="240"  controls  preload="yes">
-								<source [src]="items.URL | secureUrl" autostart="false" type="">
-  							Your browser does not support the video tag.
-							</video>
-					</div>	
-		    		<h5 class="card-title">{{items.Nombre_del_video}}</h5>
-		    		<h6 class="card-subtitle mb-2 text-muted">{{items.Codigo_de_Division}}</h6>
-		    		<p class="card-text">{{items.URL}}</p>
-					<button type="button" style="margin-right: 3%" class="btn btn-outline-info">Info</button>
-					<button type="button" class="btn btn-info">Produto</button>
+		  				<div class="card-body">
+		  					<div class="row">
+		  						<div class="col-sm">
+		  						<video id="mainVideo"width="350" height="100%" style="border: 2px solid black;"  nocontrols  preload="yes">
+										<source [src]="items.URL | secureUrl" autostart="false" type="video/mp4">
+									</video>
+								</div><div class="col-sm">					
+		    								<h5 class="card-title">{{items.Nombre_del_video}}</h5>
+		    								<h6 class="card-subtitle mb-2 text-muted">{{items.Codigo_de_Division}}</h6>
+		    								<p class="card-text">{{items.Description}}</p>
+									<button type="button" style="margin-right: 3%" (click)="info(items)" class="btn btn-info">Play</button>
+									</div>
+									</div>	
+		  				</div>
 
-
-		  	</div>
-			</div> 
-		</label>
+					</div>
+				</li>
+				</ul> 
 	</div>
   </div>
 </div>

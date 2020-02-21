@@ -77201,6 +77201,1401 @@ const DEC = 11;
 
 /***/ }),
 
+/***/ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js ***!
+  \************************************************************************/
+/*! exports provided: MAT_DIALOG_DATA, MAT_DIALOG_DEFAULT_OPTIONS, MAT_DIALOG_SCROLL_STRATEGY, MAT_DIALOG_SCROLL_STRATEGY_FACTORY, MAT_DIALOG_SCROLL_STRATEGY_PROVIDER, MAT_DIALOG_SCROLL_STRATEGY_PROVIDER_FACTORY, MatDialog, MatDialogActions, MatDialogClose, MatDialogConfig, MatDialogContainer, MatDialogContent, MatDialogModule, MatDialogRef, MatDialogTitle, matDialogAnimations, throwMatDialogContentAlreadyAttachedError */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAT_DIALOG_DATA", function() { return MAT_DIALOG_DATA; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAT_DIALOG_DEFAULT_OPTIONS", function() { return MAT_DIALOG_DEFAULT_OPTIONS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAT_DIALOG_SCROLL_STRATEGY", function() { return MAT_DIALOG_SCROLL_STRATEGY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAT_DIALOG_SCROLL_STRATEGY_FACTORY", function() { return MAT_DIALOG_SCROLL_STRATEGY_FACTORY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAT_DIALOG_SCROLL_STRATEGY_PROVIDER", function() { return MAT_DIALOG_SCROLL_STRATEGY_PROVIDER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAT_DIALOG_SCROLL_STRATEGY_PROVIDER_FACTORY", function() { return MAT_DIALOG_SCROLL_STRATEGY_PROVIDER_FACTORY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatDialog", function() { return MatDialog; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatDialogActions", function() { return MatDialogActions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatDialogClose", function() { return MatDialogClose; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatDialogConfig", function() { return MatDialogConfig; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatDialogContainer", function() { return MatDialogContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatDialogContent", function() { return MatDialogContent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatDialogModule", function() { return MatDialogModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatDialogRef", function() { return MatDialogRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatDialogTitle", function() { return MatDialogTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "matDialogAnimations", function() { return matDialogAnimations; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "throwMatDialogContentAlreadyAttachedError", function() { return throwMatDialogContentAlreadyAttachedError; });
+/* harmony import */ var _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/cdk/overlay */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/overlay.js");
+/* harmony import */ var _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/cdk/portal */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/portal.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/core */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/cdk/bidi */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/bidi.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/__ivy_ngcc__/fesm2015/animations.js");
+/* harmony import */ var _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/cdk/a11y */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/a11y.js");
+/* harmony import */ var _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/cdk/keycodes */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/keycodes.js");
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: src/material/dialog/dialog-config.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Possible overrides for a dialog's position.
+ * @record
+ */
+
+
+
+
+
+
+function MatDialogContainer_ng_template_0_Template(rf, ctx) { }
+function DialogPosition() { }
+if (false) {}
+/**
+ * Configuration for opening a modal dialog with the MatDialog service.
+ * @template D
+ */
+class MatDialogConfig {
+    constructor() {
+        /**
+         * The ARIA role of the dialog element.
+         */
+        this.role = 'dialog';
+        /**
+         * Custom class for the overlay pane.
+         */
+        this.panelClass = '';
+        /**
+         * Whether the dialog has a backdrop.
+         */
+        this.hasBackdrop = true;
+        /**
+         * Custom class for the backdrop.
+         */
+        this.backdropClass = '';
+        /**
+         * Whether the user can use escape or clicking on the backdrop to close the modal.
+         */
+        this.disableClose = false;
+        /**
+         * Width of the dialog.
+         */
+        this.width = '';
+        /**
+         * Height of the dialog.
+         */
+        this.height = '';
+        /**
+         * Max-width of the dialog. If a number is provided, assumes pixel units. Defaults to 80vw.
+         */
+        this.maxWidth = '80vw';
+        /**
+         * Data being injected into the child component.
+         */
+        this.data = null;
+        /**
+         * ID of the element that describes the dialog.
+         */
+        this.ariaDescribedBy = null;
+        /**
+         * ID of the element that labels the dialog.
+         */
+        this.ariaLabelledBy = null;
+        /**
+         * Aria label to assign to the dialog element.
+         */
+        this.ariaLabel = null;
+        /**
+         * Whether the dialog should focus the first focusable element on open.
+         */
+        this.autoFocus = true;
+        /**
+         * Whether the dialog should restore focus to the
+         * previously-focused element, after it's closed.
+         */
+        this.restoreFocus = true;
+        /**
+         * Whether the dialog should close when the user goes backwards/forwards in history.
+         * Note that this usually doesn't include clicking on links (unless the user is using
+         * the `HashLocationStrategy`).
+         */
+        this.closeOnNavigation = true;
+        // TODO(jelbourn): add configuration for lifecycle hooks, ARIA labelling.
+    }
+}
+if (false) {}
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: src/material/dialog/dialog-animations.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * Animations used by MatDialog.
+ * \@docs-private
+ * @type {?}
+ */
+const matDialogAnimations = {
+    /**
+     * Animation that is applied on the dialog container by defalt.
+     */
+    dialogContainer: Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["trigger"])('dialogContainer', [
+        // Note: The `enter` animation transitions to `transform: none`, because for some reason
+        // specifying the transform explicitly, causes IE both to blur the dialog content and
+        // decimate the animation performance. Leaving it as `none` solves both issues.
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["state"])('void, exit', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["style"])({ opacity: 0, transform: 'scale(0.7)' })),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["state"])('enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["style"])({ transform: 'none' })),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["transition"])('* => enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["animate"])('150ms cubic-bezier(0, 0, 0.2, 1)', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["style"])({ transform: 'none', opacity: 1 }))),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["transition"])('* => void, * => exit', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["animate"])('75ms cubic-bezier(0.4, 0.0, 0.2, 1)', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_8__["style"])({ opacity: 0 }))),
+    ])
+};
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: src/material/dialog/dialog-container.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * Throws an exception for the case when a ComponentPortal is
+ * attached to a DomPortalOutlet without an origin.
+ * \@docs-private
+ * @return {?}
+ */
+function throwMatDialogContentAlreadyAttachedError() {
+    throw Error('Attempting to attach dialog content after content is already attached');
+}
+/**
+ * Internal component that wraps user-provided dialog content.
+ * Animation is based on https://material.io/guidelines/motion/choreography.html.
+ * \@docs-private
+ */
+class MatDialogContainer extends _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["BasePortalOutlet"] {
+    /**
+     * @param {?} _elementRef
+     * @param {?} _focusTrapFactory
+     * @param {?} _changeDetectorRef
+     * @param {?} _document
+     * @param {?} _config
+     */
+    constructor(_elementRef, _focusTrapFactory, _changeDetectorRef, _document, _config) {
+        super();
+        this._elementRef = _elementRef;
+        this._focusTrapFactory = _focusTrapFactory;
+        this._changeDetectorRef = _changeDetectorRef;
+        this._config = _config;
+        /**
+         * Element that was focused before the dialog was opened. Save this to restore upon close.
+         */
+        this._elementFocusedBeforeDialogWasOpened = null;
+        /**
+         * State of the dialog animation.
+         */
+        this._state = 'enter';
+        /**
+         * Emits when an animation state changes.
+         */
+        this._animationStateChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_3__["EventEmitter"]();
+        /**
+         * Attaches a DOM portal to the dialog container.
+         * @param portal Portal to be attached.
+         * @deprecated To be turned into a method.
+         * \@breaking-change 10.0.0
+         */
+        this.attachDomPortal = (/**
+         * @param {?} portal
+         * @return {?}
+         */
+        (portal) => {
+            if (this._portalOutlet.hasAttached()) {
+                throwMatDialogContentAlreadyAttachedError();
+            }
+            this._savePreviouslyFocusedElement();
+            return this._portalOutlet.attachDomPortal(portal);
+        });
+        this._ariaLabelledBy = _config.ariaLabelledBy || null;
+        this._document = _document;
+    }
+    /**
+     * Attach a ComponentPortal as content to this dialog container.
+     * @template T
+     * @param {?} portal Portal to be attached as the dialog content.
+     * @return {?}
+     */
+    attachComponentPortal(portal) {
+        if (this._portalOutlet.hasAttached()) {
+            throwMatDialogContentAlreadyAttachedError();
+        }
+        this._savePreviouslyFocusedElement();
+        return this._portalOutlet.attachComponentPortal(portal);
+    }
+    /**
+     * Attach a TemplatePortal as content to this dialog container.
+     * @template C
+     * @param {?} portal Portal to be attached as the dialog content.
+     * @return {?}
+     */
+    attachTemplatePortal(portal) {
+        if (this._portalOutlet.hasAttached()) {
+            throwMatDialogContentAlreadyAttachedError();
+        }
+        this._savePreviouslyFocusedElement();
+        return this._portalOutlet.attachTemplatePortal(portal);
+    }
+    /**
+     * Moves the focus inside the focus trap.
+     * @private
+     * @return {?}
+     */
+    _trapFocus() {
+        /** @type {?} */
+        const element = this._elementRef.nativeElement;
+        if (!this._focusTrap) {
+            this._focusTrap = this._focusTrapFactory.create(element);
+        }
+        // If we were to attempt to focus immediately, then the content of the dialog would not yet be
+        // ready in instances where change detection has to run first. To deal with this, we simply
+        // wait for the microtask queue to be empty.
+        if (this._config.autoFocus) {
+            this._focusTrap.focusInitialElementWhenReady();
+        }
+        else {
+            /** @type {?} */
+            const activeElement = this._document.activeElement;
+            // Otherwise ensure that focus is on the dialog container. It's possible that a different
+            // component tried to move focus while the open animation was running. See:
+            // https://github.com/angular/components/issues/16215. Note that we only want to do this
+            // if the focus isn't inside the dialog already, because it's possible that the consumer
+            // turned off `autoFocus` in order to move focus themselves.
+            if (activeElement !== element && !element.contains(activeElement)) {
+                element.focus();
+            }
+        }
+    }
+    /**
+     * Restores focus to the element that was focused before the dialog opened.
+     * @private
+     * @return {?}
+     */
+    _restoreFocus() {
+        /** @type {?} */
+        const toFocus = this._elementFocusedBeforeDialogWasOpened;
+        // We need the extra check, because IE can set the `activeElement` to null in some cases.
+        if (this._config.restoreFocus && toFocus && typeof toFocus.focus === 'function') {
+            /** @type {?} */
+            const activeElement = this._document.activeElement;
+            /** @type {?} */
+            const element = this._elementRef.nativeElement;
+            // Make sure that focus is still inside the dialog or is on the body (usually because a
+            // non-focusable element like the backdrop was clicked) before moving it. It's possible that
+            // the consumer moved it themselves before the animation was done, in which case we shouldn't
+            // do anything.
+            if (!activeElement || activeElement === this._document.body || activeElement === element ||
+                element.contains(activeElement)) {
+                toFocus.focus();
+            }
+        }
+        if (this._focusTrap) {
+            this._focusTrap.destroy();
+        }
+    }
+    /**
+     * Saves a reference to the element that was focused before the dialog was opened.
+     * @private
+     * @return {?}
+     */
+    _savePreviouslyFocusedElement() {
+        if (this._document) {
+            this._elementFocusedBeforeDialogWasOpened = (/** @type {?} */ (this._document.activeElement));
+            // Note that there is no focus method when rendering on the server.
+            if (this._elementRef.nativeElement.focus) {
+                // Move focus onto the dialog immediately in order to prevent the user from accidentally
+                // opening multiple dialogs at the same time. Needs to be async, because the element
+                // may not be focusable immediately.
+                Promise.resolve().then((/**
+                 * @return {?}
+                 */
+                () => this._elementRef.nativeElement.focus()));
+            }
+        }
+    }
+    /**
+     * Callback, invoked whenever an animation on the host completes.
+     * @param {?} event
+     * @return {?}
+     */
+    _onAnimationDone(event) {
+        if (event.toState === 'enter') {
+            this._trapFocus();
+        }
+        else if (event.toState === 'exit') {
+            this._restoreFocus();
+        }
+        this._animationStateChanged.emit(event);
+    }
+    /**
+     * Callback, invoked when an animation on the host starts.
+     * @param {?} event
+     * @return {?}
+     */
+    _onAnimationStart(event) {
+        this._animationStateChanged.emit(event);
+    }
+    /**
+     * Starts the dialog exit animation.
+     * @return {?}
+     */
+    _startExitAnimation() {
+        this._state = 'exit';
+        // Mark the container for check so it can react if the
+        // view container is using OnPush change detection.
+        this._changeDetectorRef.markForCheck();
+    }
+}
+MatDialogContainer.ɵfac = function MatDialogContainer_Factory(t) { return new (t || MatDialogContainer)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_3__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_9__["FocusTrapFactory"]), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_3__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_2__["DOCUMENT"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](MatDialogConfig)); };
+MatDialogContainer.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: MatDialogContainer, selectors: [["mat-dialog-container"]], viewQuery: function MatDialogContainer_Query(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵstaticViewQuery"](_angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["CdkPortalOutlet"], true);
+    } if (rf & 2) {
+        var _t;
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx._portalOutlet = _t.first);
+    } }, hostAttrs: ["tabindex", "-1", "aria-modal", "true", 1, "mat-dialog-container"], hostVars: 6, hostBindings: function MatDialogContainer_HostBindings(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵcomponentHostSyntheticListener"]("@dialogContainer.start", function MatDialogContainer_animation_dialogContainer_start_HostBindingHandler($event) { return ctx._onAnimationStart($event); })("@dialogContainer.done", function MatDialogContainer_animation_dialogContainer_done_HostBindingHandler($event) { return ctx._onAnimationDone($event); });
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵattribute"]("id", ctx._id)("role", ctx._config.role)("aria-labelledby", ctx._config.ariaLabel ? null : ctx._ariaLabelledBy)("aria-label", ctx._config.ariaLabel)("aria-describedby", ctx._config.ariaDescribedBy || null);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵupdateSyntheticHostBinding"]("@dialogContainer", ctx._state);
+    } }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵInheritDefinitionFeature"]], decls: 1, vars: 0, consts: [["cdkPortalOutlet", ""]], template: function MatDialogContainer_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](0, MatDialogContainer_ng_template_0_Template, 0, 0, "ng-template", 0);
+    } }, directives: [_angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["CdkPortalOutlet"]], styles: [".mat-dialog-container{display:block;padding:24px;border-radius:4px;box-sizing:border-box;overflow:auto;outline:0;width:100%;height:100%;min-height:inherit;max-height:inherit}.cdk-high-contrast-active .mat-dialog-container{outline:solid 1px}.mat-dialog-content{display:block;margin:0 -24px;padding:0 24px;max-height:65vh;overflow:auto;-webkit-overflow-scrolling:touch}.mat-dialog-title{margin:0 0 20px;display:block}.mat-dialog-actions{padding:8px 0;display:flex;flex-wrap:wrap;min-height:52px;align-items:center;margin-bottom:-24px}.mat-dialog-actions[align=end]{justify-content:flex-end}.mat-dialog-actions[align=center]{justify-content:center}.mat-dialog-actions .mat-button-base+.mat-button-base{margin-left:8px}[dir=rtl] .mat-dialog-actions .mat-button-base+.mat-button-base{margin-left:0;margin-right:8px}\n"], encapsulation: 2, data: { animation: [matDialogAnimations.dialogContainer] } });
+/** @nocollapse */
+MatDialogContainer.ctorParameters = () => [
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ElementRef"] },
+    { type: _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_9__["FocusTrapFactory"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ChangeDetectorRef"] },
+    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Inject"], args: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["DOCUMENT"],] }] },
+    { type: MatDialogConfig }
+];
+MatDialogContainer.propDecorators = {
+    _portalOutlet: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"], args: [_angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["CdkPortalOutlet"], { static: true },] }]
+};
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵsetClassMetadata"](MatDialogContainer, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"],
+        args: [{
+                selector: 'mat-dialog-container',
+                template: "<ng-template cdkPortalOutlet></ng-template>\n",
+                encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewEncapsulation"].None,
+                // Using OnPush for dialogs caused some G3 sync issues. Disabled until we can track them down.
+                // tslint:disable-next-line:validate-decorators
+                changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ChangeDetectionStrategy"].Default,
+                animations: [matDialogAnimations.dialogContainer],
+                host: {
+                    'class': 'mat-dialog-container',
+                    'tabindex': '-1',
+                    'aria-modal': 'true',
+                    '[attr.id]': '_id',
+                    '[attr.role]': '_config.role',
+                    '[attr.aria-labelledby]': '_config.ariaLabel ? null : _ariaLabelledBy',
+                    '[attr.aria-label]': '_config.ariaLabel',
+                    '[attr.aria-describedby]': '_config.ariaDescribedBy || null',
+                    '[@dialogContainer]': '_state',
+                    '(@dialogContainer.start)': '_onAnimationStart($event)',
+                    '(@dialogContainer.done)': '_onAnimationDone($event)'
+                },
+                styles: [".mat-dialog-container{display:block;padding:24px;border-radius:4px;box-sizing:border-box;overflow:auto;outline:0;width:100%;height:100%;min-height:inherit;max-height:inherit}.cdk-high-contrast-active .mat-dialog-container{outline:solid 1px}.mat-dialog-content{display:block;margin:0 -24px;padding:0 24px;max-height:65vh;overflow:auto;-webkit-overflow-scrolling:touch}.mat-dialog-title{margin:0 0 20px;display:block}.mat-dialog-actions{padding:8px 0;display:flex;flex-wrap:wrap;min-height:52px;align-items:center;margin-bottom:-24px}.mat-dialog-actions[align=end]{justify-content:flex-end}.mat-dialog-actions[align=center]{justify-content:center}.mat-dialog-actions .mat-button-base+.mat-button-base{margin-left:8px}[dir=rtl] .mat-dialog-actions .mat-button-base+.mat-button-base{margin-left:0;margin-right:8px}\n"]
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ElementRef"] }, { type: _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_9__["FocusTrapFactory"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ChangeDetectorRef"] }, { type: undefined, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Optional"]
+            }, {
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Inject"],
+                args: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["DOCUMENT"]]
+            }] }, { type: MatDialogConfig }]; }, { _portalOutlet: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
+            args: [_angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["CdkPortalOutlet"], { static: true }]
+        }] }); })();
+if (false) {}
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: src/material/dialog/dialog-ref.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+// TODO(jelbourn): resizing
+// Counter for unique dialog ids.
+/** @type {?} */
+let uniqueId = 0;
+/** @enum {number} */
+const MatDialogState = {
+    OPEN: 0, CLOSING: 1, CLOSED: 2,
+};
+/**
+ * Reference to a dialog opened via the MatDialog service.
+ * @template T, R
+ */
+class MatDialogRef {
+    /**
+     * @param {?} _overlayRef
+     * @param {?} _containerInstance
+     * @param {?=} id
+     */
+    constructor(_overlayRef, _containerInstance, id = `mat-dialog-${uniqueId++}`) {
+        this._overlayRef = _overlayRef;
+        this._containerInstance = _containerInstance;
+        this.id = id;
+        /**
+         * Whether the user is allowed to close the dialog.
+         */
+        this.disableClose = this._containerInstance._config.disableClose;
+        /**
+         * Subject for notifying the user that the dialog has finished opening.
+         */
+        this._afterOpened = new rxjs__WEBPACK_IMPORTED_MODULE_6__["Subject"]();
+        /**
+         * Subject for notifying the user that the dialog has finished closing.
+         */
+        this._afterClosed = new rxjs__WEBPACK_IMPORTED_MODULE_6__["Subject"]();
+        /**
+         * Subject for notifying the user that the dialog has started closing.
+         */
+        this._beforeClosed = new rxjs__WEBPACK_IMPORTED_MODULE_6__["Subject"]();
+        /**
+         * Current state of the dialog.
+         */
+        this._state = 0 /* OPEN */;
+        // Pass the id along to the container.
+        _containerInstance._id = id;
+        // Emit when opening animation completes
+        _containerInstance._animationStateChanged.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["filter"])((/**
+         * @param {?} event
+         * @return {?}
+         */
+        event => event.phaseName === 'done' && event.toState === 'enter')), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["take"])(1))
+            .subscribe((/**
+         * @return {?}
+         */
+        () => {
+            this._afterOpened.next();
+            this._afterOpened.complete();
+        }));
+        // Dispose overlay when closing animation is complete
+        _containerInstance._animationStateChanged.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["filter"])((/**
+         * @param {?} event
+         * @return {?}
+         */
+        event => event.phaseName === 'done' && event.toState === 'exit')), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["take"])(1)).subscribe((/**
+         * @return {?}
+         */
+        () => {
+            clearTimeout(this._closeFallbackTimeout);
+            this._overlayRef.dispose();
+        }));
+        _overlayRef.detachments().subscribe((/**
+         * @return {?}
+         */
+        () => {
+            this._beforeClosed.next(this._result);
+            this._beforeClosed.complete();
+            this._afterClosed.next(this._result);
+            this._afterClosed.complete();
+            this.componentInstance = (/** @type {?} */ (null));
+            this._overlayRef.dispose();
+        }));
+        _overlayRef.keydownEvents()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["filter"])((/**
+         * @param {?} event
+         * @return {?}
+         */
+        event => {
+            return event.keyCode === _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_10__["ESCAPE"] && !this.disableClose && !Object(_angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_10__["hasModifierKey"])(event);
+        })))
+            .subscribe((/**
+         * @param {?} event
+         * @return {?}
+         */
+        event => {
+            event.preventDefault();
+            this.close();
+        }));
+    }
+    /**
+     * Close the dialog.
+     * @param {?=} dialogResult Optional result to return to the dialog opener.
+     * @return {?}
+     */
+    close(dialogResult) {
+        this._result = dialogResult;
+        // Transition the backdrop in parallel to the dialog.
+        this._containerInstance._animationStateChanged.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["filter"])((/**
+         * @param {?} event
+         * @return {?}
+         */
+        event => event.phaseName === 'start')), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["take"])(1))
+            .subscribe((/**
+         * @param {?} event
+         * @return {?}
+         */
+        event => {
+            this._beforeClosed.next(dialogResult);
+            this._beforeClosed.complete();
+            this._state = 2 /* CLOSED */;
+            this._overlayRef.detachBackdrop();
+            // The logic that disposes of the overlay depends on the exit animation completing, however
+            // it isn't guaranteed if the parent view is destroyed while it's running. Add a fallback
+            // timeout which will clean everything up if the animation hasn't fired within the specified
+            // amount of time plus 100ms. We don't need to run this outside the NgZone, because for the
+            // vast majority of cases the timeout will have been cleared before it has the chance to fire.
+            this._closeFallbackTimeout = setTimeout((/**
+             * @return {?}
+             */
+            () => {
+                this._overlayRef.dispose();
+            }), event.totalTime + 100);
+        }));
+        this._containerInstance._startExitAnimation();
+        this._state = 1 /* CLOSING */;
+    }
+    /**
+     * Gets an observable that is notified when the dialog is finished opening.
+     * @return {?}
+     */
+    afterOpened() {
+        return this._afterOpened.asObservable();
+    }
+    /**
+     * Gets an observable that is notified when the dialog is finished closing.
+     * @return {?}
+     */
+    afterClosed() {
+        return this._afterClosed.asObservable();
+    }
+    /**
+     * Gets an observable that is notified when the dialog has started closing.
+     * @return {?}
+     */
+    beforeClosed() {
+        return this._beforeClosed.asObservable();
+    }
+    /**
+     * Gets an observable that emits when the overlay's backdrop has been clicked.
+     * @return {?}
+     */
+    backdropClick() {
+        return this._overlayRef.backdropClick();
+    }
+    /**
+     * Gets an observable that emits when keydown events are targeted on the overlay.
+     * @return {?}
+     */
+    keydownEvents() {
+        return this._overlayRef.keydownEvents();
+    }
+    /**
+     * Updates the dialog's position.
+     * @template THIS
+     * @this {THIS}
+     * @param {?=} position New dialog position.
+     * @return {THIS}
+     */
+    updatePosition(position) {
+        /** @type {?} */
+        let strategy = (/** @type {?} */ (this))._getPositionStrategy();
+        if (position && (position.left || position.right)) {
+            position.left ? strategy.left(position.left) : strategy.right(position.right);
+        }
+        else {
+            strategy.centerHorizontally();
+        }
+        if (position && (position.top || position.bottom)) {
+            position.top ? strategy.top(position.top) : strategy.bottom(position.bottom);
+        }
+        else {
+            strategy.centerVertically();
+        }
+        (/** @type {?} */ (this))._overlayRef.updatePosition();
+        return (/** @type {?} */ (this));
+    }
+    /**
+     * Updates the dialog's width and height.
+     * @template THIS
+     * @this {THIS}
+     * @param {?=} width New width of the dialog.
+     * @param {?=} height New height of the dialog.
+     * @return {THIS}
+     */
+    updateSize(width = '', height = '') {
+        (/** @type {?} */ (this))._getPositionStrategy().width(width).height(height);
+        (/** @type {?} */ (this))._overlayRef.updatePosition();
+        return (/** @type {?} */ (this));
+    }
+    /**
+     * Add a CSS class or an array of classes to the overlay pane.
+     * @template THIS
+     * @this {THIS}
+     * @param {?} classes
+     * @return {THIS}
+     */
+    addPanelClass(classes) {
+        (/** @type {?} */ (this))._overlayRef.addPanelClass(classes);
+        return (/** @type {?} */ (this));
+    }
+    /**
+     * Remove a CSS class or an array of classes from the overlay pane.
+     * @template THIS
+     * @this {THIS}
+     * @param {?} classes
+     * @return {THIS}
+     */
+    removePanelClass(classes) {
+        (/** @type {?} */ (this))._overlayRef.removePanelClass(classes);
+        return (/** @type {?} */ (this));
+    }
+    /**
+     * Gets the current state of the dialog's lifecycle.
+     * @return {?}
+     */
+    getState() {
+        return this._state;
+    }
+    /**
+     * Fetches the position strategy object from the overlay ref.
+     * @private
+     * @return {?}
+     */
+    _getPositionStrategy() {
+        return (/** @type {?} */ (this._overlayRef.getConfig().positionStrategy));
+    }
+}
+if (false) {}
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: src/material/dialog/dialog.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * Injection token that can be used to access the data that was passed in to a dialog.
+ * @type {?}
+ */
+const MAT_DIALOG_DATA = new _angular_core__WEBPACK_IMPORTED_MODULE_3__["InjectionToken"]('MatDialogData');
+/**
+ * Injection token that can be used to specify default dialog options.
+ * @type {?}
+ */
+const MAT_DIALOG_DEFAULT_OPTIONS = new _angular_core__WEBPACK_IMPORTED_MODULE_3__["InjectionToken"]('mat-dialog-default-options');
+/**
+ * Injection token that determines the scroll handling while the dialog is open.
+ * @type {?}
+ */
+const MAT_DIALOG_SCROLL_STRATEGY = new _angular_core__WEBPACK_IMPORTED_MODULE_3__["InjectionToken"]('mat-dialog-scroll-strategy');
+/**
+ * \@docs-private
+ * @param {?} overlay
+ * @return {?}
+ */
+function MAT_DIALOG_SCROLL_STRATEGY_FACTORY(overlay) {
+    return (/**
+     * @return {?}
+     */
+    () => overlay.scrollStrategies.block());
+}
+/**
+ * \@docs-private
+ * @param {?} overlay
+ * @return {?}
+ */
+function MAT_DIALOG_SCROLL_STRATEGY_PROVIDER_FACTORY(overlay) {
+    return (/**
+     * @return {?}
+     */
+    () => overlay.scrollStrategies.block());
+}
+/**
+ * \@docs-private
+ * @type {?}
+ */
+const MAT_DIALOG_SCROLL_STRATEGY_PROVIDER = {
+    provide: MAT_DIALOG_SCROLL_STRATEGY,
+    deps: [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_0__["Overlay"]],
+    useFactory: MAT_DIALOG_SCROLL_STRATEGY_PROVIDER_FACTORY,
+};
+/**
+ * Service to open Material Design modal dialogs.
+ */
+class MatDialog {
+    /**
+     * @param {?} _overlay
+     * @param {?} _injector
+     * @param {?} _location
+     * @param {?} _defaultOptions
+     * @param {?} scrollStrategy
+     * @param {?} _parentDialog
+     * @param {?} _overlayContainer
+     */
+    constructor(_overlay, _injector, 
+    /**
+     * @deprecated `_location` parameter to be removed.
+     * @breaking-change 10.0.0
+     */
+    _location, _defaultOptions, scrollStrategy, _parentDialog, _overlayContainer) {
+        this._overlay = _overlay;
+        this._injector = _injector;
+        this._defaultOptions = _defaultOptions;
+        this._parentDialog = _parentDialog;
+        this._overlayContainer = _overlayContainer;
+        this._openDialogsAtThisLevel = [];
+        this._afterAllClosedAtThisLevel = new rxjs__WEBPACK_IMPORTED_MODULE_6__["Subject"]();
+        this._afterOpenedAtThisLevel = new rxjs__WEBPACK_IMPORTED_MODULE_6__["Subject"]();
+        this._ariaHiddenElements = new Map();
+        // TODO (jelbourn): tighten the typing right-hand side of this expression.
+        /**
+         * Stream that emits when all open dialog have finished closing.
+         * Will emit on subscribe if there are no open dialogs to begin with.
+         */
+        this.afterAllClosed = (/** @type {?} */ (Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["defer"])((/**
+         * @return {?}
+         */
+        () => this.openDialogs.length ?
+            this._afterAllClosed :
+            this._afterAllClosed.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["startWith"])(undefined))))));
+        this._scrollStrategy = scrollStrategy;
+    }
+    /**
+     * Keeps track of the currently-open dialogs.
+     * @return {?}
+     */
+    get openDialogs() {
+        return this._parentDialog ? this._parentDialog.openDialogs : this._openDialogsAtThisLevel;
+    }
+    /**
+     * Stream that emits when a dialog has been opened.
+     * @return {?}
+     */
+    get afterOpened() {
+        return this._parentDialog ? this._parentDialog.afterOpened : this._afterOpenedAtThisLevel;
+    }
+    /**
+     * @return {?}
+     */
+    get _afterAllClosed() {
+        /** @type {?} */
+        const parent = this._parentDialog;
+        return parent ? parent._afterAllClosed : this._afterAllClosedAtThisLevel;
+    }
+    /**
+     * Opens a modal dialog containing the given component.
+     * @template T, D, R
+     * @param {?} componentOrTemplateRef Type of the component to load into the dialog,
+     *     or a TemplateRef to instantiate as the dialog content.
+     * @param {?=} config Extra configuration options.
+     * @return {?} Reference to the newly-opened dialog.
+     */
+    open(componentOrTemplateRef, config) {
+        config = _applyConfigDefaults(config, this._defaultOptions || new MatDialogConfig());
+        if (config.id && this.getDialogById(config.id)) {
+            throw Error(`Dialog with id "${config.id}" exists already. The dialog id must be unique.`);
+        }
+        /** @type {?} */
+        const overlayRef = this._createOverlay(config);
+        /** @type {?} */
+        const dialogContainer = this._attachDialogContainer(overlayRef, config);
+        /** @type {?} */
+        const dialogRef = this._attachDialogContent(componentOrTemplateRef, dialogContainer, overlayRef, config);
+        // If this is the first dialog that we're opening, hide all the non-overlay content.
+        if (!this.openDialogs.length) {
+            this._hideNonDialogContentFromAssistiveTechnology();
+        }
+        this.openDialogs.push(dialogRef);
+        dialogRef.afterClosed().subscribe((/**
+         * @return {?}
+         */
+        () => this._removeOpenDialog(dialogRef)));
+        this.afterOpened.next(dialogRef);
+        return dialogRef;
+    }
+    /**
+     * Closes all of the currently-open dialogs.
+     * @return {?}
+     */
+    closeAll() {
+        this._closeDialogs(this.openDialogs);
+    }
+    /**
+     * Finds an open dialog by its id.
+     * @param {?} id ID to use when looking up the dialog.
+     * @return {?}
+     */
+    getDialogById(id) {
+        return this.openDialogs.find((/**
+         * @param {?} dialog
+         * @return {?}
+         */
+        dialog => dialog.id === id));
+    }
+    /**
+     * @return {?}
+     */
+    ngOnDestroy() {
+        // Only close the dialogs at this level on destroy
+        // since the parent service may still be active.
+        this._closeDialogs(this._openDialogsAtThisLevel);
+        this._afterAllClosedAtThisLevel.complete();
+        this._afterOpenedAtThisLevel.complete();
+    }
+    /**
+     * Creates the overlay into which the dialog will be loaded.
+     * @private
+     * @param {?} config The dialog configuration.
+     * @return {?} A promise resolving to the OverlayRef for the created overlay.
+     */
+    _createOverlay(config) {
+        /** @type {?} */
+        const overlayConfig = this._getOverlayConfig(config);
+        return this._overlay.create(overlayConfig);
+    }
+    /**
+     * Creates an overlay config from a dialog config.
+     * @private
+     * @param {?} dialogConfig The dialog configuration.
+     * @return {?} The overlay configuration.
+     */
+    _getOverlayConfig(dialogConfig) {
+        /** @type {?} */
+        const state = new _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_0__["OverlayConfig"]({
+            positionStrategy: this._overlay.position().global(),
+            scrollStrategy: dialogConfig.scrollStrategy || this._scrollStrategy(),
+            panelClass: dialogConfig.panelClass,
+            hasBackdrop: dialogConfig.hasBackdrop,
+            direction: dialogConfig.direction,
+            minWidth: dialogConfig.minWidth,
+            minHeight: dialogConfig.minHeight,
+            maxWidth: dialogConfig.maxWidth,
+            maxHeight: dialogConfig.maxHeight,
+            disposeOnNavigation: dialogConfig.closeOnNavigation
+        });
+        if (dialogConfig.backdropClass) {
+            state.backdropClass = dialogConfig.backdropClass;
+        }
+        return state;
+    }
+    /**
+     * Attaches an MatDialogContainer to a dialog's already-created overlay.
+     * @private
+     * @param {?} overlay Reference to the dialog's underlying overlay.
+     * @param {?} config The dialog configuration.
+     * @return {?} A promise resolving to a ComponentRef for the attached container.
+     */
+    _attachDialogContainer(overlay, config) {
+        /** @type {?} */
+        const userInjector = config && config.viewContainerRef && config.viewContainerRef.injector;
+        /** @type {?} */
+        const injector = new _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["PortalInjector"](userInjector || this._injector, new WeakMap([
+            [MatDialogConfig, config]
+        ]));
+        /** @type {?} */
+        const containerPortal = new _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["ComponentPortal"](MatDialogContainer, config.viewContainerRef, injector, config.componentFactoryResolver);
+        /** @type {?} */
+        const containerRef = overlay.attach(containerPortal);
+        return containerRef.instance;
+    }
+    /**
+     * Attaches the user-provided component to the already-created MatDialogContainer.
+     * @private
+     * @template T, R
+     * @param {?} componentOrTemplateRef The type of component being loaded into the dialog,
+     *     or a TemplateRef to instantiate as the content.
+     * @param {?} dialogContainer Reference to the wrapping MatDialogContainer.
+     * @param {?} overlayRef Reference to the overlay in which the dialog resides.
+     * @param {?} config The dialog configuration.
+     * @return {?} A promise resolving to the MatDialogRef that should be returned to the user.
+     */
+    _attachDialogContent(componentOrTemplateRef, dialogContainer, overlayRef, config) {
+        // Create a reference to the dialog we're creating in order to give the user a handle
+        // to modify and close it.
+        /** @type {?} */
+        const dialogRef = new MatDialogRef(overlayRef, dialogContainer, config.id);
+        // When the dialog backdrop is clicked, we want to close it.
+        if (config.hasBackdrop) {
+            overlayRef.backdropClick().subscribe((/**
+             * @return {?}
+             */
+            () => {
+                if (!dialogRef.disableClose) {
+                    dialogRef.close();
+                }
+            }));
+        }
+        if (componentOrTemplateRef instanceof _angular_core__WEBPACK_IMPORTED_MODULE_3__["TemplateRef"]) {
+            dialogContainer.attachTemplatePortal(new _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["TemplatePortal"](componentOrTemplateRef, (/** @type {?} */ (null)), (/** @type {?} */ ({ $implicit: config.data, dialogRef }))));
+        }
+        else {
+            /** @type {?} */
+            const injector = this._createInjector(config, dialogRef, dialogContainer);
+            /** @type {?} */
+            const contentRef = dialogContainer.attachComponentPortal(new _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["ComponentPortal"](componentOrTemplateRef, config.viewContainerRef, injector));
+            dialogRef.componentInstance = contentRef.instance;
+        }
+        dialogRef
+            .updateSize(config.width, config.height)
+            .updatePosition(config.position);
+        return dialogRef;
+    }
+    /**
+     * Creates a custom injector to be used inside the dialog. This allows a component loaded inside
+     * of a dialog to close itself and, optionally, to return a value.
+     * @private
+     * @template T
+     * @param {?} config Config object that is used to construct the dialog.
+     * @param {?} dialogRef Reference to the dialog.
+     * @param {?} dialogContainer
+     * @return {?} The custom injector that can be used inside the dialog.
+     */
+    _createInjector(config, dialogRef, dialogContainer) {
+        /** @type {?} */
+        const userInjector = config && config.viewContainerRef && config.viewContainerRef.injector;
+        // The MatDialogContainer is injected in the portal as the MatDialogContainer and the dialog's
+        // content are created out of the same ViewContainerRef and as such, are siblings for injector
+        // purposes. To allow the hierarchy that is expected, the MatDialogContainer is explicitly
+        // added to the injection tokens.
+        /** @type {?} */
+        const injectionTokens = new WeakMap([
+            [MatDialogContainer, dialogContainer],
+            [MAT_DIALOG_DATA, config.data],
+            [MatDialogRef, dialogRef]
+        ]);
+        if (config.direction &&
+            (!userInjector || !userInjector.get(_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_5__["Directionality"], null))) {
+            injectionTokens.set(_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_5__["Directionality"], {
+                value: config.direction,
+                change: Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["of"])()
+            });
+        }
+        return new _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["PortalInjector"](userInjector || this._injector, injectionTokens);
+    }
+    /**
+     * Removes a dialog from the array of open dialogs.
+     * @private
+     * @param {?} dialogRef Dialog to be removed.
+     * @return {?}
+     */
+    _removeOpenDialog(dialogRef) {
+        /** @type {?} */
+        const index = this.openDialogs.indexOf(dialogRef);
+        if (index > -1) {
+            this.openDialogs.splice(index, 1);
+            // If all the dialogs were closed, remove/restore the `aria-hidden`
+            // to a the siblings and emit to the `afterAllClosed` stream.
+            if (!this.openDialogs.length) {
+                this._ariaHiddenElements.forEach((/**
+                 * @param {?} previousValue
+                 * @param {?} element
+                 * @return {?}
+                 */
+                (previousValue, element) => {
+                    if (previousValue) {
+                        element.setAttribute('aria-hidden', previousValue);
+                    }
+                    else {
+                        element.removeAttribute('aria-hidden');
+                    }
+                }));
+                this._ariaHiddenElements.clear();
+                this._afterAllClosed.next();
+            }
+        }
+    }
+    /**
+     * Hides all of the content that isn't an overlay from assistive technology.
+     * @private
+     * @return {?}
+     */
+    _hideNonDialogContentFromAssistiveTechnology() {
+        /** @type {?} */
+        const overlayContainer = this._overlayContainer.getContainerElement();
+        // Ensure that the overlay container is attached to the DOM.
+        if (overlayContainer.parentElement) {
+            /** @type {?} */
+            const siblings = overlayContainer.parentElement.children;
+            for (let i = siblings.length - 1; i > -1; i--) {
+                /** @type {?} */
+                let sibling = siblings[i];
+                if (sibling !== overlayContainer &&
+                    sibling.nodeName !== 'SCRIPT' &&
+                    sibling.nodeName !== 'STYLE' &&
+                    !sibling.hasAttribute('aria-live')) {
+                    this._ariaHiddenElements.set(sibling, sibling.getAttribute('aria-hidden'));
+                    sibling.setAttribute('aria-hidden', 'true');
+                }
+            }
+        }
+    }
+    /**
+     * Closes all of the dialogs in an array.
+     * @private
+     * @param {?} dialogs
+     * @return {?}
+     */
+    _closeDialogs(dialogs) {
+        /** @type {?} */
+        let i = dialogs.length;
+        while (i--) {
+            // The `_openDialogs` property isn't updated after close until the rxjs subscription
+            // runs on the next microtask, in addition to modifying the array as we're going
+            // through it. We loop through all of them and call close without assuming that
+            // they'll be removed from the list instantaneously.
+            dialogs[i].close();
+        }
+    }
+}
+MatDialog.ɵfac = function MatDialog_Factory(t) { return new (t || MatDialog)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_0__["Overlay"]), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_3__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](MAT_DIALOG_DEFAULT_OPTIONS, 8), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](MAT_DIALOG_SCROLL_STRATEGY), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](MatDialog, 12), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_0__["OverlayContainer"])); };
+MatDialog.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({ token: MatDialog, factory: MatDialog.ɵfac });
+/** @nocollapse */
+MatDialog.ctorParameters = () => [
+    { type: _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_0__["Overlay"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Injector"] },
+    { type: _angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Optional"] }] },
+    { type: MatDialogConfig, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Inject"], args: [MAT_DIALOG_DEFAULT_OPTIONS,] }] },
+    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Inject"], args: [MAT_DIALOG_SCROLL_STRATEGY,] }] },
+    { type: MatDialog, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["SkipSelf"] }] },
+    { type: _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_0__["OverlayContainer"] }
+];
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵsetClassMetadata"](MatDialog, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Injectable"]
+    }], function () { return [{ type: _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_0__["Overlay"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Injector"] }, { type: _angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Optional"]
+            }] }, { type: MatDialogConfig, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Optional"]
+            }, {
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Inject"],
+                args: [MAT_DIALOG_DEFAULT_OPTIONS]
+            }] }, { type: undefined, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Inject"],
+                args: [MAT_DIALOG_SCROLL_STRATEGY]
+            }] }, { type: MatDialog, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Optional"]
+            }, {
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["SkipSelf"]
+            }] }, { type: _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_0__["OverlayContainer"] }]; }, null); })();
+if (false) {}
+/**
+ * Applies default options to the dialog config.
+ * @param {?=} config Config to be modified.
+ * @param {?=} defaultOptions Default options provided.
+ * @return {?} The new configuration object.
+ */
+function _applyConfigDefaults(config, defaultOptions) {
+    return Object.assign(Object.assign({}, defaultOptions), config);
+}
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: src/material/dialog/dialog-content-directives.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * Counter used to generate unique IDs for dialog elements.
+ * @type {?}
+ */
+let dialogElementUid = 0;
+/**
+ * Button that will close the current dialog.
+ */
+class MatDialogClose {
+    /**
+     * @param {?} dialogRef
+     * @param {?} _elementRef
+     * @param {?} _dialog
+     */
+    constructor(dialogRef, _elementRef, _dialog) {
+        this.dialogRef = dialogRef;
+        this._elementRef = _elementRef;
+        this._dialog = _dialog;
+        /**
+         * Default to "button" to prevents accidental form submits.
+         */
+        this.type = 'button';
+    }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+        if (!this.dialogRef) {
+            // When this directive is included in a dialog via TemplateRef (rather than being
+            // in a Component), the DialogRef isn't available via injection because embedded
+            // views cannot be given a custom injector. Instead, we look up the DialogRef by
+            // ID. This must occur in `onInit`, as the ID binding for the dialog container won't
+            // be resolved at constructor time.
+            this.dialogRef = (/** @type {?} */ (getClosestDialog(this._elementRef, this._dialog.openDialogs)));
+        }
+    }
+    /**
+     * @param {?} changes
+     * @return {?}
+     */
+    ngOnChanges(changes) {
+        /** @type {?} */
+        const proxiedChange = changes['_matDialogClose'] || changes['_matDialogCloseResult'];
+        if (proxiedChange) {
+            this.dialogResult = proxiedChange.currentValue;
+        }
+    }
+}
+MatDialogClose.ɵfac = function MatDialogClose_Factory(t) { return new (t || MatDialogClose)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](MatDialogRef, 8), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_3__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](MatDialog)); };
+MatDialogClose.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineDirective"]({ type: MatDialogClose, selectors: [["", "mat-dialog-close", ""], ["", "matDialogClose", ""]], hostVars: 2, hostBindings: function MatDialogClose_HostBindings(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function MatDialogClose_click_HostBindingHandler($event) { return ctx.dialogRef.close(ctx.dialogResult); });
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵattribute"]("aria-label", ctx.ariaLabel || null)("type", ctx.type);
+    } }, inputs: { type: "type", dialogResult: ["mat-dialog-close", "dialogResult"], ariaLabel: ["aria-label", "ariaLabel"], _matDialogClose: ["matDialogClose", "_matDialogClose"] }, exportAs: ["matDialogClose"], features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵNgOnChangesFeature"]()] });
+/** @nocollapse */
+MatDialogClose.ctorParameters = () => [
+    { type: MatDialogRef, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Optional"] }] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ElementRef"] },
+    { type: MatDialog }
+];
+MatDialogClose.propDecorators = {
+    ariaLabel: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"], args: ['aria-label',] }],
+    type: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"] }],
+    dialogResult: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"], args: ['mat-dialog-close',] }],
+    _matDialogClose: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"], args: ['matDialogClose',] }]
+};
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵsetClassMetadata"](MatDialogClose, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Directive"],
+        args: [{
+                selector: '[mat-dialog-close], [matDialogClose]',
+                exportAs: 'matDialogClose',
+                host: {
+                    '(click)': 'dialogRef.close(dialogResult)',
+                    '[attr.aria-label]': 'ariaLabel || null',
+                    '[attr.type]': 'type'
+                }
+            }]
+    }], function () { return [{ type: MatDialogRef, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Optional"]
+            }] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ElementRef"] }, { type: MatDialog }]; }, { type: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }], dialogResult: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"],
+            args: ['mat-dialog-close']
+        }], ariaLabel: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"],
+            args: ['aria-label']
+        }], _matDialogClose: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"],
+            args: ['matDialogClose']
+        }] }); })();
+if (false) {}
+/**
+ * Title of a dialog element. Stays fixed to the top of the dialog when scrolling.
+ */
+class MatDialogTitle {
+    /**
+     * @param {?} _dialogRef
+     * @param {?} _elementRef
+     * @param {?} _dialog
+     */
+    constructor(_dialogRef, _elementRef, _dialog) {
+        this._dialogRef = _dialogRef;
+        this._elementRef = _elementRef;
+        this._dialog = _dialog;
+        this.id = `mat-dialog-title-${dialogElementUid++}`;
+    }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+        if (!this._dialogRef) {
+            this._dialogRef = (/** @type {?} */ (getClosestDialog(this._elementRef, this._dialog.openDialogs)));
+        }
+        if (this._dialogRef) {
+            Promise.resolve().then((/**
+             * @return {?}
+             */
+            () => {
+                /** @type {?} */
+                const container = this._dialogRef._containerInstance;
+                if (container && !container._ariaLabelledBy) {
+                    container._ariaLabelledBy = this.id;
+                }
+            }));
+        }
+    }
+}
+MatDialogTitle.ɵfac = function MatDialogTitle_Factory(t) { return new (t || MatDialogTitle)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](MatDialogRef, 8), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_3__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](MatDialog)); };
+MatDialogTitle.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineDirective"]({ type: MatDialogTitle, selectors: [["", "mat-dialog-title", ""], ["", "matDialogTitle", ""]], hostAttrs: [1, "mat-dialog-title"], hostVars: 1, hostBindings: function MatDialogTitle_HostBindings(rf, ctx) { if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵhostProperty"]("id", ctx.id);
+    } }, inputs: { id: "id" }, exportAs: ["matDialogTitle"] });
+/** @nocollapse */
+MatDialogTitle.ctorParameters = () => [
+    { type: MatDialogRef, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Optional"] }] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ElementRef"] },
+    { type: MatDialog }
+];
+MatDialogTitle.propDecorators = {
+    id: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"] }]
+};
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵsetClassMetadata"](MatDialogTitle, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Directive"],
+        args: [{
+                selector: '[mat-dialog-title], [matDialogTitle]',
+                exportAs: 'matDialogTitle',
+                host: {
+                    'class': 'mat-dialog-title',
+                    '[id]': 'id'
+                }
+            }]
+    }], function () { return [{ type: MatDialogRef, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Optional"]
+            }] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ElementRef"] }, { type: MatDialog }]; }, { id: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }] }); })();
+if (false) {}
+/**
+ * Scrollable content container of a dialog.
+ */
+class MatDialogContent {
+}
+MatDialogContent.ɵfac = function MatDialogContent_Factory(t) { return new (t || MatDialogContent)(); };
+MatDialogContent.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineDirective"]({ type: MatDialogContent, selectors: [["", "mat-dialog-content", ""], ["mat-dialog-content"], ["", "matDialogContent", ""]], hostAttrs: [1, "mat-dialog-content"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵsetClassMetadata"](MatDialogContent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Directive"],
+        args: [{
+                selector: `[mat-dialog-content], mat-dialog-content, [matDialogContent]`,
+                host: { 'class': 'mat-dialog-content' }
+            }]
+    }], null, null); })();
+/**
+ * Container for the bottom action buttons in a dialog.
+ * Stays fixed to the bottom when scrolling.
+ */
+class MatDialogActions {
+}
+MatDialogActions.ɵfac = function MatDialogActions_Factory(t) { return new (t || MatDialogActions)(); };
+MatDialogActions.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineDirective"]({ type: MatDialogActions, selectors: [["", "mat-dialog-actions", ""], ["mat-dialog-actions"], ["", "matDialogActions", ""]], hostAttrs: [1, "mat-dialog-actions"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵsetClassMetadata"](MatDialogActions, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Directive"],
+        args: [{
+                selector: `[mat-dialog-actions], mat-dialog-actions, [matDialogActions]`,
+                host: { 'class': 'mat-dialog-actions' }
+            }]
+    }], null, null); })();
+/**
+ * Finds the closest MatDialogRef to an element by looking at the DOM.
+ * @param {?} element Element relative to which to look for a dialog.
+ * @param {?} openDialogs References to the currently-open dialogs.
+ * @return {?}
+ */
+function getClosestDialog(element, openDialogs) {
+    /** @type {?} */
+    let parent = element.nativeElement.parentElement;
+    while (parent && !parent.classList.contains('mat-dialog-container')) {
+        parent = parent.parentElement;
+    }
+    return parent ? openDialogs.find((/**
+     * @param {?} dialog
+     * @return {?}
+     */
+    dialog => dialog.id === (/** @type {?} */ (parent)).id)) : null;
+}
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: src/material/dialog/dialog-module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+class MatDialogModule {
+}
+MatDialogModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineNgModule"]({ type: MatDialogModule });
+MatDialogModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjector"]({ factory: function MatDialogModule_Factory(t) { return new (t || MatDialogModule)(); }, providers: [
+        MatDialog,
+        MAT_DIALOG_SCROLL_STRATEGY_PROVIDER,
+    ], imports: [[
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_0__["OverlayModule"],
+            _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["PortalModule"],
+            _angular_material_core__WEBPACK_IMPORTED_MODULE_4__["MatCommonModule"],
+        ],
+        _angular_material_core__WEBPACK_IMPORTED_MODULE_4__["MatCommonModule"]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsetNgModuleScope"](MatDialogModule, { declarations: function () { return [MatDialogContainer,
+        MatDialogClose,
+        MatDialogTitle,
+        MatDialogActions,
+        MatDialogContent]; }, imports: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+        _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_0__["OverlayModule"],
+        _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["PortalModule"],
+        _angular_material_core__WEBPACK_IMPORTED_MODULE_4__["MatCommonModule"]]; }, exports: function () { return [MatDialogContainer,
+        MatDialogClose,
+        MatDialogTitle,
+        MatDialogContent,
+        MatDialogActions,
+        _angular_material_core__WEBPACK_IMPORTED_MODULE_4__["MatCommonModule"]]; } }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵsetClassMetadata"](MatDialogModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"],
+        args: [{
+                imports: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+                    _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_0__["OverlayModule"],
+                    _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__["PortalModule"],
+                    _angular_material_core__WEBPACK_IMPORTED_MODULE_4__["MatCommonModule"],
+                ],
+                exports: [
+                    MatDialogContainer,
+                    MatDialogClose,
+                    MatDialogTitle,
+                    MatDialogContent,
+                    MatDialogActions,
+                    _angular_material_core__WEBPACK_IMPORTED_MODULE_4__["MatCommonModule"],
+                ],
+                declarations: [
+                    MatDialogContainer,
+                    MatDialogClose,
+                    MatDialogTitle,
+                    MatDialogActions,
+                    MatDialogContent,
+                ],
+                providers: [
+                    MatDialog,
+                    MAT_DIALOG_SCROLL_STRATEGY_PROVIDER,
+                ],
+                entryComponents: [MatDialogContainer]
+            }]
+    }], null, null); })();
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: src/material/dialog/public-api.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=dialog.js.map
+
+/***/ }),
+
 /***/ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/menu.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@angular/material/__ivy_ngcc__/fesm2015/menu.js ***!
@@ -79146,6 +80541,393 @@ MatMenuModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInje
 
 
 //# sourceMappingURL=menu.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js ***!
+  \******************************************************************************/
+/*! exports provided: MAT_PROGRESS_BAR_LOCATION, MAT_PROGRESS_BAR_LOCATION_FACTORY, MatProgressBar, MatProgressBarModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAT_PROGRESS_BAR_LOCATION", function() { return MAT_PROGRESS_BAR_LOCATION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAT_PROGRESS_BAR_LOCATION_FACTORY", function() { return MAT_PROGRESS_BAR_LOCATION_FACTORY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatProgressBar", function() { return MatProgressBar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatProgressBarModule", function() { return MatProgressBarModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/core */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/cdk/coercion */ "./node_modules/@angular/cdk/fesm2015/coercion.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
+
+
+
+
+
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: src/material/progress-bar/progress-bar.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * Last animation end data.
+ * @record
+ */
+
+
+
+const _c0 = ["primaryValueBar"];
+function ProgressAnimationEnd() { }
+if (false) {}
+// Boilerplate for applying mixins to MatProgressBar.
+/**
+ * \@docs-private
+ */
+class MatProgressBarBase {
+    /**
+     * @param {?} _elementRef
+     */
+    constructor(_elementRef) {
+        this._elementRef = _elementRef;
+    }
+}
+if (false) {}
+/** @type {?} */
+const _MatProgressBarMixinBase = Object(_angular_material_core__WEBPACK_IMPORTED_MODULE_2__["mixinColor"])(MatProgressBarBase, 'primary');
+/**
+ * Injection token used to provide the current location to `MatProgressBar`.
+ * Used to handle server-side rendering and to stub out during unit tests.
+ * \@docs-private
+ * @type {?}
+ */
+const MAT_PROGRESS_BAR_LOCATION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('mat-progress-bar-location', { providedIn: 'root', factory: MAT_PROGRESS_BAR_LOCATION_FACTORY });
+/**
+ * Stubbed out location for `MatProgressBar`.
+ * \@docs-private
+ * @record
+ */
+function MatProgressBarLocation() { }
+if (false) {}
+/**
+ * \@docs-private
+ * @return {?}
+ */
+function MAT_PROGRESS_BAR_LOCATION_FACTORY() {
+    /** @type {?} */
+    const _document = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["inject"])(_angular_common__WEBPACK_IMPORTED_MODULE_1__["DOCUMENT"]);
+    /** @type {?} */
+    const _location = _document ? _document.location : null;
+    return {
+        // Note that this needs to be a function, rather than a property, because Angular
+        // will only resolve it once, but we want the current path on each call.
+        getPathname: (/**
+         * @return {?}
+         */
+        () => _location ? (_location.pathname + _location.search) : '')
+    };
+}
+/**
+ * Counter used to generate unique IDs for progress bars.
+ * @type {?}
+ */
+let progressbarId = 0;
+/**
+ * `<mat-progress-bar>` component.
+ */
+class MatProgressBar extends _MatProgressBarMixinBase {
+    /**
+     * @param {?} _elementRef
+     * @param {?} _ngZone
+     * @param {?=} _animationMode
+     * @param {?=} location
+     */
+    constructor(_elementRef, _ngZone, _animationMode, 
+    /**
+     * @deprecated `location` parameter to be made required.
+     * @breaking-change 8.0.0
+     */
+    location) {
+        super(_elementRef);
+        this._elementRef = _elementRef;
+        this._ngZone = _ngZone;
+        this._animationMode = _animationMode;
+        /**
+         * Flag that indicates whether NoopAnimations mode is set to true.
+         */
+        this._isNoopAnimation = false;
+        this._value = 0;
+        this._bufferValue = 0;
+        /**
+         * Event emitted when animation of the primary progress bar completes. This event will not
+         * be emitted when animations are disabled, nor will it be emitted for modes with continuous
+         * animations (indeterminate and query).
+         */
+        this.animationEnd = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        /**
+         * Reference to animation end subscription to be unsubscribed on destroy.
+         */
+        this._animationEndSubscription = rxjs__WEBPACK_IMPORTED_MODULE_5__["Subscription"].EMPTY;
+        /**
+         * Mode of the progress bar.
+         *
+         * Input must be one of these values: determinate, indeterminate, buffer, query, defaults to
+         * 'determinate'.
+         * Mirrored to mode attribute.
+         */
+        this.mode = 'determinate';
+        /**
+         * ID of the progress bar.
+         */
+        this.progressbarId = `mat-progress-bar-${progressbarId++}`;
+        // We need to prefix the SVG reference with the current path, otherwise they won't work
+        // in Safari if the page has a `<base>` tag. Note that we need quotes inside the `url()`,
+        // because named route URLs can contain parentheses (see #12338). Also we don't use since
+        // we can't tell the difference between whether
+        // the consumer is using the hash location strategy or not, because `Location` normalizes
+        // both `/#/foo/bar` and `/foo/bar` to the same thing.
+        /** @type {?} */
+        const path = location ? location.getPathname().split('#')[0] : '';
+        this._rectangleFillValue = `url('${path}#${this.progressbarId}')`;
+        this._isNoopAnimation = _animationMode === 'NoopAnimations';
+    }
+    /**
+     * Value of the progress bar. Defaults to zero. Mirrored to aria-valuenow.
+     * @return {?}
+     */
+    get value() { return this._value; }
+    /**
+     * @param {?} v
+     * @return {?}
+     */
+    set value(v) {
+        this._value = clamp(Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_3__["coerceNumberProperty"])(v) || 0);
+        // When noop animation is set to true, trigger animationEnd directly.
+        if (this._isNoopAnimation) {
+            this._emitAnimationEnd();
+        }
+    }
+    /**
+     * Buffer value of the progress bar. Defaults to zero.
+     * @return {?}
+     */
+    get bufferValue() { return this._bufferValue; }
+    /**
+     * @param {?} v
+     * @return {?}
+     */
+    set bufferValue(v) { this._bufferValue = clamp(v || 0); }
+    /**
+     * Gets the current transform value for the progress bar's primary indicator.
+     * @return {?}
+     */
+    _primaryTransform() {
+        /** @type {?} */
+        const scale = this.value / 100;
+        return { transform: `scaleX(${scale})` };
+    }
+    /**
+     * Gets the current transform value for the progress bar's buffer indicator. Only used if the
+     * progress mode is set to buffer, otherwise returns an undefined, causing no transformation.
+     * @return {?}
+     */
+    _bufferTransform() {
+        if (this.mode === 'buffer') {
+            /** @type {?} */
+            const scale = this.bufferValue / 100;
+            return { transform: `scaleX(${scale})` };
+        }
+        return null;
+    }
+    /**
+     * @return {?}
+     */
+    ngAfterViewInit() {
+        if (!this._isNoopAnimation) {
+            // Run outside angular so change detection didn't get triggered on every transition end
+            // instead only on the animation that we care about (primary value bar's transitionend)
+            this._ngZone.runOutsideAngular(((/**
+             * @return {?}
+             */
+            () => {
+                /** @type {?} */
+                const element = this._primaryValueBar.nativeElement;
+                this._animationEndSubscription =
+                    ((/** @type {?} */ (Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["fromEvent"])(element, 'transitionend'))))
+                        .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["filter"])(((/**
+                     * @param {?} e
+                     * @return {?}
+                     */
+                    (e) => e.target === element))))
+                        .subscribe((/**
+                     * @return {?}
+                     */
+                    () => this._ngZone.run((/**
+                     * @return {?}
+                     */
+                    () => this._emitAnimationEnd()))));
+            })));
+        }
+    }
+    /**
+     * @return {?}
+     */
+    ngOnDestroy() {
+        this._animationEndSubscription.unsubscribe();
+    }
+    /**
+     * Emit an animationEnd event if in determinate or buffer mode.
+     * @private
+     * @return {?}
+     */
+    _emitAnimationEnd() {
+        if (this.mode === 'determinate' || this.mode === 'buffer') {
+            this.animationEnd.next({ value: this.value });
+        }
+    }
+}
+MatProgressBar.ɵfac = function MatProgressBar_Factory(t) { return new (t || MatProgressBar)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["ANIMATION_MODULE_TYPE"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](MAT_PROGRESS_BAR_LOCATION, 8)); };
+MatProgressBar.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MatProgressBar, selectors: [["mat-progress-bar"]], viewQuery: function MatProgressBar_Query(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_c0, true);
+    } if (rf & 2) {
+        var _t;
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx._primaryValueBar = _t.first);
+    } }, hostAttrs: ["role", "progressbar", "aria-valuemin", "0", "aria-valuemax", "100", 1, "mat-progress-bar"], hostVars: 4, hostBindings: function MatProgressBar_HostBindings(rf, ctx) { if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵattribute"]("aria-valuenow", ctx.mode === "indeterminate" || ctx.mode === "query" ? null : ctx.value)("mode", ctx.mode);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("_mat-animation-noopable", ctx._isNoopAnimation);
+    } }, inputs: { color: "color", mode: "mode", value: "value", bufferValue: "bufferValue" }, outputs: { animationEnd: "animationEnd" }, exportAs: ["matProgressBar"], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]], decls: 9, vars: 4, consts: [["width", "100%", "height", "4", "focusable", "false", 1, "mat-progress-bar-background", "mat-progress-bar-element"], ["x", "4", "y", "0", "width", "8", "height", "4", "patternUnits", "userSpaceOnUse", 3, "id"], ["cx", "2", "cy", "2", "r", "2"], ["width", "100%", "height", "100%"], [1, "mat-progress-bar-buffer", "mat-progress-bar-element", 3, "ngStyle"], [1, "mat-progress-bar-primary", "mat-progress-bar-fill", "mat-progress-bar-element", 3, "ngStyle"], ["primaryValueBar", ""], [1, "mat-progress-bar-secondary", "mat-progress-bar-fill", "mat-progress-bar-element"]], template: function MatProgressBar_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnamespaceSVG"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "defs");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "pattern", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "circle", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "rect", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnamespaceHTML"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "div", 5, 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "div", 7);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("id", ctx.progressbarId);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵattribute"]("fill", ctx._rectangleFillValue);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngStyle", ctx._bufferTransform());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngStyle", ctx._primaryTransform());
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgStyle"]], styles: [".mat-progress-bar{display:block;height:4px;overflow:hidden;position:relative;transition:opacity 250ms linear;width:100%}._mat-animation-noopable.mat-progress-bar{transition:none;animation:none}.mat-progress-bar .mat-progress-bar-element,.mat-progress-bar .mat-progress-bar-fill::after{height:100%;position:absolute;width:100%}.mat-progress-bar .mat-progress-bar-background{width:calc(100% + 10px)}.cdk-high-contrast-active .mat-progress-bar .mat-progress-bar-background{display:none}.mat-progress-bar .mat-progress-bar-buffer{transform-origin:top left;transition:transform 250ms ease}.cdk-high-contrast-active .mat-progress-bar .mat-progress-bar-buffer{border-top:solid 5px;opacity:.5}.mat-progress-bar .mat-progress-bar-secondary{display:none}.mat-progress-bar .mat-progress-bar-fill{animation:none;transform-origin:top left;transition:transform 250ms ease}.cdk-high-contrast-active .mat-progress-bar .mat-progress-bar-fill{border-top:solid 4px}.mat-progress-bar .mat-progress-bar-fill::after{animation:none;content:\"\";display:inline-block;left:0}.mat-progress-bar[dir=rtl],[dir=rtl] .mat-progress-bar{transform:rotateY(180deg)}.mat-progress-bar[mode=query]{transform:rotateZ(180deg)}.mat-progress-bar[mode=query][dir=rtl],[dir=rtl] .mat-progress-bar[mode=query]{transform:rotateZ(180deg) rotateY(180deg)}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-fill,.mat-progress-bar[mode=query] .mat-progress-bar-fill{transition:none}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-primary,.mat-progress-bar[mode=query] .mat-progress-bar-primary{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-primary-indeterminate-translate 2000ms infinite linear;left:-145.166611%}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-primary.mat-progress-bar-fill::after,.mat-progress-bar[mode=query] .mat-progress-bar-primary.mat-progress-bar-fill::after{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-primary-indeterminate-scale 2000ms infinite linear}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-secondary,.mat-progress-bar[mode=query] .mat-progress-bar-secondary{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-secondary-indeterminate-translate 2000ms infinite linear;left:-54.888891%;display:block}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-secondary.mat-progress-bar-fill::after,.mat-progress-bar[mode=query] .mat-progress-bar-secondary.mat-progress-bar-fill::after{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-secondary-indeterminate-scale 2000ms infinite linear}.mat-progress-bar[mode=buffer] .mat-progress-bar-background{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-background-scroll 250ms infinite linear;display:block}.mat-progress-bar._mat-animation-noopable .mat-progress-bar-fill,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-fill::after,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-buffer,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-primary,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-primary.mat-progress-bar-fill::after,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-secondary,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-secondary.mat-progress-bar-fill::after,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-background{animation:none;transition:none}@keyframes mat-progress-bar-primary-indeterminate-translate{0%{transform:translateX(0)}20%{animation-timing-function:cubic-bezier(0.5, 0, 0.701732, 0.495819);transform:translateX(0)}59.15%{animation-timing-function:cubic-bezier(0.302435, 0.381352, 0.55, 0.956352);transform:translateX(83.67142%)}100%{transform:translateX(200.611057%)}}@keyframes mat-progress-bar-primary-indeterminate-scale{0%{transform:scaleX(0.08)}36.65%{animation-timing-function:cubic-bezier(0.334731, 0.12482, 0.785844, 1);transform:scaleX(0.08)}69.15%{animation-timing-function:cubic-bezier(0.06, 0.11, 0.6, 1);transform:scaleX(0.661479)}100%{transform:scaleX(0.08)}}@keyframes mat-progress-bar-secondary-indeterminate-translate{0%{animation-timing-function:cubic-bezier(0.15, 0, 0.515058, 0.409685);transform:translateX(0)}25%{animation-timing-function:cubic-bezier(0.31033, 0.284058, 0.8, 0.733712);transform:translateX(37.651913%)}48.35%{animation-timing-function:cubic-bezier(0.4, 0.627035, 0.6, 0.902026);transform:translateX(84.386165%)}100%{transform:translateX(160.277782%)}}@keyframes mat-progress-bar-secondary-indeterminate-scale{0%{animation-timing-function:cubic-bezier(0.15, 0, 0.515058, 0.409685);transform:scaleX(0.08)}19.15%{animation-timing-function:cubic-bezier(0.31033, 0.284058, 0.8, 0.733712);transform:scaleX(0.457104)}44.15%{animation-timing-function:cubic-bezier(0.4, 0.627035, 0.6, 0.902026);transform:scaleX(0.72796)}100%{transform:scaleX(0.08)}}@keyframes mat-progress-bar-background-scroll{to{transform:translateX(-8px)}}\n"], encapsulation: 2, changeDetection: 0 });
+/** @nocollapse */
+MatProgressBar.ctorParameters = () => [
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"] },
+    { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["ANIMATION_MODULE_TYPE"],] }] },
+    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [MAT_PROGRESS_BAR_LOCATION,] }] }
+];
+MatProgressBar.propDecorators = {
+    value: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    bufferValue: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    _primaryValueBar: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: ['primaryValueBar',] }],
+    animationEnd: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+    mode: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }]
+};
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](MatProgressBar, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'mat-progress-bar',
+                exportAs: 'matProgressBar',
+                host: {
+                    'role': 'progressbar',
+                    'aria-valuemin': '0',
+                    'aria-valuemax': '100',
+                    '[attr.aria-valuenow]': '(mode === "indeterminate" || mode === "query") ? null : value',
+                    '[attr.mode]': 'mode',
+                    'class': 'mat-progress-bar',
+                    '[class._mat-animation-noopable]': '_isNoopAnimation'
+                },
+                inputs: ['color'],
+                template: "<!--\n  The background div is named as such because it appears below the other divs and is not sized based\n  on values.\n-->\n<svg width=\"100%\" height=\"4\" focusable=\"false\" class=\"mat-progress-bar-background mat-progress-bar-element\">\n  <defs>\n    <pattern [id]=\"progressbarId\" x=\"4\" y=\"0\" width=\"8\" height=\"4\" patternUnits=\"userSpaceOnUse\">\n      <circle cx=\"2\" cy=\"2\" r=\"2\"/>\n    </pattern>\n  </defs>\n  <rect [attr.fill]=\"_rectangleFillValue\" width=\"100%\" height=\"100%\"/>\n</svg>\n<div class=\"mat-progress-bar-buffer mat-progress-bar-element\" [ngStyle]=\"_bufferTransform()\"></div>\n<div class=\"mat-progress-bar-primary mat-progress-bar-fill mat-progress-bar-element\" [ngStyle]=\"_primaryTransform()\" #primaryValueBar></div>\n<div class=\"mat-progress-bar-secondary mat-progress-bar-fill mat-progress-bar-element\"></div>\n",
+                changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectionStrategy"].OnPush,
+                encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].None,
+                styles: [".mat-progress-bar{display:block;height:4px;overflow:hidden;position:relative;transition:opacity 250ms linear;width:100%}._mat-animation-noopable.mat-progress-bar{transition:none;animation:none}.mat-progress-bar .mat-progress-bar-element,.mat-progress-bar .mat-progress-bar-fill::after{height:100%;position:absolute;width:100%}.mat-progress-bar .mat-progress-bar-background{width:calc(100% + 10px)}.cdk-high-contrast-active .mat-progress-bar .mat-progress-bar-background{display:none}.mat-progress-bar .mat-progress-bar-buffer{transform-origin:top left;transition:transform 250ms ease}.cdk-high-contrast-active .mat-progress-bar .mat-progress-bar-buffer{border-top:solid 5px;opacity:.5}.mat-progress-bar .mat-progress-bar-secondary{display:none}.mat-progress-bar .mat-progress-bar-fill{animation:none;transform-origin:top left;transition:transform 250ms ease}.cdk-high-contrast-active .mat-progress-bar .mat-progress-bar-fill{border-top:solid 4px}.mat-progress-bar .mat-progress-bar-fill::after{animation:none;content:\"\";display:inline-block;left:0}.mat-progress-bar[dir=rtl],[dir=rtl] .mat-progress-bar{transform:rotateY(180deg)}.mat-progress-bar[mode=query]{transform:rotateZ(180deg)}.mat-progress-bar[mode=query][dir=rtl],[dir=rtl] .mat-progress-bar[mode=query]{transform:rotateZ(180deg) rotateY(180deg)}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-fill,.mat-progress-bar[mode=query] .mat-progress-bar-fill{transition:none}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-primary,.mat-progress-bar[mode=query] .mat-progress-bar-primary{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-primary-indeterminate-translate 2000ms infinite linear;left:-145.166611%}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-primary.mat-progress-bar-fill::after,.mat-progress-bar[mode=query] .mat-progress-bar-primary.mat-progress-bar-fill::after{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-primary-indeterminate-scale 2000ms infinite linear}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-secondary,.mat-progress-bar[mode=query] .mat-progress-bar-secondary{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-secondary-indeterminate-translate 2000ms infinite linear;left:-54.888891%;display:block}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-secondary.mat-progress-bar-fill::after,.mat-progress-bar[mode=query] .mat-progress-bar-secondary.mat-progress-bar-fill::after{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-secondary-indeterminate-scale 2000ms infinite linear}.mat-progress-bar[mode=buffer] .mat-progress-bar-background{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-background-scroll 250ms infinite linear;display:block}.mat-progress-bar._mat-animation-noopable .mat-progress-bar-fill,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-fill::after,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-buffer,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-primary,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-primary.mat-progress-bar-fill::after,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-secondary,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-secondary.mat-progress-bar-fill::after,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-background{animation:none;transition:none}@keyframes mat-progress-bar-primary-indeterminate-translate{0%{transform:translateX(0)}20%{animation-timing-function:cubic-bezier(0.5, 0, 0.701732, 0.495819);transform:translateX(0)}59.15%{animation-timing-function:cubic-bezier(0.302435, 0.381352, 0.55, 0.956352);transform:translateX(83.67142%)}100%{transform:translateX(200.611057%)}}@keyframes mat-progress-bar-primary-indeterminate-scale{0%{transform:scaleX(0.08)}36.65%{animation-timing-function:cubic-bezier(0.334731, 0.12482, 0.785844, 1);transform:scaleX(0.08)}69.15%{animation-timing-function:cubic-bezier(0.06, 0.11, 0.6, 1);transform:scaleX(0.661479)}100%{transform:scaleX(0.08)}}@keyframes mat-progress-bar-secondary-indeterminate-translate{0%{animation-timing-function:cubic-bezier(0.15, 0, 0.515058, 0.409685);transform:translateX(0)}25%{animation-timing-function:cubic-bezier(0.31033, 0.284058, 0.8, 0.733712);transform:translateX(37.651913%)}48.35%{animation-timing-function:cubic-bezier(0.4, 0.627035, 0.6, 0.902026);transform:translateX(84.386165%)}100%{transform:translateX(160.277782%)}}@keyframes mat-progress-bar-secondary-indeterminate-scale{0%{animation-timing-function:cubic-bezier(0.15, 0, 0.515058, 0.409685);transform:scaleX(0.08)}19.15%{animation-timing-function:cubic-bezier(0.31033, 0.284058, 0.8, 0.733712);transform:scaleX(0.457104)}44.15%{animation-timing-function:cubic-bezier(0.4, 0.627035, 0.6, 0.902026);transform:scaleX(0.72796)}100%{transform:scaleX(0.08)}}@keyframes mat-progress-bar-background-scroll{to{transform:translateX(-8px)}}\n"]
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"] }, { type: String, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"]
+            }, {
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+                args: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["ANIMATION_MODULE_TYPE"]]
+            }] }, { type: undefined, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"]
+            }, {
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+                args: [MAT_PROGRESS_BAR_LOCATION]
+            }] }]; }, { animationEnd: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }], mode: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], value: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], bufferValue: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], _primaryValueBar: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+            args: ['primaryValueBar']
+        }] }); })();
+if (false) {}
+/**
+ * Clamps a value to be between two numbers, by default 0 and 100.
+ * @param {?} v
+ * @param {?=} min
+ * @param {?=} max
+ * @return {?}
+ */
+function clamp(v, min = 0, max = 100) {
+    return Math.max(min, Math.min(max, v));
+}
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: src/material/progress-bar/progress-bar-module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+class MatProgressBarModule {
+}
+MatProgressBarModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: MatProgressBarModule });
+MatProgressBarModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function MatProgressBarModule_Factory(t) { return new (t || MatProgressBarModule)(); }, imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatCommonModule"]],
+        _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatCommonModule"]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](MatProgressBarModule, { declarations: function () { return [MatProgressBar]; }, imports: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatCommonModule"]]; }, exports: function () { return [MatProgressBar,
+        _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatCommonModule"]]; } }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](MatProgressBarModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatCommonModule"]],
+                exports: [MatProgressBar, _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatCommonModule"]],
+                declarations: [MatProgressBar]
+            }]
+    }], null, null); })();
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: src/material/progress-bar/public-api.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=progress-bar.js.map
 
 /***/ }),
 
@@ -91909,6 +93691,678 @@ const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('9.0.0
 
 
 //# sourceMappingURL=router.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@angular/service-worker/__ivy_ngcc__/fesm2015/service-worker.js":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/@angular/service-worker/__ivy_ngcc__/fesm2015/service-worker.js ***!
+  \**************************************************************************************/
+/*! exports provided: ServiceWorkerModule, SwPush, SwRegistrationOptions, SwUpdate, ɵangular_packages_service_worker_service_worker_a, ɵangular_packages_service_worker_service_worker_b, ɵangular_packages_service_worker_service_worker_c, ɵangular_packages_service_worker_service_worker_d */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServiceWorkerModule", function() { return ServiceWorkerModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SwPush", function() { return SwPush; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SwRegistrationOptions", function() { return SwRegistrationOptions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SwUpdate", function() { return SwUpdate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵangular_packages_service_worker_service_worker_a", function() { return NgswCommChannel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵangular_packages_service_worker_service_worker_b", function() { return SCRIPT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵangular_packages_service_worker_service_worker_c", function() { return ngswAppInitializer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵangular_packages_service_worker_service_worker_d", function() { return ngswCommChannelFactory; });
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/**
+ * @license Angular v9.0.2
+ * (c) 2010-2020 Google LLC. https://angular.io/
+ * License: MIT
+ */
+
+
+
+
+
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: packages/service-worker/src/low_level.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/** @type {?} */
+
+const ERR_SW_NOT_SUPPORTED = 'Service workers are disabled or not supported by this browser';
+/**
+ * An event emitted when a new version of the app is available.
+ *
+ * \@publicApi
+ * @record
+ */
+function UpdateAvailableEvent() { }
+if (false) {}
+/**
+ * An event emitted when a new version of the app has been downloaded and activated.
+ *
+ * \@publicApi
+ * @record
+ */
+function UpdateActivatedEvent() { }
+if (false) {}
+/**
+ * An event emitted when a `PushEvent` is received by the service worker.
+ * @record
+ */
+function PushEvent() { }
+if (false) {}
+/**
+ * @record
+ */
+function TypedEvent() { }
+if (false) {}
+/**
+ * @record
+ */
+function StatusEvent() { }
+if (false) {}
+/**
+ * @param {?} message
+ * @return {?}
+ */
+function errorObservable(message) {
+    return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["defer"])((/**
+     * @return {?}
+     */
+    () => Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])(new Error(message))));
+}
+/**
+ * \@publicApi
+ */
+class NgswCommChannel {
+    /**
+     * @param {?} serviceWorker
+     */
+    constructor(serviceWorker) {
+        this.serviceWorker = serviceWorker;
+        if (!serviceWorker) {
+            this.worker = this.events = this.registration = errorObservable(ERR_SW_NOT_SUPPORTED);
+        }
+        else {
+            /** @type {?} */
+            const controllerChangeEvents = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["fromEvent"])(serviceWorker, 'controllerchange');
+            /** @type {?} */
+            const controllerChanges = controllerChangeEvents.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])((/**
+             * @return {?}
+             */
+            () => serviceWorker.controller)));
+            /** @type {?} */
+            const currentController = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["defer"])((/**
+             * @return {?}
+             */
+            () => Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(serviceWorker.controller)));
+            /** @type {?} */
+            const controllerWithChanges = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["concat"])(currentController, controllerChanges);
+            this.worker = controllerWithChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])((/**
+             * @param {?} c
+             * @return {?}
+             */
+            (c) => !!c)));
+            this.registration = (/** @type {?} */ ((this.worker.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])((/**
+             * @return {?}
+             */
+            () => serviceWorker.getRegistration()))))));
+            /** @type {?} */
+            const rawEvents = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["fromEvent"])(serviceWorker, 'message');
+            /** @type {?} */
+            const rawEventPayload = rawEvents.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])((/**
+             * @param {?} event
+             * @return {?}
+             */
+            event => event.data)));
+            /** @type {?} */
+            const eventsUnconnected = rawEventPayload.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])((/**
+             * @param {?} event
+             * @return {?}
+             */
+            event => event && event.type)));
+            /** @type {?} */
+            const events = (/** @type {?} */ (eventsUnconnected.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["publish"])())));
+            events.connect();
+            this.events = events;
+        }
+    }
+    /**
+     * @param {?} action
+     * @param {?} payload
+     * @return {?}
+     */
+    postMessage(action, payload) {
+        return this.worker
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])((/**
+         * @param {?} sw
+         * @return {?}
+         */
+        (sw) => {
+            sw.postMessage(Object.assign({ action }, payload));
+        })))
+            .toPromise()
+            .then((/**
+         * @return {?}
+         */
+        () => undefined));
+    }
+    /**
+     * @param {?} type
+     * @param {?} payload
+     * @param {?} nonce
+     * @return {?}
+     */
+    postMessageWithStatus(type, payload, nonce) {
+        /** @type {?} */
+        const waitForStatus = this.waitForStatus(nonce);
+        /** @type {?} */
+        const postMessage = this.postMessage(type, payload);
+        return Promise.all([waitForStatus, postMessage]).then((/**
+         * @return {?}
+         */
+        () => undefined));
+    }
+    /**
+     * @return {?}
+     */
+    generateNonce() { return Math.round(Math.random() * 10000000); }
+    /**
+     * @template T
+     * @param {?} type
+     * @return {?}
+     */
+    eventsOfType(type) {
+        /** @type {?} */
+        const filterFn = (/**
+         * @param {?} event
+         * @return {?}
+         */
+        (event) => event.type === type);
+        return this.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(filterFn));
+    }
+    /**
+     * @template T
+     * @param {?} type
+     * @return {?}
+     */
+    nextEventOfType(type) {
+        return this.eventsOfType(type).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1));
+    }
+    /**
+     * @param {?} nonce
+     * @return {?}
+     */
+    waitForStatus(nonce) {
+        return this.eventsOfType('STATUS')
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])((/**
+         * @param {?} event
+         * @return {?}
+         */
+        event => event.nonce === nonce)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])((/**
+         * @param {?} event
+         * @return {?}
+         */
+        event => {
+            if (event.status) {
+                return undefined;
+            }
+            throw new Error((/** @type {?} */ (event.error)));
+        })))
+            .toPromise();
+    }
+    /**
+     * @return {?}
+     */
+    get isEnabled() { return !!this.serviceWorker; }
+}
+if (false) {}
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: packages/service-worker/src/push.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * Subscribe and listen to
+ * [Web Push Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Push_API/Best_Practices)
+ * through Angular Service Worker.
+ *
+ * \@usageNotes
+ *
+ * You can inject a `SwPush` instance into any component or service
+ * as a dependency.
+ *
+ * <code-example path="service-worker/push/module.ts" region="inject-sw-push" header="app.component.ts"></code-example>
+ *
+ * To subscribe, call `SwPush.requestSubscription()`, which asks the user for permission.
+ * The call returns a `Promise` with a new
+ * [`PushSubscription`](https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription)
+ * instance.
+ *
+ * <code-example path="service-worker/push/module.ts" region="subscribe-to-push" header="app.component.ts"></code-example>
+ *
+ * A request is rejected if the user denies permission, or if the browser
+ * blocks or does not support the Push API or ServiceWorkers.
+ * Check `SwPush.isEnabled` to confirm status.
+ *
+ * Invoke Push Notifications by pushing a message with the following payload.
+ *
+ * ```ts
+ * {
+ *   "notification": {
+ *     "actions": NotificationAction[],
+ *     "badge": USVString
+ *     "body": DOMString,
+ *     "data": any,
+ *     "dir": "auto"|"ltr"|"rtl",
+ *     "icon": USVString,
+ *     "image": USVString,
+ *     "lang": DOMString,
+ *     "renotify": boolean,
+ *     "requireInteraction": boolean,
+ *     "silent": boolean,
+ *     "tag": DOMString,
+ *     "timestamp": DOMTimeStamp,
+ *     "title": DOMString,
+ *     "vibrate": number[]
+ *   }
+ * }
+ * ```
+ *
+ * Only `title` is required. See `Notification`
+ * [instance properties](https://developer.mozilla.org/en-US/docs/Web/API/Notification#Instance_properties).
+ *
+ * While the subscription is active, Service Worker listens for
+ * [PushEvent](https://developer.mozilla.org/en-US/docs/Web/API/PushEvent)
+ * occurrences and creates
+ * [Notification](https://developer.mozilla.org/en-US/docs/Web/API/Notification)
+ * instances in response.
+ *
+ * Unsubscribe using `SwPush.unsubscribe()`.
+ *
+ * An application can subscribe to `SwPush.notificationClicks` observable to be notified when a user
+ * clicks on a notification. For example:
+ *
+ * <code-example path="service-worker/push/module.ts" region="subscribe-to-notification-clicks" header="app.component.ts"></code-example>
+ *
+ * @see [Push Notifications](https://developers.google.com/web/fundamentals/codelabs/push-notifications/)
+ * @see [Angular Push Notifications](https://blog.angular-university.io/angular-push-notifications/)
+ * @see [MDN: Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
+ * @see [MDN: Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API)
+ * @see [MDN: Web Push API Notifications best practices](https://developer.mozilla.org/en-US/docs/Web/API/Push_API/Best_Practices)
+ *
+ * \@publicApi
+ */
+class SwPush {
+    /**
+     * @param {?} sw
+     */
+    constructor(sw) {
+        this.sw = sw;
+        this.subscriptionChanges = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        if (!sw.isEnabled) {
+            this.messages = rxjs__WEBPACK_IMPORTED_MODULE_2__["NEVER"];
+            this.notificationClicks = rxjs__WEBPACK_IMPORTED_MODULE_2__["NEVER"];
+            this.subscription = rxjs__WEBPACK_IMPORTED_MODULE_2__["NEVER"];
+            return;
+        }
+        this.messages = this.sw.eventsOfType('PUSH').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])((/**
+         * @param {?} message
+         * @return {?}
+         */
+        message => message.data)));
+        this.notificationClicks =
+            this.sw.eventsOfType('NOTIFICATION_CLICK').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])((/**
+             * @param {?} message
+             * @return {?}
+             */
+            (message) => message.data)));
+        this.pushManager = this.sw.registration.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])((/**
+         * @param {?} registration
+         * @return {?}
+         */
+        registration => registration.pushManager)));
+        /** @type {?} */
+        const workerDrivenSubscriptions = this.pushManager.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])((/**
+         * @param {?} pm
+         * @return {?}
+         */
+        pm => pm.getSubscription())));
+        this.subscription = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["merge"])(workerDrivenSubscriptions, this.subscriptionChanges);
+    }
+    /**
+     * True if the Service Worker is enabled (supported by the browser and enabled via
+     * `ServiceWorkerModule`).
+     * @return {?}
+     */
+    get isEnabled() { return this.sw.isEnabled; }
+    /**
+     * Subscribes to Web Push Notifications,
+     * after requesting and receiving user permission.
+     *
+     * @param {?} options An object containing the `serverPublicKey` string.
+     * @return {?} A Promise that resolves to the new subscription object.
+     */
+    requestSubscription(options) {
+        if (!this.sw.isEnabled) {
+            return Promise.reject(new Error(ERR_SW_NOT_SUPPORTED));
+        }
+        /** @type {?} */
+        const pushOptions = { userVisibleOnly: true };
+        /** @type {?} */
+        let key = this.decodeBase64(options.serverPublicKey.replace(/_/g, '/').replace(/-/g, '+'));
+        /** @type {?} */
+        let applicationServerKey = new Uint8Array(new ArrayBuffer(key.length));
+        for (let i = 0; i < key.length; i++) {
+            applicationServerKey[i] = key.charCodeAt(i);
+        }
+        pushOptions.applicationServerKey = applicationServerKey;
+        return this.pushManager.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])((/**
+         * @param {?} pm
+         * @return {?}
+         */
+        pm => pm.subscribe(pushOptions))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1))
+            .toPromise()
+            .then((/**
+         * @param {?} sub
+         * @return {?}
+         */
+        sub => {
+            this.subscriptionChanges.next(sub);
+            return sub;
+        }));
+    }
+    /**
+     * Unsubscribes from Service Worker push notifications.
+     *
+     * @return {?} A Promise that is resolved when the operation succeeds, or is rejected if there is no
+     *          active subscription or the unsubscribe operation fails.
+     */
+    unsubscribe() {
+        if (!this.sw.isEnabled) {
+            return Promise.reject(new Error(ERR_SW_NOT_SUPPORTED));
+        }
+        /** @type {?} */
+        const doUnsubscribe = (/**
+         * @param {?} sub
+         * @return {?}
+         */
+        (sub) => {
+            if (sub === null) {
+                throw new Error('Not subscribed to push notifications.');
+            }
+            return sub.unsubscribe().then((/**
+             * @param {?} success
+             * @return {?}
+             */
+            success => {
+                if (!success) {
+                    throw new Error('Unsubscribe failed!');
+                }
+                this.subscriptionChanges.next(null);
+            }));
+        });
+        return this.subscription.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(doUnsubscribe)).toPromise();
+    }
+    /**
+     * @private
+     * @param {?} input
+     * @return {?}
+     */
+    decodeBase64(input) { return atob(input); }
+}
+SwPush.ɵfac = function SwPush_Factory(t) { return new (t || SwPush)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](NgswCommChannel)); };
+SwPush.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: SwPush, factory: SwPush.ɵfac });
+/** @nocollapse */
+SwPush.ctorParameters = () => [
+    { type: NgswCommChannel }
+];
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](SwPush, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+    }], function () { return [{ type: NgswCommChannel }]; }, null); })();
+if (false) {}
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: packages/service-worker/src/update.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * Subscribe to update notifications from the Service Worker, trigger update
+ * checks, and forcibly activate updates.
+ *
+ * \@publicApi
+ */
+class SwUpdate {
+    /**
+     * @param {?} sw
+     */
+    constructor(sw) {
+        this.sw = sw;
+        if (!sw.isEnabled) {
+            this.available = rxjs__WEBPACK_IMPORTED_MODULE_2__["NEVER"];
+            this.activated = rxjs__WEBPACK_IMPORTED_MODULE_2__["NEVER"];
+            return;
+        }
+        this.available = this.sw.eventsOfType('UPDATE_AVAILABLE');
+        this.activated = this.sw.eventsOfType('UPDATE_ACTIVATED');
+    }
+    /**
+     * True if the Service Worker is enabled (supported by the browser and enabled via
+     * `ServiceWorkerModule`).
+     * @return {?}
+     */
+    get isEnabled() { return this.sw.isEnabled; }
+    /**
+     * @return {?}
+     */
+    checkForUpdate() {
+        if (!this.sw.isEnabled) {
+            return Promise.reject(new Error(ERR_SW_NOT_SUPPORTED));
+        }
+        /** @type {?} */
+        const statusNonce = this.sw.generateNonce();
+        return this.sw.postMessageWithStatus('CHECK_FOR_UPDATES', { statusNonce }, statusNonce);
+    }
+    /**
+     * @return {?}
+     */
+    activateUpdate() {
+        if (!this.sw.isEnabled) {
+            return Promise.reject(new Error(ERR_SW_NOT_SUPPORTED));
+        }
+        /** @type {?} */
+        const statusNonce = this.sw.generateNonce();
+        return this.sw.postMessageWithStatus('ACTIVATE_UPDATE', { statusNonce }, statusNonce);
+    }
+}
+SwUpdate.ɵfac = function SwUpdate_Factory(t) { return new (t || SwUpdate)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](NgswCommChannel)); };
+SwUpdate.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: SwUpdate, factory: SwUpdate.ɵfac });
+/** @nocollapse */
+SwUpdate.ctorParameters = () => [
+    { type: NgswCommChannel }
+];
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](SwUpdate, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+    }], function () { return [{ type: NgswCommChannel }]; }, null); })();
+if (false) {}
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: packages/service-worker/src/module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * Token that can be used to provide options for `ServiceWorkerModule` outside of
+ * `ServiceWorkerModule.register()`.
+ *
+ * You can use this token to define a provider that generates the registration options at runtime,
+ * for example via a function call:
+ *
+ * {\@example service-worker/registration-options/module.ts region="registration-options"
+ *     header="app.module.ts"}
+ *
+ * \@publicApi
+ * @abstract
+ */
+class SwRegistrationOptions {
+}
+if (false) {}
+/** @type {?} */
+const SCRIPT = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["InjectionToken"]('NGSW_REGISTER_SCRIPT');
+/**
+ * @param {?} injector
+ * @param {?} script
+ * @param {?} options
+ * @param {?} platformId
+ * @return {?}
+ */
+function ngswAppInitializer(injector, script, options, platformId) {
+    /** @type {?} */
+    const initializer = (/**
+     * @return {?}
+     */
+    () => {
+        if (!(Object(_angular_common__WEBPACK_IMPORTED_MODULE_0__["isPlatformBrowser"])(platformId) && ('serviceWorker' in navigator) &&
+            options.enabled !== false)) {
+            return;
+        }
+        // Wait for service worker controller changes, and fire an INITIALIZE action when a new SW
+        // becomes active. This allows the SW to initialize itself even if there is no application
+        // traffic.
+        navigator.serviceWorker.addEventListener('controllerchange', (/**
+         * @return {?}
+         */
+        () => {
+            if (navigator.serviceWorker.controller !== null) {
+                navigator.serviceWorker.controller.postMessage({ action: 'INITIALIZE' });
+            }
+        }));
+        /** @type {?} */
+        let readyToRegister$;
+        if (typeof options.registrationStrategy === 'function') {
+            readyToRegister$ = options.registrationStrategy();
+        }
+        else {
+            const [strategy, ...args] = (options.registrationStrategy || 'registerWhenStable').split(':');
+            switch (strategy) {
+                case 'registerImmediately':
+                    readyToRegister$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(null);
+                    break;
+                case 'registerWithDelay':
+                    readyToRegister$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(null).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["delay"])(+args[0] || 0));
+                    break;
+                case 'registerWhenStable':
+                    /** @type {?} */
+                    const appRef = injector.get(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ApplicationRef"]);
+                    readyToRegister$ = appRef.isStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])((/**
+                     * @param {?} stable
+                     * @return {?}
+                     */
+                    stable => stable)));
+                    break;
+                default:
+                    // Unknown strategy.
+                    throw new Error(`Unknown ServiceWorker registration strategy: ${options.registrationStrategy}`);
+            }
+        }
+        // Don't return anything to avoid blocking the application until the SW is registered.
+        // Catch and log the error if SW registration fails to avoid uncaught rejection warning.
+        readyToRegister$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1)).subscribe((/**
+         * @return {?}
+         */
+        () => navigator.serviceWorker.register(script, { scope: options.scope })
+            .catch((/**
+         * @param {?} err
+         * @return {?}
+         */
+        err => console.error('Service worker registration failed with:', err)))));
+    });
+    return initializer;
+}
+/**
+ * @param {?} opts
+ * @param {?} platformId
+ * @return {?}
+ */
+function ngswCommChannelFactory(opts, platformId) {
+    return new NgswCommChannel(Object(_angular_common__WEBPACK_IMPORTED_MODULE_0__["isPlatformBrowser"])(platformId) && opts.enabled !== false ? navigator.serviceWorker :
+        undefined);
+}
+/**
+ * \@publicApi
+ */
+class ServiceWorkerModule {
+    /**
+     * Register the given Angular Service Worker script.
+     *
+     * If `enabled` is set to `false` in the given options, the module will behave as if service
+     * workers are not supported by the browser, and the service worker will not be registered.
+     * @param {?} script
+     * @param {?=} opts
+     * @return {?}
+     */
+    static register(script, opts = {}) {
+        return {
+            ngModule: ServiceWorkerModule,
+            providers: [
+                { provide: SCRIPT, useValue: script },
+                { provide: SwRegistrationOptions, useValue: opts },
+                {
+                    provide: NgswCommChannel,
+                    useFactory: ngswCommChannelFactory,
+                    deps: [SwRegistrationOptions, _angular_core__WEBPACK_IMPORTED_MODULE_1__["PLATFORM_ID"]]
+                },
+                {
+                    provide: _angular_core__WEBPACK_IMPORTED_MODULE_1__["APP_INITIALIZER"],
+                    useFactory: ngswAppInitializer,
+                    deps: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"], SCRIPT, SwRegistrationOptions, _angular_core__WEBPACK_IMPORTED_MODULE_1__["PLATFORM_ID"]],
+                    multi: true,
+                },
+            ],
+        };
+    }
+}
+ServiceWorkerModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: ServiceWorkerModule });
+ServiceWorkerModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function ServiceWorkerModule_Factory(t) { return new (t || ServiceWorkerModule)(); }, providers: [SwPush, SwUpdate] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](ServiceWorkerModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
+        args: [{
+                providers: [SwPush, SwUpdate]
+            }]
+    }], null, null); })();
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: packages/service-worker/src/index.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: packages/service-worker/public_api.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: packages/service-worker/index.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=service-worker.js.map
 
 /***/ }),
 

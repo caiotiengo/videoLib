@@ -8,8 +8,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 import {MatMenuModule} from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MAT_DIALOG_DEFAULT_OPTIONS, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 import {AppRoutingModule, routingComponents} from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +20,9 @@ import { VideoComponent } from './video/video.component';
 import { SecureUrlPipe } from './secure-url.pipe';
 import { AccessComponent } from './access/access.component';
 import { ListComponent } from './list/list.component';
+import { UniquePipe } from './unique.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -26,19 +32,24 @@ import { ListComponent } from './list/list.component';
     VideoComponent,
     SecureUrlPipe,
     AccessComponent,
-    ListComponent
+    ListComponent,
+    UniquePipe
   ],
   imports: [
     BrowserModule,
+        MatProgressBarModule,
+
         MatToolbarModule,
         MatCardModule,
         MatMenuModule,
         MatButtonModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule
+        AppRoutingModule,   
+        MatDialogModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}, { provide: MAT_DIALOG_DATA, useValue: {} }],  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

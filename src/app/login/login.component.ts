@@ -4,6 +4,8 @@ import {DbService} from '../db.service'
 import {User} from "../User";
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { interval, Subscription } from 'rxjs';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,14 +19,21 @@ export class LoginComponent implements OnInit {
   users: any = [];	
   mudId	
   usuario: any =[];
+  shouldDisable=true;
+  curSec: number = 0;
+  showLoading = false;
+
   constructor(private router: Router, private db: DbService,private http: HttpClient) { 
-
-
+     //30 seconds
 
 	this.data().then(data => {
       this.result = data.valueOf();
       console.log(this.result.users[0].MUD_ID);
       this.users = this.result.users;
+      setTimeout(x => {
+          this.shouldDisable=false;
+          this.showLoading = true;
+        }, 2000)
     });
   
 
@@ -34,9 +43,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   entrar(){
+       
+
     console.log(this.uname.nativeElement.value)
-     if(this.result.users.find(i => i.MudId === this.uname.nativeElement.value)){
-       this.usuario = this.result.users.find(i => i.MudId === this.uname.nativeElement.value);
+     if(this.result.users.filter(i => i.MudId === this.uname.nativeElement.value)){
+       this.usuario = this.result.users.filter(i => i.MudId === this.uname.nativeElement.value);
        console.log(this.usuario)
        localStorage.setItem('user', JSON.stringify(this.usuario))  
            this.router.navigateByUrl('/home')
@@ -46,6 +57,7 @@ export class LoginComponent implements OnInit {
   }
   }
   data(){
+
     const headers = new HttpHeaders({
       'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
 
@@ -61,4 +73,6 @@ export class LoginComponent implements OnInit {
       });
     });
     }
+
+ 
 }
