@@ -23,6 +23,7 @@ import { ListComponent } from './list/list.component';
 import { UniquePipe } from './unique.pipe';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { NgGoogleAnalyticsModule } from 'ng-google-analytics';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
         MatProgressBarModule,
+        NgGoogleAnalyticsModule.forRoot({ id: 'G-BCZCZ3L4WD' }),
 
         MatToolbarModule,
         MatCardModule,

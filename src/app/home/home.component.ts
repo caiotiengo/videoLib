@@ -22,17 +22,22 @@ export class HomeComponent implements OnInit {
 	link
   usuario: any =[];
   user
+    views: any = [];
+
   videos: any = [];
   division: any =[];
   videosSF: any = [];
   filtrei
   video
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any,public dialog: MatDialog,private router: Router,private sanitizer: DomSanitizer, private db: DbService) { 
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any,public dialog: MatDialog,private router: Router,private sanitizer: DomSanitizer, 
+    private db: DbService) { 
       this.usuario = JSON.parse(localStorage.getItem('user'))
       this.division = JSON.parse(localStorage.getItem('division'));
       console.log(this.usuario)
-       this.db.data().then(data => {
+
+
+      this.db.data().then(data => {
       this.result = data.valueOf();
       console.log(this.result.videos);
       this.filtrei = this.result.videos;
@@ -79,7 +84,7 @@ export class HomeComponent implements OnInit {
     home(){
   	this.router.navigateByUrl('/home')
   }
-
+  
   videoss(){
   	this.router.navigateByUrl('/list')
   }
@@ -109,9 +114,14 @@ export class HomeComponent implements OnInit {
                  division_description: items.division_description,
                  Description: items.Description,
                  Root: items.Root,
-                 URL: items.URL
+                 URL: items.URL,
+                 usuario: this.usuario.Nombre_del_representa,
+                 mudId: this.usuario.MudId
                }
       });
-    console.log(items)
+    localStorage.setItem('video', JSON.stringify(dialogRef.componentInstance.data))
+    console.log(dialogRef.componentInstance.data)
+    this.views = JSON.parse(localStorage.getItem('video')) 
+    this.db.data2(this.views);
   }
 }

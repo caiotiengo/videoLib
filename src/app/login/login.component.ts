@@ -46,8 +46,8 @@ export class LoginComponent implements OnInit {
        
 
     console.log(this.uname.nativeElement.value)
-     if(this.result.users.filter(i => i.MudId === this.uname.nativeElement.value)){
-       this.usuario = this.result.users.filter(i => i.MudId === this.uname.nativeElement.value);
+     if(this.result.users.find(i => i.MudId === this.uname.nativeElement.value)){
+       this.usuario = this.result.users.find(i => i.MudId === this.uname.nativeElement.value);
        console.log(this.usuario)
        localStorage.setItem('user', JSON.stringify(this.usuario))  
            this.router.navigateByUrl('/home')
