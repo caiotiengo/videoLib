@@ -137,6 +137,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
 
 
 
@@ -144,6 +147,12 @@ class AppComponent {
     constructor(router) {
         this.router = router;
         this.title = 'videoLib';
+        const navegar = router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(event => event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"]));
+        navegar.subscribe((event) => {
+            gtag('config', 'UA-159221095-1', {
+                'page_path': event.urlAfterRedirects
+            });
+        });
         this.router.navigateByUrl('/access');
     }
     home() {
@@ -236,7 +245,7 @@ AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule
 AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [{ provide: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MAT_DIALOG_DEFAULT_OPTIONS"], useValue: { hasBackdrop: false } }, { provide: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MAT_DIALOG_DATA"], useValue: {} }], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
             _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_8__["MatProgressBarModule"],
-            ng_google_analytics__WEBPACK_IMPORTED_MODULE_20__["NgGoogleAnalyticsModule"].forRoot({ id: 'G-BCZCZ3L4WD' }),
+            ng_google_analytics__WEBPACK_IMPORTED_MODULE_20__["NgGoogleAnalyticsModule"].forRoot({ id: 'UA-159221095-1' }),
             _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__["MatToolbarModule"],
             _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"],
             _angular_material_menu__WEBPACK_IMPORTED_MODULE_9__["MatMenuModule"],
@@ -277,7 +286,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                     _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_8__["MatProgressBarModule"],
-                    ng_google_analytics__WEBPACK_IMPORTED_MODULE_20__["NgGoogleAnalyticsModule"].forRoot({ id: 'G-BCZCZ3L4WD' }),
+                    ng_google_analytics__WEBPACK_IMPORTED_MODULE_20__["NgGoogleAnalyticsModule"].forRoot({ id: 'UA-159221095-1' }),
                     _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__["MatToolbarModule"],
                     _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"],
                     _angular_material_menu__WEBPACK_IMPORTED_MODULE_9__["MatMenuModule"],
@@ -379,13 +388,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _video_video_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../video/video.component */ "./src/app/video/video.component.ts");
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
-/* harmony import */ var _db_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../db.service */ "./src/app/db.service.ts");
-/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/toolbar.js");
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/card */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/card.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _secure_url_pipe__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../secure-url.pipe */ "./src/app/secure-url.pipe.ts");
+/* harmony import */ var ng_google_analytics__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ng-google-analytics */ "./node_modules/ng-google-analytics/__ivy_ngcc__/fesm2015/ng-google-analytics.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
+/* harmony import */ var _db_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../db.service */ "./src/app/db.service.ts");
+/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/toolbar.js");
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/card */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/card.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _secure_url_pipe__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../secure-url.pipe */ "./src/app/secure-url.pipe.ts");
+
 
 
 
@@ -423,7 +434,7 @@ function HomeComponent_div_24_Template(rf, ctx) { if (rf & 1) {
     const items_r18 = ctx.$implicit;
     const ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", items_r18.Descripcion_de_Division == ctx_r16.usuario.Descripcion_de_Division);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", items_r18.Codigo_de_Division == ctx_r16.usuario.Codigo_de_Division);
 } }
 function HomeComponent_li_28_div_1_Template(rf, ctx) { if (rf & 1) {
     const _r29 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
@@ -461,7 +472,7 @@ function HomeComponent_li_28_div_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r25.Nombre_del_video);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r25.Codigo_de_Division);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r25.division_description);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r25.Description);
 } }
@@ -476,9 +487,10 @@ function HomeComponent_li_28_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", items_r25.Codigo_de_Division == ctx_r17.usuario.Codigo_de_Division);
 } }
 class HomeComponent {
-    constructor(data, dialog, router, sanitizer, db) {
+    constructor(data, dialog, googleAnalyticsService, router, sanitizer, db) {
         this.data = data;
         this.dialog = dialog;
+        this.googleAnalyticsService = googleAnalyticsService;
         this.router = router;
         this.sanitizer = sanitizer;
         this.db = db;
@@ -487,40 +499,20 @@ class HomeComponent {
         this.usuario = [];
         this.views = [];
         this.videos = [];
+        this.produtos = [];
         this.division = [];
         this.videosSF = [];
         this.usuario = JSON.parse(localStorage.getItem('user'));
-        this.division = JSON.parse(localStorage.getItem('division'));
+        this.division = JSON.parse(localStorage.getItem('divisions'));
+        this.videos = JSON.parse(localStorage.getItem('videos'));
+        this.produtos = JSON.parse(localStorage.getItem('produtos'));
         console.log(this.usuario);
-        this.db.data().then(data => {
-            this.result = data.valueOf();
-            console.log(this.result.videos);
-            this.filtrei = this.result.videos;
-            localStorage.setItem('videos', JSON.stringify(this.videos));
-        });
-        this.division = [{
-                Codigo_de_Division: "CR_PruebaMAC",
-                Descripcion_de_Division: "Prueba de Maurcio FV 1",
-                Pais: "CR"
-            }, {
-                Codigo_de_Division: "CR_PruebaMAC2",
-                Descripcion_de_Division: "Prueba de Maurcio FV 2",
-                Pais: "CR"
-            }, {
-                Codigo_de_Division: "BR_ForcaVentas_1",
-                Descripcion_de_Division: "Forca Ventas Caio 1",
-                Pais: "BR"
-            }, {
-                Codigo_de_Division: "BR_ForcaVentas_2",
-                Descripcion_de_Division: "Forca Ventas Caio 2",
-                Pais: "BR"
-            }, {
-                Codigo_de_Division: "BR_ForcaVentas_3",
-                Descripcion_de_Division: "Forca Ventas Eric 3",
-                Pais: "BR"
-            }];
+        console.log(this.division);
+        console.log(this.videos);
+        console.log(this.produtos);
         //this.filtrei = JSON.parse(localStorage.getItem('videos'));
         //console.log(this.filtrei)
+        this.filtrei = this.videos;
     }
     ngOnInit() {
     }
@@ -540,13 +532,14 @@ class HomeComponent {
         this.router.navigateByUrl('/list');
     }
     filtro(codigo) {
-        var videos = this.result.videos;
+        var videos = this.videos;
         console.log(videos);
         if (videos.filter(i => i.division_description === codigo)) {
             this.filtrei = videos.filter(i => i.division_description === codigo);
+            console.log(this.filtrei);
         }
         else {
-            this.filtrei = this.result.videos;
+            this.filtrei = this.videos;
         }
         console.log(codigo);
     }
@@ -568,10 +561,10 @@ class HomeComponent {
         localStorage.setItem('video', JSON.stringify(dialogRef.componentInstance.data));
         console.log(dialogRef.componentInstance.data);
         this.views = JSON.parse(localStorage.getItem('video'));
-        this.db.data2(this.views);
+        //    this.googleAnalyticsService.eventTracker("video", dialogRef.componentInstance.data.Nombre_del_video,  dialogRef.componentInstance.data.usuario )
     }
 }
-HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_db_service__WEBPACK_IMPORTED_MODULE_5__["DbService"])); };
+HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ng_google_analytics__WEBPACK_IMPORTED_MODULE_3__["NgGoogleAnalyticsTracker"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_db_service__WEBPACK_IMPORTED_MODULE_6__["DbService"])); };
 HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 32, vars: 3, consts: [["color", "#dac84c"], ["src", "/assets/gsk_branco.png"], [1, "example-fill-remaining-space"], [2, "margin-top", "18px", "margin-bottom", "1rem", "margin-right", "15px"], ["role", "group", "aria-label", "Basic example", 1, "btn-group"], ["type", "button", 1, "btn", "btn-light", 3, "click"], [1, "transparent-card"], [1, "container", "colors"], [2, "text-align-last", "center !important"], ["class", "btn-group", "role", "group", "aria-label", "Basic example", 4, "ngFor", "ngForOf"], [1, "row"], [1, "col-xl"], [1, "list-group"], ["style", "list-style-type: none;", 4, "ngFor", "ngForOf"], [1, "navbar", "sticky-bottom", "navbar-light", "bg-light"], ["href", "#", 1, "navbar-brand"], ["style", "margin-right: 10px;", 4, "ngIf"], [2, "margin-right", "10px"], ["type", "button", "id", "uname", 1, "btn", "btn-light", 3, "value", "click"], ["uname", ""], [2, "list-style-type", "none"], ["class", "card card-videos", "style", "width:100%; margin-right: 5px; height: auto; ", 4, "ngIf"], [1, "card", "card-videos", 2, "width", "100%", "margin-right", "5px", "height", "auto"], [1, "card-body"], [1, "col-sm"], ["id", "mainVideo", "width", "350", "height", "100%", "nocontrols", "", "preload", "yes", 2, "border", "2px solid black"], ["autostart", "false", "type", "video/mp4", 3, "src"], [1, "card-title"], [1, "card-subtitle", "mb-2", "text-muted"], [1, "card-text"], ["type", "button", 1, "btn", "btn-info", 2, "margin-right", "3%", 3, "click"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-toolbar", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "span");
@@ -635,7 +628,7 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.division);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.filtrei);
-    } }, directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_6__["MatToolbar"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCardSubtitle"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"]], pipes: [_secure_url_pipe__WEBPACK_IMPORTED_MODULE_9__["SecureUrlPipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyJ9 */"] });
+    } }, directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_7__["MatToolbar"], _angular_material_card__WEBPACK_IMPORTED_MODULE_8__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_8__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_8__["MatCardSubtitle"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgIf"]], pipes: [_secure_url_pipe__WEBPACK_IMPORTED_MODULE_10__["SecureUrlPipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyJ9 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HomeComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -646,7 +639,7 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
     }], function () { return [{ type: undefined, decorators: [{
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
                 args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]]
-            }] }, { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }, { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["DomSanitizer"] }, { type: _db_service__WEBPACK_IMPORTED_MODULE_5__["DbService"] }]; }, null); })();
+            }] }, { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"] }, { type: ng_google_analytics__WEBPACK_IMPORTED_MODULE_3__["NgGoogleAnalyticsTracker"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }, { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["DomSanitizer"] }, { type: _db_service__WEBPACK_IMPORTED_MODULE_6__["DbService"] }]; }, null); })();
 
 
 /***/ }),
@@ -746,7 +739,7 @@ function ListComponent_li_23_div_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r10.Nombre_del_video);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r10.Codigo_de_Division);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r10.division_description);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r10.Description);
 } }
@@ -777,27 +770,7 @@ class ListComponent {
             console.log(this.result.videos);
             this.filtrei = this.result.videos;
         });
-        this.division = [{
-                Codigo_de_Division: "CR_PruebaMAC",
-                Descripcion_de_Division: "Prueba de Maurcio FV 1",
-                Pais: "CR"
-            }, {
-                Codigo_de_Division: "CR_PruebaMAC2",
-                Descripcion_de_Division: "Prueba de Maurcio FV 2",
-                Pais: "CR"
-            }, {
-                Codigo_de_Division: "BR_ForcaVentas_1",
-                Descripcion_de_Division: "Forca Ventas Caio 1",
-                Pais: "BR"
-            }, {
-                Codigo_de_Division: "BR_ForcaVentas_2",
-                Descripcion_de_Division: "Forca Ventas Caio 2",
-                Pais: "BR"
-            }, {
-                Codigo_de_Division: "BR_ForcaVentas_3",
-                Descripcion_de_Division: "Forca Ventas Eric 3",
-                Pais: "BR"
-            }];
+        this.division = JSON.parse(localStorage.getItem('divisions'));
     }
     info(items) {
         let dialogRef = this.dialog.open(_video_video_component__WEBPACK_IMPORTED_MODULE_2__["VideoComponent"], {
@@ -970,8 +943,15 @@ class LoginComponent {
         this.http = http;
         this.user = {};
         this.result = [];
+        this.result2 = [];
+        this.result3 = [];
+        this.result4 = [];
         this.users = [];
         this.usuario = [];
+        this.produtos = [];
+        this.divisions = [];
+        this.divisoes = [];
+        this.videos = [];
         this.shouldDisable = true;
         this.curSec = 0;
         this.showLoading = false;
@@ -979,10 +959,29 @@ class LoginComponent {
             this.result = data.valueOf();
             console.log(this.result.users[0].MUD_ID);
             this.users = this.result.users;
+            localStorage.setItem('users', this.users);
             setTimeout(x => {
                 this.shouldDisable = false;
                 this.showLoading = true;
             }, 2000);
+        });
+        this.data2().then(data => {
+            this.result2 = data.valueOf();
+            console.log(this.result2.division);
+            this.divisions = this.result2.division;
+            localStorage.setItem('divisions', JSON.stringify(this.divisions));
+        });
+        this.data3().then(data => {
+            this.result3 = data.valueOf();
+            console.log(this.result3.videos);
+            this.videos = this.result3.videos;
+            localStorage.setItem('videos', JSON.stringify(this.videos));
+        });
+        this.data4().then(data => {
+            this.result4 = data.valueOf();
+            console.log(this.result4.produtos);
+            this.produtos = this.result4.produtos;
+            localStorage.setItem('produtos', JSON.stringify(this.produtos));
         });
     }
     ngOnInit() {
@@ -994,6 +993,7 @@ class LoginComponent {
             console.log(this.usuario);
             localStorage.setItem('user', JSON.stringify(this.usuario));
             this.router.navigateByUrl('/home');
+            localStorage.setItem('division', JSON.stringify(this.usuario.Codigo_de_Division));
             console.log('foi');
         }
         else {
@@ -1009,6 +1009,48 @@ class LoginComponent {
                 resolve(data);
                 console.log(data);
                 this.users = data;
+            }, err => {
+                console.log(err);
+            });
+        });
+    }
+    data2() {
+        const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
+        });
+        return new Promise(resolve => {
+            this.http.get('https://gskvideolib.azure-api.net/division').subscribe(data => {
+                resolve(data);
+                console.log(data);
+                this.divisoes = data;
+            }, err => {
+                console.log(err);
+            });
+        });
+    }
+    data3() {
+        const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
+        });
+        return new Promise(resolve => {
+            this.http.get('https://gskvideolib.azure-api.net/videos').subscribe(data => {
+                resolve(data);
+                console.log(data);
+                this.videos = data;
+            }, err => {
+                console.log(err);
+            });
+        });
+    }
+    data4() {
+        const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
+        });
+        return new Promise(resolve => {
+            this.http.get('https://gskvideolib.azure-api.net/produtos').subscribe(data => {
+                resolve(data);
+                console.log(data);
+                this.produtos = data;
             }, err => {
                 console.log(err);
             });
@@ -1151,8 +1193,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VideoComponent", function() { return VideoComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
-/* harmony import */ var _secure_url_pipe__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../secure-url.pipe */ "./src/app/secure-url.pipe.ts");
+/* harmony import */ var ng_google_analytics__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ng-google-analytics */ "./node_modules/ng-google-analytics/__ivy_ngcc__/fesm2015/ng-google-analytics.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var _secure_url_pipe__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../secure-url.pipe */ "./src/app/secure-url.pipe.ts");
+
 
 
 
@@ -1160,24 +1204,42 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class VideoComponent {
-    constructor(dialogRef, data, http) {
+    constructor(dialogRef, data, googleAnalyticsService, http) {
         this.dialogRef = dialogRef;
         this.data = data;
+        this.googleAnalyticsService = googleAnalyticsService;
         this.http = http;
+        this.views = [];
+        let mainVideo = document.getElementById('mainVideo');
+        this.views = JSON.parse(localStorage.getItem('video'));
+        console.log(this.views);
+        console.log(this.percentual);
+        var date = new Date();
+        this.date = date.getDate() + '/' + date.getUTCMonth() + '/' + date.getFullYear();
+        console.log(this.date);
     }
     ngOnInit() {
     }
     pause() {
-        let mainVideo = document.getElementById('mainVideo');
-        mainVideo.pause();
-        console.log('conta play');
     }
     close() {
         this.dialogRef.close('Pizza!');
+        this.percentage = localStorage.getItem('percentual');
+        console.log(this.percentage);
+        this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video, this.percentage, 'User:' + this.views.usuario + ', ' + 'Mud ID:' + this.views.mudId + ', ' + 'Date:' + this.date);
+        //console.log(this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video, this.percentage, 'User:' + this.views.usuario + ', ' + 'Mud ID:' + this.views.mudId + ', ' + 'Date:' + this.date ))
+    }
+    setCurrentTime(data) {
+        let mainVideo = document.getElementById('mainVideo');
+        this.percentual = Math.floor(((data.target.currentTime / mainVideo.duration) * 100)) + '%';
+        //     this.currentTime = data.target.currentTime;
+        // console.log(this.currentTime)
+        this.timePercentual = localStorage.setItem('percentual', this.percentual);
+        console.log(this.percentual);
     }
 }
-VideoComponent.ɵfac = function VideoComponent_Factory(t) { return new (t || VideoComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
-VideoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: VideoComponent, selectors: [["app-video"]], decls: 19, vars: 6, consts: [["type", "button", 1, "btn", "btn-light", 3, "click"], [1, "card-body"], [1, "cor-div"], [1, "embed-responsive", "embed-responsive-16by9"], ["id", "mainVideo", "onclick", "this.paused ? this.play() : this.pause();", "width", "320", "height", "240", "autoplay", "", "nocontrols", "", "preload", "yes"], ["autostart", "true", "type", "", 3, "src"], [1, "card-title"], [1, "card-subtitle", "mb-2", "text-muted"], [1, "card-text"], ["type", "button", 1, "btn", "btn-info", 2, "margin-right", "3%"], ["type", "button", 1, "btn", "btn-info"]], template: function VideoComponent_Template(rf, ctx) { if (rf & 1) {
+VideoComponent.ɵfac = function VideoComponent_Factory(t) { return new (t || VideoComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ng_google_analytics__WEBPACK_IMPORTED_MODULE_2__["NgGoogleAnalyticsTracker"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"])); };
+VideoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: VideoComponent, selectors: [["app-video"]], decls: 19, vars: 6, consts: [["type", "button", 1, "btn", "btn-light", 3, "click"], [1, "card-body"], [1, "cor-div"], [1, "embed-responsive", "embed-responsive-16by9"], ["id", "mainVideo", "onclick", "this.paused ? this.play() : this.pause();", "width", "320", "height", "240", "controls", "", "preload", "yes", 3, "timeupdate"], ["autostart", "true", "type", "", 3, "src"], [1, "card-title"], [1, "card-subtitle", "mb-2", "text-muted"], [1, "card-text"], ["type", "button", 1, "btn", "btn-info", 2, "margin-right", "3%"], ["type", "button", 1, "btn", "btn-info"]], template: function VideoComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function VideoComponent_Template_button_click_0_listener($event) { return ctx.close(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "x");
@@ -1186,6 +1248,7 @@ VideoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "div", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "video", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("timeupdate", function VideoComponent_Template_video_timeupdate_5_listener($event) { return ctx.setCurrentTime($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "source", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](7, "secureUrl");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, " Your browser does not support the video tag. ");
@@ -1213,10 +1276,10 @@ VideoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.data.Nombre_del_video);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.data.Codigo_de_Division);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.data.division_description);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.data.Description);
-    } }, pipes: [_secure_url_pipe__WEBPACK_IMPORTED_MODULE_3__["SecureUrlPipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3ZpZGVvL3ZpZGVvLmNvbXBvbmVudC5zY3NzIn0= */"] });
+    } }, pipes: [_secure_url_pipe__WEBPACK_IMPORTED_MODULE_4__["SecureUrlPipe"]], styles: ["video[_ngcontent-%COMP%]::-webkit-media-controls-fullscreen-button {\n  display: none !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdmlkZW8vQzpcXFVzZXJzXFxjdDI5NzE1NFxcT25lRHJpdmUgLSBHU0tcXERlc2t0b3BcXENhaW9ERVZMb2NhbFxcdmlkZW9MaWIvc3JjXFxhcHBcXHZpZGVvXFx2aWRlby5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvdmlkZW8vdmlkZW8uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFFUSx3QkFBQTtBQ0FSIiwiZmlsZSI6InNyYy9hcHAvdmlkZW8vdmlkZW8uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJ2aWRlbzo6LXdlYmtpdC1tZWRpYS1jb250cm9scy1mdWxsc2NyZWVuLWJ1dHRvblxyXG57XHJcbiAgICAgICAgZGlzcGxheTogbm9uZSAhaW1wb3J0YW50O1xyXG59IiwidmlkZW86Oi13ZWJraXQtbWVkaWEtY29udHJvbHMtZnVsbHNjcmVlbi1idXR0b24ge1xuICBkaXNwbGF5OiBub25lICFpbXBvcnRhbnQ7XG59Il19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](VideoComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -1227,7 +1290,7 @@ VideoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
     }], function () { return [{ type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"] }, { type: undefined, decorators: [{
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
                 args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]]
-            }] }, { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }]; }, null); })();
+            }] }, { type: ng_google_analytics__WEBPACK_IMPORTED_MODULE_2__["NgGoogleAnalyticsTracker"] }, { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }]; }, null); })();
 
 
 /***/ }),

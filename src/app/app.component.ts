@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { Router } from '@angular/router';
+import { NavigationEnd,Router } from '@angular/router';
+import {filter} from 'rxjs/operators';
+
+declare var gtag;
 
 
 @Component({
@@ -10,11 +13,23 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'videoLib';
+    private currentRoute:string;
 
   constructor(  public router: Router){
-    this.router.navigateByUrl('/access')
+        const navegar = router.events.pipe(
+          filter(event => event instanceof NavigationEnd));
+        navegar.subscribe((event: NavigationEnd) =>{
+          gtag('config', 'UA-159221095-1',{
+            'page_path': event.urlAfterRedirects
+          });
+        })
+      
+        this.router.navigateByUrl('/access')
     
-  }
+  
+      }
+    
+
   home(){
   	this.router.navigateByUrl('/home')
   	alert('Calm down.. teremos um login aqui')

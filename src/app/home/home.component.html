@@ -38,7 +38,7 @@
 	<h1>Para você!</h1>
 	<mat-card-subtitle style="text-align-last: center !important; ">	
 		<div class="btn-group" role="group" aria-label="Basic example" *ngFor="let items of division">
-			<label style="margin-right: 10px;" *ngIf="items.Descripcion_de_Division == usuario.Descripcion_de_Division ">
+			<label style="margin-right: 10px;" *ngIf="items.Codigo_de_Division == usuario.Codigo_de_Division  ">
 				<label >
 				  			<button #uname type="button" id="uname" value="{{items.Descripcion_de_Division}}" (click)="filtro(items.Descripcion_de_Division)" class="btn btn-light">{{items.Descripcion_de_Division}}</button>
 				</label>
@@ -61,7 +61,7 @@
 									</video>
 								</div><div class="col-sm">					
 		    								<h5 class="card-title">{{items.Nombre_del_video}}</h5>
-		    								<h6 class="card-subtitle mb-2 text-muted">{{items.Codigo_de_Division}}</h6>
+		    								<h6 class="card-subtitle mb-2 text-muted">{{items.division_description}}</h6>
 		    								<p class="card-text">{{items.Description}}</p>
 									<button type="button" style="margin-right: 3%" (click)="info(items)" class="btn btn-info">Play</button>
 									</div>

@@ -31,27 +31,7 @@ export class ListComponent implements OnInit {
       this.filtrei = this.result.videos;
     
     });
-     this.division = [{
-       Codigo_de_Division: "CR_PruebaMAC",
-       Descripcion_de_Division: "Prueba de Maurcio FV 1",
-       Pais: "CR"
-       }, {
-       Codigo_de_Division: "CR_PruebaMAC2",
-       Descripcion_de_Division: "Prueba de Maurcio FV 2",
-       Pais: "CR"
-       }, {
-       Codigo_de_Division: "BR_ForcaVentas_1",
-       Descripcion_de_Division: "Forca Ventas Caio 1",
-       Pais: "BR"
-       }, {
-       Codigo_de_Division: "BR_ForcaVentas_2",
-       Descripcion_de_Division: "Forca Ventas Caio 2",
-       Pais: "BR"
-       }, {
-       Codigo_de_Division: "BR_ForcaVentas_3",
-       Descripcion_de_Division: "Forca Ventas Eric 3",
-       Pais: "BR"
-       }]
+     this.division = JSON.parse(localStorage.getItem('divisions'));
   }
 info(items:any): void{
     let dialogRef = this.dialog.open(VideoComponent, {

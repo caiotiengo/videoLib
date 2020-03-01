@@ -7,6 +7,7 @@ import {User} from "../User";
 import {ListComponent} from "../list/list.component"
 import {VideoComponent} from '../video/video.component'
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { NgGoogleAnalyticsTracker } from 'ng-google-analytics';
 
 
 @Component({
@@ -22,51 +23,30 @@ export class HomeComponent implements OnInit {
 	link
   usuario: any =[];
   user
-    views: any = [];
+  views: any = [];
 
   videos: any = [];
+  produtos: any = [];
+
   division: any =[];
   videosSF: any = [];
   filtrei
   video
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any,public dialog: MatDialog,private router: Router,private sanitizer: DomSanitizer, 
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any,public dialog: MatDialog,public googleAnalyticsService: NgGoogleAnalyticsTracker,private router: Router,private sanitizer: DomSanitizer, 
     private db: DbService) { 
       this.usuario = JSON.parse(localStorage.getItem('user'))
-      this.division = JSON.parse(localStorage.getItem('division'));
+      this.division = JSON.parse(localStorage.getItem('divisions'));
+      this.videos = JSON.parse(localStorage.getItem('videos'));
+      this.produtos = JSON.parse(localStorage.getItem('produtos'));
       console.log(this.usuario)
-
-
-      this.db.data().then(data => {
-      this.result = data.valueOf();
-      console.log(this.result.videos);
-      this.filtrei = this.result.videos;
-       localStorage.setItem('videos', JSON.stringify(this.videos));
-      });
-   this.division = [{
-       Codigo_de_Division: "CR_PruebaMAC",
-       Descripcion_de_Division: "Prueba de Maurcio FV 1",
-       Pais: "CR"
-       }, {
-       Codigo_de_Division: "CR_PruebaMAC2",
-       Descripcion_de_Division: "Prueba de Maurcio FV 2",
-       Pais: "CR"
-       }, {
-       Codigo_de_Division: "BR_ForcaVentas_1",
-       Descripcion_de_Division: "Forca Ventas Caio 1",
-       Pais: "BR"
-       }, {
-       Codigo_de_Division: "BR_ForcaVentas_2",
-       Descripcion_de_Division: "Forca Ventas Caio 2",
-       Pais: "BR"
-       }, {
-       Codigo_de_Division: "BR_ForcaVentas_3",
-       Descripcion_de_Division: "Forca Ventas Eric 3",
-       Pais: "BR"
-       }]
+      console.log(this.division)
+      console.log(this.videos)
+      console.log(this.produtos)
 
        //this.filtrei = JSON.parse(localStorage.getItem('videos'));
        //console.log(this.filtrei)
+       this.filtrei = this.videos
   }
 
 
@@ -89,13 +69,14 @@ export class HomeComponent implements OnInit {
   	this.router.navigateByUrl('/list')
   }
    filtro(codigo: any){
-      var videos = this.result.videos;
+
+      var videos = this.videos;
       console.log(videos)
           if(videos.filter(i => i.division_description === codigo)){
                this.filtrei = videos.filter(i => i.division_description === codigo);
-                
+               console.log(this.filtrei)
       }else{
-       this.filtrei = this.result.videos;
+              this.filtrei = this.videos;
 
       }
 
@@ -122,6 +103,6 @@ export class HomeComponent implements OnInit {
     localStorage.setItem('video', JSON.stringify(dialogRef.componentInstance.data))
     console.log(dialogRef.componentInstance.data)
     this.views = JSON.parse(localStorage.getItem('video')) 
-    this.db.data2(this.views);
+//    this.googleAnalyticsService.eventTracker("video", dialogRef.componentInstance.data.Nombre_del_video,  dialogRef.componentInstance.data.usuario )
   }
 }

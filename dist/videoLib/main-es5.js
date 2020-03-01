@@ -280,6 +280,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
 
     var AppComponent =
     /*#__PURE__*/
@@ -289,6 +295,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.router = router;
         this.title = 'videoLib';
+        var navegar = router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (event) {
+          return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"];
+        }));
+        navegar.subscribe(function (event) {
+          gtag('config', 'UA-159221095-1', {
+            'page_path': event.urlAfterRedirects
+          });
+        });
         this.router.navigateByUrl('/access');
       }
 
@@ -520,7 +534,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         useValue: {}
       }],
       imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_8__["MatProgressBarModule"], ng_google_analytics__WEBPACK_IMPORTED_MODULE_20__["NgGoogleAnalyticsModule"].forRoot({
-        id: 'G-BCZCZ3L4WD'
+        id: 'UA-159221095-1'
       }), _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__["MatToolbarModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_9__["MatMenuModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialogModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["BrowserAnimationsModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_18__["ServiceWorkerModule"].register('ngsw-worker.js', {
         enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_19__["environment"].production
       })]]
@@ -541,7 +555,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         args: [{
           declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"], _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["routingComponents"], _video_video_component__WEBPACK_IMPORTED_MODULE_13__["VideoComponent"], _secure_url_pipe__WEBPACK_IMPORTED_MODULE_14__["SecureUrlPipe"], _access_access_component__WEBPACK_IMPORTED_MODULE_15__["AccessComponent"], _list_list_component__WEBPACK_IMPORTED_MODULE_16__["ListComponent"], _unique_pipe__WEBPACK_IMPORTED_MODULE_17__["UniquePipe"]],
           imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_8__["MatProgressBarModule"], ng_google_analytics__WEBPACK_IMPORTED_MODULE_20__["NgGoogleAnalyticsModule"].forRoot({
-            id: 'G-BCZCZ3L4WD'
+            id: 'UA-159221095-1'
           }), _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__["MatToolbarModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_9__["MatMenuModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialogModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["BrowserAnimationsModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_18__["ServiceWorkerModule"].register('ngsw-worker.js', {
             enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_19__["environment"].production
           })],
@@ -719,43 +733,49 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var ng_google_analytics__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ng-google-analytics */
+    "./node_modules/ng-google-analytics/__ivy_ngcc__/fesm2015/ng-google-analytics.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
     /* harmony import */
 
 
-    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @angular/platform-browser */
     "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
     /* harmony import */
 
 
-    var _db_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _db_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ../db.service */
     "./src/app/db.service.ts");
     /* harmony import */
 
 
-    var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! @angular/material/toolbar */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/toolbar.js");
     /* harmony import */
 
 
-    var _angular_material_card__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var _angular_material_card__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! @angular/material/card */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/card.js");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
     /* harmony import */
 
 
-    var _secure_url_pipe__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    var _secure_url_pipe__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ../secure-url.pipe */
     "./src/app/secure-url.pipe.ts");
 
@@ -817,7 +837,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", items_r18.Descripcion_de_Division == ctx_r16.usuario.Descripcion_de_Division);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", items_r18.Codigo_de_Division == ctx_r16.usuario.Codigo_de_Division);
       }
     }
 
@@ -901,7 +921,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r25.Codigo_de_Division);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r25.division_description);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
@@ -932,13 +952,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var HomeComponent =
     /*#__PURE__*/
     function () {
-      function HomeComponent(data, dialog, router, sanitizer, db) {
-        var _this2 = this;
-
+      function HomeComponent(data, dialog, googleAnalyticsService, router, sanitizer, db) {
         _classCallCheck(this, HomeComponent);
 
         this.data = data;
         this.dialog = dialog;
+        this.googleAnalyticsService = googleAnalyticsService;
         this.router = router;
         this.sanitizer = sanitizer;
         this.db = db;
@@ -947,39 +966,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.usuario = [];
         this.views = [];
         this.videos = [];
+        this.produtos = [];
         this.division = [];
         this.videosSF = [];
         this.usuario = JSON.parse(localStorage.getItem('user'));
-        this.division = JSON.parse(localStorage.getItem('division'));
+        this.division = JSON.parse(localStorage.getItem('divisions'));
+        this.videos = JSON.parse(localStorage.getItem('videos'));
+        this.produtos = JSON.parse(localStorage.getItem('produtos'));
         console.log(this.usuario);
-        this.db.data().then(function (data) {
-          _this2.result = data.valueOf();
-          console.log(_this2.result.videos);
-          _this2.filtrei = _this2.result.videos;
-          localStorage.setItem('videos', JSON.stringify(_this2.videos));
-        });
-        this.division = [{
-          Codigo_de_Division: "CR_PruebaMAC",
-          Descripcion_de_Division: "Prueba de Maurcio FV 1",
-          Pais: "CR"
-        }, {
-          Codigo_de_Division: "CR_PruebaMAC2",
-          Descripcion_de_Division: "Prueba de Maurcio FV 2",
-          Pais: "CR"
-        }, {
-          Codigo_de_Division: "BR_ForcaVentas_1",
-          Descripcion_de_Division: "Forca Ventas Caio 1",
-          Pais: "BR"
-        }, {
-          Codigo_de_Division: "BR_ForcaVentas_2",
-          Descripcion_de_Division: "Forca Ventas Caio 2",
-          Pais: "BR"
-        }, {
-          Codigo_de_Division: "BR_ForcaVentas_3",
-          Descripcion_de_Division: "Forca Ventas Eric 3",
-          Pais: "BR"
-        }]; //this.filtrei = JSON.parse(localStorage.getItem('videos'));
+        console.log(this.division);
+        console.log(this.videos);
+        console.log(this.produtos); //this.filtrei = JSON.parse(localStorage.getItem('videos'));
         //console.log(this.filtrei)
+
+        this.filtrei = this.videos;
       }
 
       _createClass(HomeComponent, [{
@@ -1011,7 +1011,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "filtro",
         value: function filtro(codigo) {
-          var videos = this.result.videos;
+          var videos = this.videos;
           console.log(videos);
 
           if (videos.filter(function (i) {
@@ -1020,8 +1020,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             this.filtrei = videos.filter(function (i) {
               return i.division_description === codigo;
             });
+            console.log(this.filtrei);
           } else {
-            this.filtrei = this.result.videos;
+            this.filtrei = this.videos;
           }
 
           console.log(codigo);
@@ -1046,8 +1047,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           });
           localStorage.setItem('video', JSON.stringify(dialogRef.componentInstance.data));
           console.log(dialogRef.componentInstance.data);
-          this.views = JSON.parse(localStorage.getItem('video'));
-          this.db.data2(this.views);
+          this.views = JSON.parse(localStorage.getItem('video')); //    this.googleAnalyticsService.eventTracker("video", dialogRef.componentInstance.data.Nombre_del_video,  dialogRef.componentInstance.data.usuario )
         }
       }]);
 
@@ -1055,7 +1055,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }();
 
     HomeComponent.ɵfac = function HomeComponent_Factory(t) {
-      return new (t || HomeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_db_service__WEBPACK_IMPORTED_MODULE_5__["DbService"]));
+      return new (t || HomeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ng_google_analytics__WEBPACK_IMPORTED_MODULE_3__["NgGoogleAnalyticsTracker"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_db_service__WEBPACK_IMPORTED_MODULE_6__["DbService"]));
     };
 
     HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -1195,8 +1195,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.filtrei);
         }
       },
-      directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_6__["MatToolbar"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCardSubtitle"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"]],
-      pipes: [_secure_url_pipe__WEBPACK_IMPORTED_MODULE_9__["SecureUrlPipe"]],
+      directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_7__["MatToolbar"], _angular_material_card__WEBPACK_IMPORTED_MODULE_8__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_8__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_8__["MatCardSubtitle"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgIf"]],
+      pipes: [_secure_url_pipe__WEBPACK_IMPORTED_MODULE_10__["SecureUrlPipe"]],
       styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyJ9 */"]
     });
     /*@__PURE__*/
@@ -1219,11 +1219,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }, {
           type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]
         }, {
-          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+          type: ng_google_analytics__WEBPACK_IMPORTED_MODULE_3__["NgGoogleAnalyticsTracker"]
         }, {
-          type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["DomSanitizer"]
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
         }, {
-          type: _db_service__WEBPACK_IMPORTED_MODULE_5__["DbService"]
+          type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["DomSanitizer"]
+        }, {
+          type: _db_service__WEBPACK_IMPORTED_MODULE_6__["DbService"]
         }];
       }, null);
     })();
@@ -1449,7 +1451,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r10.Codigo_de_Division);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r10.division_description);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
@@ -1481,7 +1483,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*#__PURE__*/
     function () {
       function ListComponent(data, router, dialog, http) {
-        var _this3 = this;
+        var _this2 = this;
 
         _classCallCheck(this, ListComponent);
 
@@ -1496,31 +1498,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.videosSF = [];
         this.usuario = JSON.parse(localStorage.getItem('user'));
         this.data1().then(function (data) {
-          _this3.result = data.valueOf();
-          console.log(_this3.result.videos);
-          _this3.filtrei = _this3.result.videos;
+          _this2.result = data.valueOf();
+          console.log(_this2.result.videos);
+          _this2.filtrei = _this2.result.videos;
         });
-        this.division = [{
-          Codigo_de_Division: "CR_PruebaMAC",
-          Descripcion_de_Division: "Prueba de Maurcio FV 1",
-          Pais: "CR"
-        }, {
-          Codigo_de_Division: "CR_PruebaMAC2",
-          Descripcion_de_Division: "Prueba de Maurcio FV 2",
-          Pais: "CR"
-        }, {
-          Codigo_de_Division: "BR_ForcaVentas_1",
-          Descripcion_de_Division: "Forca Ventas Caio 1",
-          Pais: "BR"
-        }, {
-          Codigo_de_Division: "BR_ForcaVentas_2",
-          Descripcion_de_Division: "Forca Ventas Caio 2",
-          Pais: "BR"
-        }, {
-          Codigo_de_Division: "BR_ForcaVentas_3",
-          Descripcion_de_Division: "Forca Ventas Eric 3",
-          Pais: "BR"
-        }];
+        this.division = JSON.parse(localStorage.getItem('divisions'));
       }
 
       _createClass(ListComponent, [{
@@ -1544,16 +1526,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "data1",
         value: function data1() {
-          var _this4 = this;
+          var _this3 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
           });
           return new Promise(function (resolve) {
-            _this4.http.get('https://gskvideolib.azure-api.net/videos').subscribe(function (data) {
+            _this3.http.get('https://gskvideolib.azure-api.net/videos').subscribe(function (data) {
               resolve(data);
               console.log(data);
-              _this4.videos = data;
+              _this3.videos = data;
             }, function (err) {
               console.log(err);
             });
@@ -1562,16 +1544,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "data2",
         value: function data2() {
-          var _this5 = this;
+          var _this4 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
           });
           return new Promise(function (resolve) {
-            _this5.http.get('https://gskvideolib.azure-api.net/division').subscribe(function (data) {
+            _this4.http.get('https://gskvideolib.azure-api.net/division').subscribe(function (data) {
               resolve(data);
               console.log(data);
-              _this5.videos = data;
+              _this4.videos = data;
             }, function (err) {
               console.log(err);
             });
@@ -1839,7 +1821,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*#__PURE__*/
     function () {
       function LoginComponent(router, db, http) {
-        var _this6 = this;
+        var _this5 = this;
 
         _classCallCheck(this, LoginComponent);
 
@@ -1849,19 +1831,45 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.http = http;
         this.user = {};
         this.result = [];
+        this.result2 = [];
+        this.result3 = [];
+        this.result4 = [];
         this.users = [];
         this.usuario = [];
+        this.produtos = [];
+        this.divisions = [];
+        this.divisoes = [];
+        this.videos = [];
         this.shouldDisable = true;
         this.curSec = 0;
         this.showLoading = false;
         this.data().then(function (data) {
-          _this6.result = data.valueOf();
-          console.log(_this6.result.users[0].MUD_ID);
-          _this6.users = _this6.result.users;
+          _this5.result = data.valueOf();
+          console.log(_this5.result.users[0].MUD_ID);
+          _this5.users = _this5.result.users;
+          localStorage.setItem('users', _this5.users);
           setTimeout(function (x) {
-            _this6.shouldDisable = false;
-            _this6.showLoading = true;
+            _this5.shouldDisable = false;
+            _this5.showLoading = true;
           }, 2000);
+        });
+        this.data2().then(function (data) {
+          _this5.result2 = data.valueOf();
+          console.log(_this5.result2.division);
+          _this5.divisions = _this5.result2.division;
+          localStorage.setItem('divisions', JSON.stringify(_this5.divisions));
+        });
+        this.data3().then(function (data) {
+          _this5.result3 = data.valueOf();
+          console.log(_this5.result3.videos);
+          _this5.videos = _this5.result3.videos;
+          localStorage.setItem('videos', JSON.stringify(_this5.videos));
+        });
+        this.data4().then(function (data) {
+          _this5.result4 = data.valueOf();
+          console.log(_this5.result4.produtos);
+          _this5.produtos = _this5.result4.produtos;
+          localStorage.setItem('produtos', JSON.stringify(_this5.produtos));
         });
       }
 
@@ -1871,19 +1879,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "entrar",
         value: function entrar() {
-          var _this7 = this;
+          var _this6 = this;
 
           console.log(this.uname.nativeElement.value);
 
           if (this.result.users.find(function (i) {
-            return i.MudId === _this7.uname.nativeElement.value;
+            return i.MudId === _this6.uname.nativeElement.value;
           })) {
             this.usuario = this.result.users.find(function (i) {
-              return i.MudId === _this7.uname.nativeElement.value;
+              return i.MudId === _this6.uname.nativeElement.value;
             });
             console.log(this.usuario);
             localStorage.setItem('user', JSON.stringify(this.usuario));
             this.router.navigateByUrl('/home');
+            localStorage.setItem('division', JSON.stringify(this.usuario.Codigo_de_Division));
             console.log('foi');
           } else {
             console.log('mentira');
@@ -1892,16 +1901,70 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "data",
         value: function data() {
+          var _this7 = this;
+
+          var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
+          });
+          return new Promise(function (resolve) {
+            _this7.http.get('https://gskvideolib.azure-api.net/users').subscribe(function (data) {
+              resolve(data);
+              console.log(data);
+              _this7.users = data;
+            }, function (err) {
+              console.log(err);
+            });
+          });
+        }
+      }, {
+        key: "data2",
+        value: function data2() {
           var _this8 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
           });
           return new Promise(function (resolve) {
-            _this8.http.get('https://gskvideolib.azure-api.net/users').subscribe(function (data) {
+            _this8.http.get('https://gskvideolib.azure-api.net/division').subscribe(function (data) {
               resolve(data);
               console.log(data);
-              _this8.users = data;
+              _this8.divisoes = data;
+            }, function (err) {
+              console.log(err);
+            });
+          });
+        }
+      }, {
+        key: "data3",
+        value: function data3() {
+          var _this9 = this;
+
+          var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
+          });
+          return new Promise(function (resolve) {
+            _this9.http.get('https://gskvideolib.azure-api.net/videos').subscribe(function (data) {
+              resolve(data);
+              console.log(data);
+              _this9.videos = data;
+            }, function (err) {
+              console.log(err);
+            });
+          });
+        }
+      }, {
+        key: "data4",
+        value: function data4() {
+          var _this10 = this;
+
+          var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
+          });
+          return new Promise(function (resolve) {
+            _this10.http.get('https://gskvideolib.azure-api.net/produtos').subscribe(function (data) {
+              resolve(data);
+              console.log(data);
+              _this10.produtos = data;
             }, function (err) {
               console.log(err);
             });
@@ -2216,25 +2279,40 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var ng_google_analytics__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ng-google-analytics */
+    "./node_modules/ng-google-analytics/__ivy_ngcc__/fesm2015/ng-google-analytics.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/common/http */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
     /* harmony import */
 
 
-    var _secure_url_pipe__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _secure_url_pipe__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ../secure-url.pipe */
     "./src/app/secure-url.pipe.ts");
 
     var VideoComponent =
     /*#__PURE__*/
     function () {
-      function VideoComponent(dialogRef, data, http) {
+      function VideoComponent(dialogRef, data, googleAnalyticsService, http) {
         _classCallCheck(this, VideoComponent);
 
         this.dialogRef = dialogRef;
         this.data = data;
+        this.googleAnalyticsService = googleAnalyticsService;
         this.http = http;
+        this.views = [];
+        var mainVideo = document.getElementById('mainVideo');
+        this.views = JSON.parse(localStorage.getItem('video'));
+        console.log(this.views);
+        console.log(this.percentual);
+        var date = new Date();
+        this.date = date.getDate() + '/' + date.getUTCMonth() + '/' + date.getFullYear();
+        console.log(this.date);
       }
 
       _createClass(VideoComponent, [{
@@ -2242,15 +2320,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function ngOnInit() {}
       }, {
         key: "pause",
-        value: function pause() {
-          var mainVideo = document.getElementById('mainVideo');
-          mainVideo.pause();
-          console.log('conta play');
-        }
+        value: function pause() {}
       }, {
         key: "close",
         value: function close() {
           this.dialogRef.close('Pizza!');
+          this.percentage = localStorage.getItem('percentual');
+          console.log(this.percentage);
+          this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video, this.percentage, 'User:' + this.views.usuario + ', ' + 'Mud ID:' + this.views.mudId + ', ' + 'Date:' + this.date); //console.log(this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video, this.percentage, 'User:' + this.views.usuario + ', ' + 'Mud ID:' + this.views.mudId + ', ' + 'Date:' + this.date ))
+        }
+      }, {
+        key: "setCurrentTime",
+        value: function setCurrentTime(data) {
+          var mainVideo = document.getElementById('mainVideo');
+          this.percentual = Math.floor(data.target.currentTime / mainVideo.duration * 100) + '%'; //     this.currentTime = data.target.currentTime;
+          // console.log(this.currentTime)
+
+          this.timePercentual = localStorage.setItem('percentual', this.percentual);
+          console.log(this.percentual);
         }
       }]);
 
@@ -2258,7 +2345,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }();
 
     VideoComponent.ɵfac = function VideoComponent_Factory(t) {
-      return new (t || VideoComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]));
+      return new (t || VideoComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ng_google_analytics__WEBPACK_IMPORTED_MODULE_2__["NgGoogleAnalyticsTracker"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]));
     };
 
     VideoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -2266,7 +2353,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       selectors: [["app-video"]],
       decls: 19,
       vars: 6,
-      consts: [["type", "button", 1, "btn", "btn-light", 3, "click"], [1, "card-body"], [1, "cor-div"], [1, "embed-responsive", "embed-responsive-16by9"], ["id", "mainVideo", "onclick", "this.paused ? this.play() : this.pause();", "width", "320", "height", "240", "autoplay", "", "nocontrols", "", "preload", "yes"], ["autostart", "true", "type", "", 3, "src"], [1, "card-title"], [1, "card-subtitle", "mb-2", "text-muted"], [1, "card-text"], ["type", "button", 1, "btn", "btn-info", 2, "margin-right", "3%"], ["type", "button", 1, "btn", "btn-info"]],
+      consts: [["type", "button", 1, "btn", "btn-light", 3, "click"], [1, "card-body"], [1, "cor-div"], [1, "embed-responsive", "embed-responsive-16by9"], ["id", "mainVideo", "onclick", "this.paused ? this.play() : this.pause();", "width", "320", "height", "240", "controls", "", "preload", "yes", 3, "timeupdate"], ["autostart", "true", "type", "", 3, "src"], [1, "card-title"], [1, "card-subtitle", "mb-2", "text-muted"], [1, "card-text"], ["type", "button", 1, "btn", "btn-info", 2, "margin-right", "3%"], ["type", "button", 1, "btn", "btn-info"]],
       template: function VideoComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 0);
@@ -2286,6 +2373,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 3);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "video", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("timeupdate", function VideoComponent_Template_video_timeupdate_5_listener($event) {
+            return ctx.setCurrentTime($event);
+          });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "source", 5);
 
@@ -2341,15 +2432,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.data.Codigo_de_Division);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.data.division_description);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.data.Description);
         }
       },
-      pipes: [_secure_url_pipe__WEBPACK_IMPORTED_MODULE_3__["SecureUrlPipe"]],
-      styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3ZpZGVvL3ZpZGVvLmNvbXBvbmVudC5zY3NzIn0= */"]
+      pipes: [_secure_url_pipe__WEBPACK_IMPORTED_MODULE_4__["SecureUrlPipe"]],
+      styles: ["video[_ngcontent-%COMP%]::-webkit-media-controls-fullscreen-button {\n  display: none !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdmlkZW8vQzpcXFVzZXJzXFxjdDI5NzE1NFxcT25lRHJpdmUgLSBHU0tcXERlc2t0b3BcXENhaW9ERVZMb2NhbFxcdmlkZW9MaWIvc3JjXFxhcHBcXHZpZGVvXFx2aWRlby5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvdmlkZW8vdmlkZW8uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFFUSx3QkFBQTtBQ0FSIiwiZmlsZSI6InNyYy9hcHAvdmlkZW8vdmlkZW8uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJ2aWRlbzo6LXdlYmtpdC1tZWRpYS1jb250cm9scy1mdWxsc2NyZWVuLWJ1dHRvblxyXG57XHJcbiAgICAgICAgZGlzcGxheTogbm9uZSAhaW1wb3J0YW50O1xyXG59IiwidmlkZW86Oi13ZWJraXQtbWVkaWEtY29udHJvbHMtZnVsbHNjcmVlbi1idXR0b24ge1xuICBkaXNwbGF5OiBub25lICFpbXBvcnRhbnQ7XG59Il19 */"]
     });
     /*@__PURE__*/
 
@@ -2371,7 +2462,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]]
           }]
         }, {
-          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+          type: ng_google_analytics__WEBPACK_IMPORTED_MODULE_2__["NgGoogleAnalyticsTracker"]
+        }, {
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]
         }];
       }, null);
     })();

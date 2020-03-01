@@ -39,8 +39,7 @@ import { NgGoogleAnalyticsModule } from 'ng-google-analytics';
   imports: [
     BrowserModule,
         MatProgressBarModule,
-        NgGoogleAnalyticsModule.forRoot({ id: 'G-BCZCZ3L4WD' }),
-
+        NgGoogleAnalyticsModule.forRoot({ id: 'UA-159221095-1' }),
         MatToolbarModule,
         MatCardModule,
         MatMenuModule,
