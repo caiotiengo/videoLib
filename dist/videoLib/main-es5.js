@@ -286,15 +286,35 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! rxjs/operators */
     "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var ng_connection_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ng-connection-service */
+    "./node_modules/ng-connection-service/__ivy_ngcc__/fesm2015/ng-connection-service.js");
 
     var AppComponent =
     /*#__PURE__*/
     function () {
-      function AppComponent(router) {
+      function AppComponent(connectionService, router) {
+        var _this = this;
+
         _classCallCheck(this, AppComponent);
 
+        this.connectionService = connectionService;
         this.router = router;
         this.title = 'videoLib';
+        this.status = 'ONLINE';
+        this.isConnected = true;
+        this.connectionService.monitor().subscribe(function (isConnected) {
+          _this.isConnected = isConnected;
+
+          if (_this.isConnected) {
+            _this.status = "ONLINE";
+          } else {
+            _this.status = "OFFLINE";
+          }
+        });
         var navegar = router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (event) {
           return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"];
         }));
@@ -324,7 +344,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }();
 
     AppComponent.ɵfac = function AppComponent_Factory(t) {
-      return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]));
+      return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ng_connection_service__WEBPACK_IMPORTED_MODULE_3__["ConnectionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]));
     };
 
     AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -352,6 +372,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }]
       }], function () {
         return [{
+          type: ng_connection_service__WEBPACK_IMPORTED_MODULE_3__["ConnectionService"]
+        }, {
           type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]
         }];
       }, null);
@@ -508,7 +530,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _home_home_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
+    var ng_connection_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
+    /*! ng-connection-service */
+    "./node_modules/ng-connection-service/__ivy_ngcc__/fesm2015/ng-connection-service.js");
+    /* harmony import */
+
+
+    var _home_home_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
     /*! ./home/home.component */
     "./src/app/home/home.component.ts");
 
@@ -535,15 +563,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }],
       imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_8__["MatProgressBarModule"], ng_google_analytics__WEBPACK_IMPORTED_MODULE_20__["NgGoogleAnalyticsModule"].forRoot({
         id: 'UA-159221095-1'
-      }), _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__["MatToolbarModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_9__["MatMenuModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialogModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["BrowserAnimationsModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_18__["ServiceWorkerModule"].register('ngsw-worker.js', {
+      }), _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__["MatToolbarModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_9__["MatMenuModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialogModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], ng_connection_service__WEBPACK_IMPORTED_MODULE_21__["ConnectionServiceModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["BrowserAnimationsModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_18__["ServiceWorkerModule"].register('ngsw-worker.js', {
         enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_19__["environment"].production
       })]]
     });
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, {
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_21__["HomeComponent"], _list_list_component__WEBPACK_IMPORTED_MODULE_16__["ListComponent"], _video_video_component__WEBPACK_IMPORTED_MODULE_13__["VideoComponent"], _secure_url_pipe__WEBPACK_IMPORTED_MODULE_14__["SecureUrlPipe"], _access_access_component__WEBPACK_IMPORTED_MODULE_15__["AccessComponent"], _list_list_component__WEBPACK_IMPORTED_MODULE_16__["ListComponent"], _unique_pipe__WEBPACK_IMPORTED_MODULE_17__["UniquePipe"]],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_8__["MatProgressBarModule"], ng_google_analytics__WEBPACK_IMPORTED_MODULE_20__["NgGoogleAnalyticsModule"], _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__["MatToolbarModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_9__["MatMenuModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialogModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["BrowserAnimationsModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_18__["ServiceWorkerModule"]]
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_22__["HomeComponent"], _list_list_component__WEBPACK_IMPORTED_MODULE_16__["ListComponent"], _video_video_component__WEBPACK_IMPORTED_MODULE_13__["VideoComponent"], _secure_url_pipe__WEBPACK_IMPORTED_MODULE_14__["SecureUrlPipe"], _access_access_component__WEBPACK_IMPORTED_MODULE_15__["AccessComponent"], _list_list_component__WEBPACK_IMPORTED_MODULE_16__["ListComponent"], _unique_pipe__WEBPACK_IMPORTED_MODULE_17__["UniquePipe"]],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_8__["MatProgressBarModule"], ng_google_analytics__WEBPACK_IMPORTED_MODULE_20__["NgGoogleAnalyticsModule"], _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__["MatToolbarModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_9__["MatMenuModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialogModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], ng_connection_service__WEBPACK_IMPORTED_MODULE_21__["ConnectionServiceModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["BrowserAnimationsModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_18__["ServiceWorkerModule"]]
       });
     })();
     /*@__PURE__*/
@@ -556,7 +584,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"], _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["routingComponents"], _video_video_component__WEBPACK_IMPORTED_MODULE_13__["VideoComponent"], _secure_url_pipe__WEBPACK_IMPORTED_MODULE_14__["SecureUrlPipe"], _access_access_component__WEBPACK_IMPORTED_MODULE_15__["AccessComponent"], _list_list_component__WEBPACK_IMPORTED_MODULE_16__["ListComponent"], _unique_pipe__WEBPACK_IMPORTED_MODULE_17__["UniquePipe"]],
           imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_8__["MatProgressBarModule"], ng_google_analytics__WEBPACK_IMPORTED_MODULE_20__["NgGoogleAnalyticsModule"].forRoot({
             id: 'UA-159221095-1'
-          }), _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__["MatToolbarModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_9__["MatMenuModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialogModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["BrowserAnimationsModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_18__["ServiceWorkerModule"].register('ngsw-worker.js', {
+          }), _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__["MatToolbarModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_9__["MatMenuModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialogModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], ng_connection_service__WEBPACK_IMPORTED_MODULE_21__["ConnectionServiceModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["BrowserAnimationsModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_18__["ServiceWorkerModule"].register('ngsw-worker.js', {
             enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_19__["environment"].production
           })],
           providers: [{
@@ -646,16 +674,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "data",
         value: function data() {
-          var _this = this;
+          var _this2 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
           });
           return new Promise(function (resolve) {
-            _this.http.get('https://gskvideolib.azure-api.net/videos').subscribe(function (data) {
+            _this2.http.get('https://gskvideolib.azure-api.net/videos').subscribe(function (data) {
               resolve(data);
               console.log(data);
-              _this.videos = data;
+              _this2.videos = data;
             }, function (err) {
               console.log(err);
             });
@@ -1483,7 +1511,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*#__PURE__*/
     function () {
       function ListComponent(data, router, dialog, http) {
-        var _this2 = this;
+        var _this3 = this;
 
         _classCallCheck(this, ListComponent);
 
@@ -1497,11 +1525,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.division = [];
         this.videosSF = [];
         this.usuario = JSON.parse(localStorage.getItem('user'));
-        this.data1().then(function (data) {
-          _this2.result = data.valueOf();
-          console.log(_this2.result.videos);
-          _this2.filtrei = _this2.result.videos;
-        });
+
+        if (localStorage.getItem('videos') == null) {
+          this.data1().then(function (data) {
+            _this3.result = data.valueOf();
+            console.log(_this3.result.videos);
+            _this3.filtrei = _this3.result.videos;
+          });
+        } else {
+          this.filtrei = JSON.parse(localStorage.getItem('videos'));
+          console.log(this.filtrei);
+          this.filtrai = this.filtrei;
+        }
+
         this.division = JSON.parse(localStorage.getItem('divisions'));
       }
 
@@ -1526,16 +1562,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "data1",
         value: function data1() {
-          var _this3 = this;
+          var _this4 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
           });
           return new Promise(function (resolve) {
-            _this3.http.get('https://gskvideolib.azure-api.net/videos').subscribe(function (data) {
+            _this4.http.get('https://gskvideolib.azure-api.net/videos').subscribe(function (data) {
               resolve(data);
               console.log(data);
-              _this3.videos = data;
+              _this4.videos = data;
             }, function (err) {
               console.log(err);
             });
@@ -1544,16 +1580,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "data2",
         value: function data2() {
-          var _this4 = this;
+          var _this5 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
           });
           return new Promise(function (resolve) {
-            _this4.http.get('https://gskvideolib.azure-api.net/division').subscribe(function (data) {
+            _this5.http.get('https://gskvideolib.azure-api.net/division').subscribe(function (data) {
               resolve(data);
               console.log(data);
-              _this4.videos = data;
+              _this5.videos = data;
             }, function (err) {
               console.log(err);
             });
@@ -1570,17 +1606,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "filtro",
         value: function filtro(codigo) {
-          var videos = this.result.videos;
+          var videos = this.filtrei;
           console.log(videos);
 
           if (videos.filter(function (i) {
             return i.division_description === codigo;
           })) {
-            this.filtrei = videos.filter(function (i) {
+            this.filtrai = videos.filter(function (i) {
               return i.division_description === codigo;
             });
           } else {
-            this.filtrei = this.result.videos;
+            this.filtrai = this.filtrei;
           }
 
           console.log(codigo);
@@ -1723,7 +1759,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.filtrei);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.filtrai);
         }
       },
       directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_5__["MatToolbar"], _angular_material_card__WEBPACK_IMPORTED_MODULE_6__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_6__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_6__["MatCardSubtitle"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"]],
@@ -1805,13 +1841,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _db_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var ng_connection_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ng-connection-service */
+    "./node_modules/ng-connection-service/__ivy_ngcc__/fesm2015/ng-connection-service.js");
+    /* harmony import */
+
+
+    var _db_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ../db.service */
     "./src/app/db.service.ts");
     /* harmony import */
 
 
-    var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @angular/material/progress-bar */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
 
@@ -1820,13 +1862,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var LoginComponent =
     /*#__PURE__*/
     function () {
-      function LoginComponent(router, db, http) {
-        var _this5 = this;
+      function LoginComponent(router, connectionService, db, http) {
+        var _this6 = this;
 
         _classCallCheck(this, LoginComponent);
 
-        //30 seconds
         this.router = router;
+        this.connectionService = connectionService;
         this.db = db;
         this.http = http;
         this.user = {};
@@ -1834,6 +1876,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.result2 = [];
         this.result3 = [];
         this.result4 = [];
+        this.status = '';
         this.users = [];
         this.usuario = [];
         this.produtos = [];
@@ -1842,35 +1885,64 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.videos = [];
         this.shouldDisable = true;
         this.curSec = 0;
-        this.showLoading = false;
-        this.data().then(function (data) {
-          _this5.result = data.valueOf();
-          console.log(_this5.result.users[0].MUD_ID);
-          _this5.users = _this5.result.users;
-          localStorage.setItem('users', _this5.users);
-          setTimeout(function (x) {
-            _this5.shouldDisable = false;
-            _this5.showLoading = true;
-          }, 2000);
+        this.showLoading = false; //30 seconds
+
+        setTimeout(function (x) {
+          _this6.shouldDisable = false;
+          _this6.showLoading = true;
+        }, 2000);
+        this.connectionService.monitor().subscribe(function (connect) {
+          _this6.status = connect ? 'internet ativa' : 'internet desativada';
+          console.log(_this6.status);
         });
-        this.data2().then(function (data) {
-          _this5.result2 = data.valueOf();
-          console.log(_this5.result2.division);
-          _this5.divisions = _this5.result2.division;
-          localStorage.setItem('divisions', JSON.stringify(_this5.divisions));
-        });
-        this.data3().then(function (data) {
-          _this5.result3 = data.valueOf();
-          console.log(_this5.result3.videos);
-          _this5.videos = _this5.result3.videos;
-          localStorage.setItem('videos', JSON.stringify(_this5.videos));
-        });
-        this.data4().then(function (data) {
-          _this5.result4 = data.valueOf();
-          console.log(_this5.result4.produtos);
-          _this5.produtos = _this5.result4.produtos;
-          localStorage.setItem('produtos', JSON.stringify(_this5.produtos));
-        });
+
+        if (localStorage.getItem('users') == null) {
+          this.data().then(function (data) {
+            _this6.result = data.valueOf();
+            console.log(_this6.result.users[0].MUD_ID);
+            _this6.users = _this6.result.users;
+            localStorage.setItem('users', JSON.stringify(_this6.users));
+          });
+        } else {
+          this.users = JSON.parse(localStorage.getItem('users'));
+          console.log(this.users);
+        }
+
+        if (localStorage.getItem('divisions') == null) {
+          this.data2().then(function (data) {
+            _this6.result2 = data.valueOf();
+            console.log(_this6.result2.division);
+            _this6.divisions = _this6.result2.division;
+            localStorage.setItem('divisions', JSON.stringify(_this6.divisions));
+          });
+        } else {
+          this.divisions = JSON.parse(localStorage.getItem('divisions'));
+          console.log(this.divisions);
+        }
+
+        if (localStorage.getItem('videos') == null) {
+          this.data3().then(function (data) {
+            _this6.result3 = data.valueOf();
+            console.log(_this6.result3.videos);
+            _this6.videos = _this6.result3.videos;
+            localStorage.setItem('videos', JSON.stringify(_this6.videos));
+          });
+        } else {
+          this.videos = JSON.parse(localStorage.getItem('videos'));
+          console.log(this.videos);
+        }
+
+        if (localStorage.getItem('produtos') == null) {
+          this.data4().then(function (data) {
+            _this6.result4 = data.valueOf();
+            console.log(_this6.result4.produtos);
+            _this6.produtos = _this6.result4.produtos;
+            localStorage.setItem('produtos', JSON.stringify(_this6.produtos));
+          });
+        } else {
+          this.produtos = JSON.parse(localStorage.getItem('produtos'));
+          console.log(this.produtos);
+        }
       }
 
       _createClass(LoginComponent, [{
@@ -1879,15 +1951,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "entrar",
         value: function entrar() {
-          var _this6 = this;
+          var _this7 = this;
 
           console.log(this.uname.nativeElement.value);
 
-          if (this.result.users.find(function (i) {
-            return i.MudId === _this6.uname.nativeElement.value;
+          if (this.users.find(function (i) {
+            return i.MudId === _this7.uname.nativeElement.value.toUpperCase();
           })) {
-            this.usuario = this.result.users.find(function (i) {
-              return i.MudId === _this6.uname.nativeElement.value;
+            this.usuario = this.users.find(function (i) {
+              return i.MudId === _this7.uname.nativeElement.value.toUpperCase();
             });
             console.log(this.usuario);
             localStorage.setItem('user', JSON.stringify(this.usuario));
@@ -1901,16 +1973,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "data",
         value: function data() {
-          var _this7 = this;
+          var _this8 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
           });
           return new Promise(function (resolve) {
-            _this7.http.get('https://gskvideolib.azure-api.net/users').subscribe(function (data) {
+            _this8.http.get('https://gskvideolib.azure-api.net/users').subscribe(function (data) {
               resolve(data);
               console.log(data);
-              _this7.users = data;
+              _this8.users = data;
             }, function (err) {
               console.log(err);
             });
@@ -1919,16 +1991,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "data2",
         value: function data2() {
-          var _this8 = this;
+          var _this9 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
           });
           return new Promise(function (resolve) {
-            _this8.http.get('https://gskvideolib.azure-api.net/division').subscribe(function (data) {
+            _this9.http.get('https://gskvideolib.azure-api.net/division').subscribe(function (data) {
               resolve(data);
               console.log(data);
-              _this8.divisoes = data;
+              _this9.divisoes = data;
             }, function (err) {
               console.log(err);
             });
@@ -1937,16 +2009,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "data3",
         value: function data3() {
-          var _this9 = this;
+          var _this10 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
           });
           return new Promise(function (resolve) {
-            _this9.http.get('https://gskvideolib.azure-api.net/videos').subscribe(function (data) {
+            _this10.http.get('https://gskvideolib.azure-api.net/videos').subscribe(function (data) {
               resolve(data);
               console.log(data);
-              _this9.videos = data;
+              _this10.videos = data;
             }, function (err) {
               console.log(err);
             });
@@ -1955,16 +2027,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "data4",
         value: function data4() {
-          var _this10 = this;
+          var _this11 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
           });
           return new Promise(function (resolve) {
-            _this10.http.get('https://gskvideolib.azure-api.net/produtos').subscribe(function (data) {
+            _this11.http.get('https://gskvideolib.azure-api.net/produtos').subscribe(function (data) {
               resolve(data);
               console.log(data);
-              _this10.produtos = data;
+              _this11.produtos = data;
             }, function (err) {
               console.log(err);
             });
@@ -1976,7 +2048,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }();
 
     LoginComponent.ɵfac = function LoginComponent_Factory(t) {
-      return new (t || LoginComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_db_service__WEBPACK_IMPORTED_MODULE_3__["DbService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]));
+      return new (t || LoginComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ng_connection_service__WEBPACK_IMPORTED_MODULE_3__["ConnectionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_db_service__WEBPACK_IMPORTED_MODULE_4__["DbService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]));
     };
 
     LoginComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -2063,7 +2135,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", ctx.shouldDisable);
         }
       },
-      directives: [_angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_4__["MatProgressBar"]],
+      directives: [_angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_5__["MatProgressBar"]],
       styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIn0= */"]
     });
     /*@__PURE__*/
@@ -2080,7 +2152,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         return [{
           type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
         }, {
-          type: _db_service__WEBPACK_IMPORTED_MODULE_3__["DbService"]
+          type: ng_connection_service__WEBPACK_IMPORTED_MODULE_3__["ConnectionService"]
+        }, {
+          type: _db_service__WEBPACK_IMPORTED_MODULE_4__["DbService"]
         }, {
           type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
         }];
@@ -2353,7 +2427,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       selectors: [["app-video"]],
       decls: 19,
       vars: 6,
-      consts: [["type", "button", 1, "btn", "btn-light", 3, "click"], [1, "card-body"], [1, "cor-div"], [1, "embed-responsive", "embed-responsive-16by9"], ["id", "mainVideo", "onclick", "this.paused ? this.play() : this.pause();", "width", "320", "height", "240", "controls", "", "preload", "yes", 3, "timeupdate"], ["autostart", "true", "type", "", 3, "src"], [1, "card-title"], [1, "card-subtitle", "mb-2", "text-muted"], [1, "card-text"], ["type", "button", 1, "btn", "btn-info", 2, "margin-right", "3%"], ["type", "button", 1, "btn", "btn-info"]],
+      consts: [["type", "button", 1, "btn", "btn-light", 3, "click"], [1, "card-body"], [1, "cor-div"], [1, "embed-responsive", "embed-responsive-16by9"], ["id", "mainVideo", "onclick", "this.paused ? this.play() : this.pause();", "width", "320", "height", "240", "nocontrols", "", "preload", "yes", 3, "timeupdate"], ["autostart", "true", "type", "", 3, "src"], [1, "card-title"], [1, "card-subtitle", "mb-2", "text-muted"], [1, "card-text"], ["type", "button", 1, "btn", "btn-info", 2, "margin-right", "3%"], ["type", "button", 1, "btn", "btn-info"]],
       template: function VideoComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 0);

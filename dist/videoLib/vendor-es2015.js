@@ -94366,6 +94366,89 @@ ServiceWorkerModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefi
 
 /***/ }),
 
+/***/ "./node_modules/ng-connection-service/__ivy_ngcc__/fesm2015/ng-connection-service.js":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/ng-connection-service/__ivy_ngcc__/fesm2015/ng-connection-service.js ***!
+  \*******************************************************************************************/
+/*! exports provided: ConnectionService, ConnectionServiceModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConnectionService", function() { return ConnectionService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConnectionServiceModule", function() { return ConnectionServiceModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
+
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+
+class ConnectionService {
+    constructor() {
+        this.connectionMonitor = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"]((observer) => {
+            window.addEventListener('offline', (e) => {
+                observer.next(false);
+            });
+            window.addEventListener('online', (e) => {
+                observer.next(true);
+            });
+        });
+    }
+    /**
+     * @return {?}
+     */
+    monitor() {
+        return this.connectionMonitor;
+    }
+}
+ConnectionService.ɵfac = function ConnectionService_Factory(t) { return new (t || ConnectionService)(); };
+ConnectionService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: ConnectionService, factory: ConnectionService.ɵfac, providedIn: 'root' });
+/** @nocollapse */
+ConnectionService.ctorParameters = () => [];
+/** @nocollapse */ ConnectionService.ngInjectableDef = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["defineInjectable"])({ factory: function ConnectionService_Factory() { return new ConnectionService(); }, token: ConnectionService, providedIn: "root" });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ConnectionService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return []; }, null); })();
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+class ConnectionServiceModule {
+}
+ConnectionServiceModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: ConnectionServiceModule });
+ConnectionServiceModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function ConnectionServiceModule_Factory(t) { return new (t || ConnectionServiceModule)(); }, providers: [ConnectionService], imports: [[]] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ConnectionServiceModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                imports: [],
+                providers: [ConnectionService]
+            }]
+    }], null, null); })();
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+
+
+
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6L1VzZXJzL2N0Mjk3MTU0L09uZURyaXZlIC0gR1NLL0Rlc2t0b3AvQ2Fpb0RFVkxvY2FsL3ZpZGVvTGliL25vZGVfbW9kdWxlcy9uZy1jb25uZWN0aW9uLXNlcnZpY2UvZmVzbTIwMTUvbmctY29ubmVjdGlvbi1zZXJ2aWNlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7OztBQU9BOzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0NBaUJDLHNJQUtDOzs7Ozs7Ozs7Z0RBRzJNOzs7Ozs7Ozs7Q0FPNU07Ozs7Ozs7MEJBTUMiLCJmaWxlIjoibmctY29ubmVjdGlvbi1zZXJ2aWNlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgSW5qZWN0YWJsZSwgTmdNb2R1bGUsIGRlZmluZUluamVjdGFibGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IE9ic2VydmFibGUgfSBmcm9tICdyeGpzJztcblxuLyoqXHJcbiAqIEBmaWxlb3ZlcnZpZXcgYWRkZWQgYnkgdHNpY2tsZVxyXG4gKiBAc3VwcHJlc3Mge2NoZWNrVHlwZXMsZXh0cmFSZXF1aXJlLHVzZWxlc3NDb2RlfSBjaGVja2VkIGJ5IHRzY1xyXG4gKi9cclxuY2xhc3MgQ29ubmVjdGlvblNlcnZpY2Uge1xyXG4gICAgY29uc3RydWN0b3IoKSB7XHJcbiAgICAgICAgdGhpcy5jb25uZWN0aW9uTW9uaXRvciA9IG5ldyBPYnNlcnZhYmxlKChvYnNlcnZlcikgPT4ge1xyXG4gICAgICAgICAgICB3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcignb2ZmbGluZScsIChlKSA9PiB7XHJcbiAgICAgICAgICAgICAgICBvYnNlcnZlci5uZXh0KGZhbHNlKTtcclxuICAgICAgICAgICAgfSk7XHJcbiAgICAgICAgICAgIHdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdvbmxpbmUnLCAoZSkgPT4ge1xyXG4gICAgICAgICAgICAgICAgb2JzZXJ2ZXIubmV4dCh0cnVlKTtcclxuICAgICAgICAgICAgfSk7XHJcbiAgICAgICAgfSk7XHJcbiAgICB9XHJcbiAgICAvKipcclxuICAgICAqIEByZXR1cm4gez99XHJcbiAgICAgKi9cclxuICAgIG1vbml0b3IoKSB7XHJcbiAgICAgICAgcmV0dXJuIHRoaXMuY29ubmVjdGlvbk1vbml0b3I7XHJcbiAgICB9XHJcbn1cclxuQ29ubmVjdGlvblNlcnZpY2UuZGVjb3JhdG9ycyA9IFtcclxuICAgIHsgdHlwZTogSW5qZWN0YWJsZSwgYXJnczogW3tcclxuICAgICAgICAgICAgICAgIHByb3ZpZGVkSW46ICdyb290J1xyXG4gICAgICAgICAgICB9LF0gfSxcclxuXTtcclxuLyoqIEBub2NvbGxhcHNlICovXHJcbkNvbm5lY3Rpb25TZXJ2aWNlLmN0b3JQYXJhbWV0ZXJzID0gKCkgPT4gW107XHJcbi8qKiBAbm9jb2xsYXBzZSAqLyBDb25uZWN0aW9uU2VydmljZS5uZ0luamVjdGFibGVEZWYgPSBkZWZpbmVJbmplY3RhYmxlKHsgZmFjdG9yeTogZnVuY3Rpb24gQ29ubmVjdGlvblNlcnZpY2VfRmFjdG9yeSgpIHsgcmV0dXJuIG5ldyBDb25uZWN0aW9uU2VydmljZSgpOyB9LCB0b2tlbjogQ29ubmVjdGlvblNlcnZpY2UsIHByb3ZpZGVkSW46IFwicm9vdFwiIH0pO1xuXG4vKipcclxuICogQGZpbGVvdmVydmlldyBhZGRlZCBieSB0c2lja2xlXHJcbiAqIEBzdXBwcmVzcyB7Y2hlY2tUeXBlcyxleHRyYVJlcXVpcmUsdXNlbGVzc0NvZGV9IGNoZWNrZWQgYnkgdHNjXHJcbiAqL1xyXG5jbGFzcyBDb25uZWN0aW9uU2VydmljZU1vZHVsZSB7XHJcbn1cclxuQ29ubmVjdGlvblNlcnZpY2VNb2R1bGUuZGVjb3JhdG9ycyA9IFtcclxuICAgIHsgdHlwZTogTmdNb2R1bGUsIGFyZ3M6IFt7XHJcbiAgICAgICAgICAgICAgICBpbXBvcnRzOiBbXSxcclxuICAgICAgICAgICAgICAgIHByb3ZpZGVyczogW0Nvbm5lY3Rpb25TZXJ2aWNlXVxyXG4gICAgICAgICAgICB9LF0gfSxcclxuXTtcblxuLyoqXHJcbiAqIEBmaWxlb3ZlcnZpZXcgYWRkZWQgYnkgdHNpY2tsZVxyXG4gKiBAc3VwcHJlc3Mge2NoZWNrVHlwZXMsZXh0cmFSZXF1aXJlLHVzZWxlc3NDb2RlfSBjaGVja2VkIGJ5IHRzY1xyXG4gKi9cblxuLyoqXHJcbiAqIEBmaWxlb3ZlcnZpZXcgYWRkZWQgYnkgdHNpY2tsZVxyXG4gKiBAc3VwcHJlc3Mge2NoZWNrVHlwZXMsZXh0cmFSZXF1aXJlLHVzZWxlc3NDb2RlfSBjaGVja2VkIGJ5IHRzY1xyXG4gKi9cblxuZXhwb3J0IHsgQ29ubmVjdGlvblNlcnZpY2UsIENvbm5lY3Rpb25TZXJ2aWNlTW9kdWxlIH07XG4iXX0=
+
+/***/ }),
+
 /***/ "./node_modules/ng-google-analytics/__ivy_ngcc__/fesm2015/ng-google-analytics.js":
 /*!***************************************************************************************!*\
   !*** ./node_modules/ng-google-analytics/__ivy_ngcc__/fesm2015/ng-google-analytics.js ***!

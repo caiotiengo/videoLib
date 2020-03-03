@@ -24,6 +24,7 @@ import { UniquePipe } from './unique.pipe';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NgGoogleAnalyticsModule } from 'ng-google-analytics';
+import {ConnectionServiceModule} from 'ng-connection-service';
 
 @NgModule({
   declarations: [
@@ -47,10 +48,11 @@ import { NgGoogleAnalyticsModule } from 'ng-google-analytics';
         AppRoutingModule,   
         MatDialogModule,
         HttpClientModule,
+         ConnectionServiceModule,
         BrowserAnimationsModule,
         ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}, { provide: MAT_DIALOG_DATA, useValue: {} }],  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},{ provide: MAT_DIALOG_DATA, useValue: {} }],  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

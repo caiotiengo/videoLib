@@ -21,16 +21,26 @@ export class ListComponent implements OnInit {
 
       videosSF: any = [];
       filtrei
+      filtrai
       opc
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,private router: Router,public dialog: MatDialog,private http: HttpClient) { 
   	 this.usuario = JSON.parse(localStorage.getItem('user'))
 
-  	 this.data1().then(data => {
-      this.result = data.valueOf();
-      console.log(this.result.videos);
-      this.filtrei = this.result.videos;
+     if(localStorage.getItem('videos') == null){
+           this.data1().then(data => {
+              this.result = data.valueOf();
+              console.log(this.result.videos);
+              this.filtrei = this.result.videos;
     
-    });
+        });
+         
+       }else{
+          this.filtrei = JSON.parse(localStorage.getItem('videos'))
+          console.log(this.filtrei)
+          this.filtrai = this.filtrei
+
+       }
+
      this.division = JSON.parse(localStorage.getItem('divisions'));
   }
 info(items:any): void{
@@ -90,13 +100,13 @@ info(items:any): void{
   }
   filtro(codigo: any){
 
-  var videos = this.result.videos;
+  var videos = this.filtrei;
       console.log(videos)
           if(videos.filter(i => i.division_description === codigo)){
-               this.filtrei = videos.filter(i => i.division_description === codigo);
+               this.filtrai = videos.filter(i => i.division_description === codigo);
                 
       }else{
-       this.filtrei = this.result.videos;
+       this.filtrai = this.filtrei;
 
       }
 
