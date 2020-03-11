@@ -1,4 +1,4 @@
-import { Component, OnInit , Inject } from '@angular/core';
+import { Component, OnInit , Inject, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { DomSanitizer} from '@angular/platform-browser';
 import {Pipe} from '@angular/core'
@@ -8,6 +8,7 @@ import {ListComponent} from "../list/list.component"
 import {VideoComponent} from '../video/video.component'
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { NgGoogleAnalyticsTracker } from 'ng-google-analytics';
+import { MatMenuTrigger } from '@angular/material/menu';
 
 
 @Component({
@@ -18,6 +19,8 @@ import { NgGoogleAnalyticsTracker } from 'ng-google-analytics';
 
 
 export class HomeComponent implements OnInit {
+      @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
+
 	public allList:any =[];
   result: any = [];
 	link
@@ -97,7 +100,8 @@ export class HomeComponent implements OnInit {
                  Root: items.Root,
                  URL: items.URL,
                  usuario: this.usuario.Nombre_del_representa,
-                 mudId: this.usuario.MudId
+                 mudId: this.usuario.MudId,
+                 disclaimer: items.disclaimer
                }
       });
     localStorage.setItem('video', JSON.stringify(dialogRef.componentInstance.data))

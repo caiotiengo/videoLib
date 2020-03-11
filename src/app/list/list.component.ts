@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
  import { HttpClient, HttpHeaders} from '@angular/common/http';
  import {VideoComponent} from '../video/video.component'
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatMenuTrigger } from '@angular/material/menu';
+
 
 
 @Component({
@@ -13,6 +15,8 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 export class ListComponent implements OnInit {
   	videos: any = [];
   @ViewChild('uname') resultado;
+    @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
+
   	code
 	allList:any =[];
 	usuario
@@ -53,7 +57,10 @@ info(items:any): void{
                  division_description: items.division_description,
                  Description: items.Description,
                  Root: items.Root,
-                 URL: items.URL
+                 URL: items.URL,
+                 usuario: this.usuario.Nombre_del_representa,
+                 mudId: this.usuario.MudId,
+                 disclaimer: items.disclaimer
                }
       });
     console.log(items)

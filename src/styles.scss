@@ -40,7 +40,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background: #f4a836 !important;
     color: rgba(0, 0, 0, 0.87);
     img{
-    	max-width:16%;
+    	max-width:30%;
     }
 }
 .mat-card{
@@ -58,7 +58,6 @@ body{
 .transparent-card{
 		border-top-right-radius: 0px !important;
     	border-top-left-radius: 0px !important;
-    	height: 50%;
 		background: linear-gradient(#f4a836, rgba(255, 255, 255, 0));
 		h1{
 			color:white;

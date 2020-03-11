@@ -1,22 +1,28 @@
 
 <mat-toolbar color="#dac84c">
+	<mat-menu #appMenu="matMenu">
+  		<button mat-menu-item (click)="home()">Home</button>
+  		<button mat-menu-item (click)="videos()">Vídeos</button>
+	</mat-menu>
+
+<button gsk1 type="button" class="btn btn-light" [matMenuTriggerFor]="appMenu">
+	  <i class="fas fa-bars"></i> Menu
+</button>
+<span style="    border-left: 2px solid white;
+    margin-left: 1%;
+    height: 50px;" ></span>
   <span><img src="/assets/gsk_branco.png"></span>
 
-  <!-- This fills the remaining space of the current row -->
+  <!-- This fills the remaining space of the current row      			<button type="button" class="btn btn-light" (click)="home()">Home</button>
+ -->
   <span class="example-fill-remaining-space">  	
 </span>
+
 <p style="margin-top: 18px;
     margin-bottom: 1rem;
     margin-right: 15px;">Olá, {{usuario.Nombre_del_representa}}</p>
-  <span>
-  		<div class="btn-group" role="group" aria-label="Basic example">
-  			<button type="button" class="btn btn-light" (click)="home()">Home</button>
-  			<button type="button" class="btn btn-light" (click)="videos()">Vídeos
-			</button>
-		</div>
-  </span>
-</mat-toolbar>
 
+</mat-toolbar>
 
 
 <mat-card class="transparent-card">
@@ -27,11 +33,11 @@
 		</div>
 		
 	</mat-card-title>
-	<mat-card-subtitle style="text-align-last: center !important; ">	
+	<mat-card-subtitle style="text-align: center !important; ">	
 		<div class="btn-group" role="group" aria-label="Basic example" *ngFor="let items of division">
 			<label style="margin-right: 10px;" *ngIf="items.Pais == usuario.Pais">
 				<label >
-				  			<button #uname type="button" id="uname" value="{{items.Descripcion_de_Division}}" (click)="filtro(items.Descripcion_de_Division)" class="btn btn-outline-light">{{items.Descripcion_de_Division}}</button>
+				  			<button #uname type="button" id="uname" value="{{items.Descripcion_de_Division}}" (click)="filtro(items.Descripcion_de_Division)" class="btn btn-light">{{items.Descripcion_de_Division}}</button>
 				</label>
 			</label>
 		
@@ -51,7 +57,7 @@
 		  				<div class="card-body">
 		  					<div class="row">
 		  						<div class="col-sm">
-		  						<video id="mainVideo"width="350" height="100%" style="border: 2px solid black;"  nocontrols  preload="yes">
+		  						<video id="mainVideo" width="100%" height="auto" style="border: 2px solid black;"  nocontrols  preload="yes">
 										<source [src]="items.URL | secureUrl" autostart="false" type="video/mp4">
 									</video>
 								</div><div class="col-sm">					
