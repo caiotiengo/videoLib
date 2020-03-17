@@ -523,9 +523,10 @@ class HomeComponent {
         this.videos = [];
         this.produtos = [];
         this.division = [];
+        this.divisions = [];
         this.videosSF = [];
         this.usuario = JSON.parse(localStorage.getItem('user'));
-        this.division = JSON.parse(localStorage.getItem('divisions'));
+        this.divisions = JSON.parse(localStorage.getItem('divisions'));
         this.videos = JSON.parse(localStorage.getItem('videos'));
         this.produtos = JSON.parse(localStorage.getItem('produtos'));
         console.log(this.usuario);
@@ -535,6 +536,7 @@ class HomeComponent {
         //this.filtrei = JSON.parse(localStorage.getItem('videos'));
         //console.log(this.filtrei)
         this.filtrei = this.videos;
+        this.division = this.divisions.sort((a, b) => b.index - a.index);
     }
     ngOnInit() {
     }
@@ -582,8 +584,9 @@ class HomeComponent {
             }
         });
         localStorage.setItem('video', JSON.stringify(dialogRef.componentInstance.data));
-        console.log(dialogRef.componentInstance.data);
+        //console.log(dialogRef.componentInstance.data)
         this.views = JSON.parse(localStorage.getItem('video'));
+        localStorage.removeItem('percentual');
         //    this.googleAnalyticsService.eventTracker("video", dialogRef.componentInstance.data.Nombre_del_video,  dialogRef.componentInstance.data.usuario )
     }
 }
@@ -662,7 +665,7 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.division);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.filtrei);
-    } }, directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_8__["MatToolbar"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_3__["_MatMenu"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_3__["MatMenuItem"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_3__["MatMenuTrigger"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCardSubtitle"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"]], pipes: [_secure_url_pipe__WEBPACK_IMPORTED_MODULE_11__["SecureUrlPipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyJ9 */"] });
+    } }, directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_8__["MatToolbar"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_3__["_MatMenu"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_3__["MatMenuItem"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_3__["MatMenuTrigger"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCardSubtitle"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"]], pipes: [_secure_url_pipe__WEBPACK_IMPORTED_MODULE_11__["SecureUrlPipe"]], styles: [".transparent-card[_ngcontent-%COMP%] {\n  height: 28% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9DOlxcVXNlcnNcXGN0Mjk3MTU0XFxPbmVEcml2ZSAtIEdTS1xcRGVza3RvcFxcQ2Fpb0RFVkxvY2FsXFx2aWRlb0xpYi9zcmNcXGFwcFxcaG9tZVxcaG9tZS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Msc0JBQUE7QUNDRCIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi50cmFuc3BhcmVudC1jYXJke1xyXG5cdGhlaWdodDoyOCUgIWltcG9ydGFudDtcclxuXHJcbn0iLCIudHJhbnNwYXJlbnQtY2FyZCB7XG4gIGhlaWdodDogMjglICFpbXBvcnRhbnQ7XG59Il19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HomeComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -803,6 +806,7 @@ class ListComponent {
         this.allList = [];
         this.result = [];
         this.division = [];
+        this.divisions = [];
         this.videosSF = [];
         this.usuario = JSON.parse(localStorage.getItem('user'));
         if (localStorage.getItem('videos') == null) {
@@ -817,7 +821,9 @@ class ListComponent {
             console.log(this.filtrei);
             this.filtrai = this.filtrei;
         }
-        this.division = JSON.parse(localStorage.getItem('divisions'));
+        this.divisions = JSON.parse(localStorage.getItem('divisions'));
+        this.division = this.divisions.sort((A, B) => A.Descripcion_de_Division - B.Descripcion_de_Division);
+        console.log(this.division);
     }
     info(items) {
         let dialogRef = this.dialog.open(_video_video_component__WEBPACK_IMPORTED_MODULE_2__["VideoComponent"], {
@@ -835,7 +841,8 @@ class ListComponent {
                 disclaimer: items.disclaimer
             }
         });
-        console.log(items);
+        // console.log(items)
+        localStorage.removeItem('percentual');
     }
     data1() {
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
@@ -951,7 +958,7 @@ ListComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.division);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.filtrai);
-    } }, directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_6__["MatToolbar"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_4__["_MatMenu"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_4__["MatMenuItem"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_4__["MatMenuTrigger"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCardSubtitle"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"]], pipes: [_secure_url_pipe__WEBPACK_IMPORTED_MODULE_9__["SecureUrlPipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xpc3QvbGlzdC5jb21wb25lbnQuc2NzcyJ9 */"] });
+    } }, directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_6__["MatToolbar"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_4__["_MatMenu"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_4__["MatMenuItem"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_4__["MatMenuTrigger"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCardSubtitle"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"]], pipes: [_secure_url_pipe__WEBPACK_IMPORTED_MODULE_9__["SecureUrlPipe"]], styles: [".transparent-card[_ngcontent-%COMP%] {\n  height: 45% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGlzdC9DOlxcVXNlcnNcXGN0Mjk3MTU0XFxPbmVEcml2ZSAtIEdTS1xcRGVza3RvcFxcQ2Fpb0RFVkxvY2FsXFx2aWRlb0xpYi9zcmNcXGFwcFxcbGlzdFxcbGlzdC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvbGlzdC9saXN0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0csc0JBQUE7QUNDSCIsImZpbGUiOiJzcmMvYXBwL2xpc3QvbGlzdC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi50cmFuc3BhcmVudC1jYXJke1xyXG5cdFx0XHRoZWlnaHQ6NDUlICFpbXBvcnRhbnQ7XHJcblxyXG59IiwiLnRyYW5zcGFyZW50LWNhcmQge1xuICBoZWlnaHQ6IDQ1JSAhaW1wb3J0YW50O1xufSJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ListComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -1044,7 +1051,7 @@ class LoginComponent {
             this.data2().then(data => {
                 this.result2 = data.valueOf();
                 console.log(this.result2.division);
-                this.divisions = this.result2.division;
+                this.divisions = this.result2.division.sort((A, B) => A.Descripcion_de_Division - B.Descripcion_de_Division);
                 localStorage.setItem('divisions', JSON.stringify(this.divisions));
             });
         }
@@ -1309,7 +1316,7 @@ class VideoComponent {
         let mainVideo = document.getElementById('mainVideo');
         this.views = JSON.parse(localStorage.getItem('video'));
         console.log(this.views);
-        console.log(this.percentual);
+        //console.log(this.percentual)
         var date = new Date();
         this.date = date.getDate() + '/' + date.getUTCMonth() + '/' + date.getFullYear();
         console.log(this.date);
@@ -1338,12 +1345,12 @@ class VideoComponent {
                 }];
             localStorage.setItem('dadoOffline', JSON.stringify(this.usuarioView));
             this.dadoOffline = JSON.parse(localStorage.getItem('dadoOffline'));
-            console.log(this.dadoOffline);
+            //  console.log(this.dadoOffline)
             this.Offline = this.dadoOffline.concat(this.usuarioView);
-            console.log(this.Offline);
+            //       console.log(this.Offline)     
         }
         else {
-            console.log(this.percentage);
+            // console.log(this.percentage)
             this.usuarioView.push({
                 Pais: this.views.Pais,
                 Codigo_de_Division: this.views.Codigo_de_Division,
@@ -1365,9 +1372,9 @@ class VideoComponent {
         // console.log(this.currentTime)
         this.timePercentual = localStorage.setItem('percentual', this.percentual);
         if (this.timePercentual = !null) {
-            console.log(this.timePercentual);
+            //  console.log(this.timePercentual)
         }
-        console.log(this.percentual);
+        // console.log(this.percentual)
     }
 }
 VideoComponent.ɵfac = function VideoComponent_Factory(t) { return new (t || VideoComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ng_google_analytics__WEBPACK_IMPORTED_MODULE_2__["NgGoogleAnalyticsTracker"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"])); };

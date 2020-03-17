@@ -62,7 +62,7 @@ export class LoginComponent implements OnInit {
            this.data2().then(data =>{
               this.result2 = data.valueOf();
               console.log(this.result2.division)
-              this.divisions = this.result2.division
+              this.divisions = this.result2.division.sort((A, B) => A.Descripcion_de_Division - B.Descripcion_de_Division);
               localStorage.setItem('divisions', JSON.stringify(this.divisions))
          });
        }else{

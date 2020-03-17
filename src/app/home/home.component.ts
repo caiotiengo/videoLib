@@ -32,6 +32,8 @@ export class HomeComponent implements OnInit {
   produtos: any = [];
 
   division: any =[];
+    divisions: any =[];
+
   videosSF: any = [];
   filtrei
   video
@@ -39,7 +41,7 @@ export class HomeComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,public dialog: MatDialog,public googleAnalyticsService: NgGoogleAnalyticsTracker,private router: Router,private sanitizer: DomSanitizer, 
     private db: DbService) { 
       this.usuario = JSON.parse(localStorage.getItem('user'))
-      this.division = JSON.parse(localStorage.getItem('divisions'));
+      this.divisions = JSON.parse(localStorage.getItem('divisions'));
       this.videos = JSON.parse(localStorage.getItem('videos'));
       this.produtos = JSON.parse(localStorage.getItem('produtos'));
       console.log(this.usuario)
@@ -50,6 +52,7 @@ export class HomeComponent implements OnInit {
        //this.filtrei = JSON.parse(localStorage.getItem('videos'));
        //console.log(this.filtrei)
        this.filtrei = this.videos
+       this.division = this.divisions.sort((a, b) => b.index - a.index);
   }
 
 
@@ -105,8 +108,9 @@ export class HomeComponent implements OnInit {
                }
       });
     localStorage.setItem('video', JSON.stringify(dialogRef.componentInstance.data))
-    console.log(dialogRef.componentInstance.data)
+    //console.log(dialogRef.componentInstance.data)
     this.views = JSON.parse(localStorage.getItem('video')) 
+    localStorage.removeItem('percentual')
 //    this.googleAnalyticsService.eventTracker("video", dialogRef.componentInstance.data.Nombre_del_video,  dialogRef.componentInstance.data.usuario )
   }
 }

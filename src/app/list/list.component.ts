@@ -22,6 +22,7 @@ export class ListComponent implements OnInit {
 	usuario
 	result: any = [];
   division: any = [];
+  divisions: any = [];
 
       videosSF: any = [];
       filtrei
@@ -45,7 +46,9 @@ export class ListComponent implements OnInit {
 
        }
 
-     this.division = JSON.parse(localStorage.getItem('divisions'));
+     this.divisions = JSON.parse(localStorage.getItem('divisions'));
+     this.division = this.divisions.sort((A, B) => A.Descripcion_de_Division - B.Descripcion_de_Division);
+     console.log(this.division)
   }
 info(items:any): void{
     let dialogRef = this.dialog.open(VideoComponent, {
@@ -63,7 +66,9 @@ info(items:any): void{
                  disclaimer: items.disclaimer
                }
       });
-    console.log(items)
+   // console.log(items)
+        localStorage.removeItem('percentual')
+
   }
 
 

@@ -25,7 +25,7 @@ export class VideoComponent implements OnInit {
     let mainVideo = <HTMLMediaElement>document.getElementById('mainVideo');
     this.views = JSON.parse(localStorage.getItem('video')) 
     console.log(this.views)
-    console.log(this.percentual)
+    //console.log(this.percentual)
 
     var date = new Date()
     this.date = date.getDate()+'/'+date.getUTCMonth()+'/'+date.getFullYear()
@@ -61,14 +61,14 @@ export class VideoComponent implements OnInit {
 
                localStorage.setItem('dadoOffline',JSON.stringify(this.usuarioView)) 
                this.dadoOffline = JSON.parse(localStorage.getItem('dadoOffline'))
-               console.log(this.dadoOffline)
+             //  console.log(this.dadoOffline)
                this.Offline = this.dadoOffline.concat(this.usuarioView);
-               console.log(this.Offline)     
+        //       console.log(this.Offline)     
                 
 
                
             }else{
-              console.log(this.percentage)
+             // console.log(this.percentage)
               this.usuarioView.push({
                  Pais: this.views.Pais,
                  Codigo_de_Division: this.views.Codigo_de_Division,
@@ -94,9 +94,9 @@ export class VideoComponent implements OnInit {
       this.timePercentual = localStorage.setItem('percentual', this.percentual)
       if(this.timePercentual =! null){
         
-        console.log(this.timePercentual)
+      //  console.log(this.timePercentual)
       }
-      console.log(this.percentual)
+     // console.log(this.percentual)
       
 
     }
