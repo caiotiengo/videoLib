@@ -29,7 +29,6 @@ export class LoginComponent implements OnInit {
   divisions: any =[];
   divisoes: any =[];
   videos: any =[];
-
   shouldDisable=true;
   curSec: number = 0;
   showLoading = false;
@@ -64,6 +63,7 @@ export class LoginComponent implements OnInit {
               console.log(this.result2.division)
               this.divisions = this.result2.division.sort((A, B) => A.Descripcion_de_Division - B.Descripcion_de_Division);
               localStorage.setItem('divisions', JSON.stringify(this.divisions))
+
          });
        }else{
           this.divisions = JSON.parse(localStorage.getItem('divisions'))
@@ -89,14 +89,15 @@ export class LoginComponent implements OnInit {
               console.log(this.result4.produtos)
               this.produtos = this.result4.produtos
               localStorage.setItem('produtos', JSON.stringify(this.produtos))
+
           })
          
+
        }else{
           this.produtos = JSON.parse(localStorage.getItem('produtos'));
           console.log(this.produtos)
        }
     
-
    
 
   }
@@ -107,10 +108,10 @@ export class LoginComponent implements OnInit {
 
   entrar(){
        
-
+// .toUpperCase() lembrar de usar quando atualizar o banco verdadeiro
     console.log(this.uname.nativeElement.value)
-     if(this.users.find(i => i.MudId === this.uname.nativeElement.value.toUpperCase())){
-       this.usuario = this.users.find(i => i.MudId === this.uname.nativeElement.value.toUpperCase());
+     if(this.users.find(i => i.MudId === this.uname.nativeElement.value)){
+       this.usuario = this.users.find(i => i.MudId === this.uname.nativeElement.value);
        console.log(this.usuario)
        localStorage.setItem('user', JSON.stringify(this.usuario))  
            this.router.navigateByUrl('/home')

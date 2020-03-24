@@ -37,7 +37,7 @@
 		<div class="btn-group" role="group" aria-label="Basic example" *ngFor="let items of division">
 			<label style="margin-right: 10px;" *ngIf="items.Pais == usuario.Pais">
 				<label >
-				  			<button #uname type="button" id="uname" value="{{items.Descripcion_de_Division}}" (click)="filtro(items.Descripcion_de_Division)" class="btn btn-light">{{items.Descripcion_de_Division}}</button>
+				  			<button #uname type="button" id="uname" value="{{items.Codigo_de_Division}}" (click)="filtro(items.Codigo_de_Division)" class="btn btn-light">{{items.Descripcion_de_Division}}</button>
 				</label>
 			</label>
 		
@@ -62,9 +62,9 @@
 									</video>
 								</div><div class="col-sm">					
 		    								<h5 class="card-title">{{items.Nombre_del_video}}</h5>
-		    								<h6 class="card-subtitle mb-2 text-muted">{{items.division_description}}</h6>
+		    								<h6 class="card-subtitle mb-2 text-muted">{{items.Codigo_de_Division}} | {{items.area_terapeutica}}</h6>
 		    								<p class="card-text">{{items.Description}}</p>
-									<button type="button" style="margin-right: 3%" (click)="info(items)" class="btn btn-info">Play</button>
+									<button type="button" style="margin-right: 3%" (click)="info(items)" class="btn btn-info">Watch</button>
 									</div>
 									</div>	
 		  				</div>

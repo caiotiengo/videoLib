@@ -23,14 +23,15 @@ export class ListComponent implements OnInit {
 	result: any = [];
   division: any = [];
   divisions: any = [];
-
-      videosSF: any = [];
-      filtrei
-      filtrai
-      opc
+  produtos: any = [];
+  videosSF: any = [];
+  filtrei
+  filtrai
+  opc
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,private router: Router,public dialog: MatDialog,private http: HttpClient) { 
   	 this.usuario = JSON.parse(localStorage.getItem('user'))
-
+     this.produtos = JSON.parse(localStorage.getItem('produtos'));
+     console.log(this.produtos)
      if(localStorage.getItem('videos') == null){
            this.data1().then(data => {
               this.result = data.valueOf();
@@ -114,8 +115,8 @@ info(items:any): void{
 
   var videos = this.filtrei;
       console.log(videos)
-          if(videos.filter(i => i.division_description === codigo)){
-               this.filtrai = videos.filter(i => i.division_description === codigo);
+          if(videos.filter(i => i.Codigo_de_Division === codigo)){
+               this.filtrai = videos.filter(i => i.Codigo_de_Division === codigo);
                 
       }else{
        this.filtrai = this.filtrei;

@@ -32,7 +32,8 @@ export class HomeComponent implements OnInit {
   produtos: any = [];
 
   division: any =[];
-    divisions: any =[];
+  divisions: any =[];
+  codigo: any =[]
 
   videosSF: any = [];
   filtrei
@@ -53,6 +54,8 @@ export class HomeComponent implements OnInit {
        //console.log(this.filtrei)
        this.filtrei = this.videos
        this.division = this.divisions.sort((a, b) => b.index - a.index);
+       this.codigo = this.produtos
+    
   }
 
 
@@ -78,8 +81,10 @@ export class HomeComponent implements OnInit {
 
       var videos = this.videos;
       console.log(videos)
-          if(videos.filter(i => i.division_description === codigo)){
-               this.filtrei = videos.filter(i => i.division_description === codigo);
+          if(videos.filter(i => i.Codigo_de_Division === codigo)){
+               this.filtrei = videos.filter(i => i.Codigo_de_Division === codigo);
+               this.codigo = this.produtos.filter(i => i.Codigo_de_Division === codigo);
+               console.log(this.codigo)
                console.log(this.filtrei)
       }else{
               this.filtrei = this.videos;
