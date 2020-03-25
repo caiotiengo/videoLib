@@ -109,7 +109,8 @@ export class HomeComponent implements OnInit {
                  URL: items.URL,
                  usuario: this.usuario.Nombre_del_representa,
                  mudId: this.usuario.MudId,
-                 disclaimer: items.disclaimer
+                 disclaimer: items.disclaimer,
+                 area_terapeutica: items.area_terapeutica
                }
       });
     localStorage.setItem('video', JSON.stringify(dialogRef.componentInstance.data))

@@ -1105,7 +1105,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               URL: items.URL,
               usuario: this.usuario.Nombre_del_representa,
               mudId: this.usuario.MudId,
-              disclaimer: items.disclaimer
+              disclaimer: items.disclaimer,
+              area_terapeutica: items.area_terapeutica
             }
           });
           localStorage.setItem('video', JSON.stringify(dialogRef.componentInstance.data)); //console.log(dialogRef.componentInstance.data)
@@ -1641,7 +1642,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               URL: items.URL,
               usuario: this.usuario.Nombre_del_representa,
               mudId: this.usuario.MudId,
-              disclaimer: items.disclaimer
+              disclaimer: items.disclaimer,
+              area_terapeutica: items.area_terapeutica
             }
           }); // console.log(items)
 
@@ -2575,7 +2577,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       type: VideoComponent,
       selectors: [["app-video"]],
       decls: 21,
-      vars: 7,
+      vars: 8,
       consts: [["type", "button", 1, "btn", "btn-light", 3, "click"], [1, "card-body"], [1, "cor-div"], [1, "embed-responsive", "embed-responsive-16by9"], ["id", "mainVideo", "onclick", "this.paused ? this.play() : this.pause();", "width", "320", "height", "240", "controls", "", "preload", "yes", "playsinline", "", 3, "timeupdate"], ["autostart", "true", "type", "", 3, "src"], [1, "card-title"], [1, "card-subtitle", "mb-2", "text-muted"], [1, "card-text"], [2, "font-size", "xx-small", "color", "gray"], ["type", "button", 1, "btn", "btn-info", 2, "margin-right", "3%"], ["type", "button", 1, "btn", "btn-info"]],
       template: function VideoComponent_Template(rf, ctx) {
         if (rf & 1) {
@@ -2653,7 +2655,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         if (rf & 2) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](7, 5, ctx.data.URL), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](7, 6, ctx.data.URL), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
 
@@ -2661,7 +2663,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.data.division_description);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", ctx.data.Codigo_de_Division, " | ", ctx.data.area_terapeutica, "");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 

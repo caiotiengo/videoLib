@@ -64,7 +64,9 @@ info(items:any): void{
                  URL: items.URL,
                  usuario: this.usuario.Nombre_del_representa,
                  mudId: this.usuario.MudId,
-                 disclaimer: items.disclaimer
+                 disclaimer: items.disclaimer,
+                 area_terapeutica: items.area_terapeutica
+
                }
       });
    // console.log(items)
