@@ -25,6 +25,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NgGoogleAnalyticsModule } from 'ng-google-analytics';
 import {ConnectionServiceModule} from 'ng-connection-service';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {ConnectionServiceModule} from 'ng-connection-service';
     SecureUrlPipe,
     AccessComponent,
     ListComponent,
-    UniquePipe
+    UniquePipe,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

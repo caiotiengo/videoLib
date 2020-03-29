@@ -16,6 +16,8 @@
 		    		<p class="card-text">{{data.Description}}</p>
 		    		<p style="font-size: xx-small;
     color: gray;">{{data.disclaimer}}</p>
-					<button type="button" style="margin-right: 3%" class="btn btn-info">Info</button>
-					<button type="button" class="btn btn-info">Produto</button>
+    			<a style="text-decoration: none"  href="{{data.link_produto}}" target="_blank">
+					<button type="button" style="margin-right: 3%" class="btn btn-dark">Produto</button>
+				</a>
+					<button type="button" class="btn btn-dark" (click)="info(data)">Info</button>
 </div>

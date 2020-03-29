@@ -36,9 +36,11 @@ export class HomeComponent implements OnInit {
   codigo: any =[]
 
   videosSF: any = [];
+    divisionUser: any = [];
+
   filtrei
   video
-
+dividiu:any = [];
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,public dialog: MatDialog,public googleAnalyticsService: NgGoogleAnalyticsTracker,private router: Router,private sanitizer: DomSanitizer, 
     private db: DbService) { 
       this.usuario = JSON.parse(localStorage.getItem('user'))
@@ -52,8 +54,23 @@ export class HomeComponent implements OnInit {
 
        //this.filtrei = JSON.parse(localStorage.getItem('videos'));
        //console.log(this.filtrei)
+       
+       this.divisionUser = this.divisions.filter(i => i.Codigo_de_Division === this.usuario.Codigo_de_Division)
+       console.log(this.divisionUser)
+       console.log(this.divisionUser.length)
+
+       if(this.divisionUser.length > 1){
+         this.dividiu = this.divisionUser[0]
+          console.log(this.dividiu)
+
+       }else{
+        this.dividiu = this.divisionUser
+       }
+
+     
        this.filtrei = this.videos
        this.division = this.divisions.sort((a, b) => b.index - a.index);
+       
        this.codigo = this.produtos
     
   }
@@ -77,6 +94,9 @@ export class HomeComponent implements OnInit {
   videoss(){
   	this.router.navigateByUrl('/list')
   }
+
+
+
    filtro(codigo: any){
 
       var videos = this.videos;
@@ -110,7 +130,9 @@ export class HomeComponent implements OnInit {
                  usuario: this.usuario.Nombre_del_representa,
                  mudId: this.usuario.MudId,
                  disclaimer: items.disclaimer,
-                 area_terapeutica: items.area_terapeutica
+                 area_terapeutica: items.area_terapeutica,
+                 link_produto: items.link_produto,
+                 info_txt: items.info_txt
                }
       });
     localStorage.setItem('video', JSON.stringify(dialogRef.componentInstance.data))

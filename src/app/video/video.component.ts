@@ -2,6 +2,8 @@ import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { NgGoogleAnalyticsTracker } from 'ng-google-analytics';
+import {InfoComponent} from '../info/info.component';
+
 
 @Component({
   selector: 'app-video',
@@ -20,7 +22,8 @@ export class VideoComponent implements OnInit {
    dadoOffline:any = []
    Offline:any = []
    
-  constructor(public dialogRef: MatDialogRef<VideoComponent>,@Inject(MAT_DIALOG_DATA) public data: any,public googleAnalyticsService: NgGoogleAnalyticsTracker,
+  constructor(public dialogRef: MatDialogRef<VideoComponent>,@Inject(MAT_DIALOG_DATA) public data: any,
+    public dialog: MatDialog, public googleAnalyticsService: NgGoogleAnalyticsTracker,
     private http: HttpClient) {
     let mainVideo = <HTMLMediaElement>document.getElementById('mainVideo');
     this.views = JSON.parse(localStorage.getItem('video')) 
@@ -100,5 +103,14 @@ export class VideoComponent implements OnInit {
       
 
     }
+
+    info(items:any): void{
+    let dialogRef = this.dialog.open(InfoComponent, {
+      height: '100%',
+      width: '100%',
+      data: { info_txt: items.info_txt}
+      });
+//    this.googleAnalyticsService.eventTracker("video", dialogRef.componentInstance.data.Nombre_del_video,  dialogRef.componentInstance.data.usuario )
+  }
     
 }

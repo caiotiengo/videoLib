@@ -16,6 +16,7 @@ export class ListComponent implements OnInit {
   	videos: any = [];
   @ViewChild('uname') resultado;
     @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
+  @ViewChild('passcode') uname;
 
   	code
 	allList:any =[];
@@ -65,7 +66,9 @@ info(items:any): void{
                  usuario: this.usuario.Nombre_del_representa,
                  mudId: this.usuario.MudId,
                  disclaimer: items.disclaimer,
-                 area_terapeutica: items.area_terapeutica
+                 area_terapeutica: items.area_terapeutica,
+                 link_produto: items.link_produto,
+                 info_txt: items.info_txt
 
                }
       });
@@ -117,8 +120,8 @@ info(items:any): void{
 
   var videos = this.filtrei;
       console.log(videos)
-          if(videos.filter(i => i.Codigo_de_Division === codigo)){
-               this.filtrai = videos.filter(i => i.Codigo_de_Division === codigo);
+          if(videos.filter(i => i.Codigo_de_Division === this.uname.nativeElement.value)){
+               this.filtrai = videos.filter(i => i.Codigo_de_Division === this.uname.nativeElement.value);
                 
       }else{
        this.filtrai = this.filtrei;

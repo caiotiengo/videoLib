@@ -41,25 +41,25 @@
 <div class="container colors">
 
 	<h1>Para você!</h1>
-	<mat-card-subtitle style="text-align-last: center !important; ">	
-		<div class="btn-group" role="group" aria-label="Basic example" *ngFor="let items of division">
-			<label style="margin-right: 10px;" *ngIf="items.Codigo_de_Division == usuario.Codigo_de_Division  ">
-				<label >
-				  			<button #uname type="button" id="uname" value="{{items.Codigo_de_Division}}" (click)="filtro(items.Codigo_de_Division)"  class="btn btn-light">{{items.Descripcion_de_Division}}</button>
-				</label>
+	<mat-card-subtitle style="text-align-last: center !important; " *ngIf="divisionUser.length >= 1">		
+		<div class="btn-group" role="group" aria-label="Basic example">
+			<label style="margin-right: 10px;">			
+				  			<button #uname type="button" id="uname" value="{{divisionUser[0].Codigo_de_Division}}" (click)="filtro(divisionUser[0].Codigo_de_Division)"  class="btn btn-dark">{{divisionUser[0].Descripcion_de_Division}}</button>
+	
 			</label>
 		
 		</div>
 			<div class="btn-group" role="group" aria-label="Basic example">
 			<label style="margin-right: 10px;" *ngIf="">
 				<label >
-				  			<button #uname type="button" id="uname"   class="btn btn-dark">btn</button>
+				  			<button #uname type="button" id="uname" class="btn btn-dark">btn</button>
 				</label>
 			</label>
 		
 		</div>
 
 	</mat-card-subtitle>
+
 	
   <div class="row" style="">
     <div class="col-xl" >
@@ -78,7 +78,7 @@
 		    								<h5 class="card-title">{{items.Nombre_del_video}}</h5>
 		    								<h6 class="card-subtitle mb-2 text-muted">{{items.Codigo_de_Division}}  | {{items.area_terapeutica}}</h6>
 		    								<p class="card-text">{{items.Description}}</p>
-									<button type="button" style="margin-right: 3%" (click)="info(items)"  class="btn btn-info">Watch</button>
+									<button type="button" style="margin-right: 3%" (click)="info(items)"  class="btn btn-dark">Watch</button>
 									</div>
 									</div>	
 		  				</div>

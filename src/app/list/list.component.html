@@ -29,20 +29,17 @@
 
 	<mat-card-title>
 		<div>
-			<h1>Escolha a área terapêutica</h1>	
+			<h2 style="text-align-last:center; color:white; margin-top: 5%;">Find the right video for you!</h2>	
+			<p style="color: #8c8c8c;    font-size: medium;    font-style: italic;">Search by Division Code or Tags.</p>
 		</div>
 		
 	</mat-card-title>
 	<mat-card-subtitle style="text-align: center !important; ">	
-		<div class="btn-group" role="group" aria-label="Basic example" *ngFor="let items of division">
-			<label style="margin-right: 10px;" *ngIf="items.Pais == usuario.Pais">
-				<label >
-				  			<button #uname type="button" id="uname" value="{{items.Codigo_de_Division}}" (click)="filtro(items.Codigo_de_Division)" class="btn btn-light">{{items.Descripcion_de_Division}}</button>
-				</label>
-			</label>
-		
-		</div>
+		<input class="form-control"  style="    border-radius: 25px;   width: 75%;  margin-top: 5%;  margin-left: auto;    text-align: center;    margin-right: auto;    box-shadow: 3px 3px #cecdcd;" id="passcode" placeholder="Search" #passcode aria-describedby="search"><br/>
+		<button #uname type="button" id="uname" value="{{divisions.Codigo_de_Division}}" (click)="filtro(divisions.Codigo_de_Division)" class="btn btn-dark"> Search </button>
 	</mat-card-subtitle>
+		
+
 </mat-card>
 
 
@@ -64,7 +61,7 @@
 		    								<h5 class="card-title">{{items.Nombre_del_video}}</h5>
 		    								<h6 class="card-subtitle mb-2 text-muted">{{items.Codigo_de_Division}} | {{items.area_terapeutica}}</h6>
 		    								<p class="card-text">{{items.Description}}</p>
-									<button type="button" style="margin-right: 3%" (click)="info(items)" class="btn btn-info">Watch</button>
+									<button type="button" style="margin-right: 3%" (click)="info(items)" class="btn btn-dark">Watch</button>
 									</div>
 									</div>	
 		  				</div>
