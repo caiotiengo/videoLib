@@ -42,12 +42,15 @@ export class VideoComponent implements OnInit {
   }
    close(){
         this.dialogRef.close('Pizza!');
-
+          // area terapeutica do video no analytics
+          //calculo de porcentagem
+          //
             this.percentage = localStorage.getItem('percentual')
             
             console.log(this.percentage)
             if(this.percentage =! null){
-               this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video, this.percentage, 'User:' + this.views.usuario + ', ' + 'Mud ID:' + this.views.mudId + ', ' + 'Date:' + this.date )      
+               this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video, this.percentage, 'User:' + 
+                 this.views.usuario + ', ' + 'Mud ID:' + this.views.mudId + ', ' + 'Date:' + this.date )      
                
 
                this.usuarioView = [{

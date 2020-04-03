@@ -735,15 +735,13 @@ class InfoComponent {
     }
 }
 InfoComponent.ɵfac = function InfoComponent_Factory(t) { return new (t || InfoComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialog"])); };
-InfoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: InfoComponent, selectors: [["app-info"]], decls: 3, vars: 1, template: function InfoComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "html");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+InfoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: InfoComponent, selectors: [["app-info"]], decls: 2, vars: 1, template: function InfoComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "iframe");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.data.info_txt);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx.data.info_txt, " ");
     } }, styles: [".mat-dialog-container[_ngcontent-%COMP%] {\n  width: 50% !important;\n  height: 50% !important;\n  margin-left: auto !important;\n  margin-right: auto !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaW5mby9DOlxcVXNlcnNcXGN0Mjk3MTU0XFxPbmVEcml2ZSAtIEdTS1xcRGVza3RvcFxcQ2Fpb0RFVkxvY2FsXFx2aWRlb0xpYi9zcmNcXGFwcFxcaW5mb1xcaW5mby5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvaW5mby9pbmZvLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UscUJBQUE7RUFDQSxzQkFBQTtFQUNBLDRCQUFBO0VBQ0EsNkJBQUE7QUNDRiIsImZpbGUiOiJzcmMvYXBwL2luZm8vaW5mby5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXQtZGlhbG9nLWNvbnRhaW5lciB7XHJcblx0XHR3aWR0aDo1MCUgIWltcG9ydGFudDtcclxuXHRcdGhlaWdodDo1MCUgIWltcG9ydGFudDtcclxuXHRcdG1hcmdpbi1sZWZ0OiBhdXRvIWltcG9ydGFudDtcclxuXHRcdG1hcmdpbi1yaWdodDphdXRvICFpbXBvcnRhbnQ7XHJcblx0XHRcclxufSIsIi5tYXQtZGlhbG9nLWNvbnRhaW5lciB7XG4gIHdpZHRoOiA1MCUgIWltcG9ydGFudDtcbiAgaGVpZ2h0OiA1MCUgIWltcG9ydGFudDtcbiAgbWFyZ2luLWxlZnQ6IGF1dG8gIWltcG9ydGFudDtcbiAgbWFyZ2luLXJpZ2h0OiBhdXRvICFpbXBvcnRhbnQ7XG59Il19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](InfoComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
@@ -859,6 +857,9 @@ class ListComponent {
         this.divisions = [];
         this.produtos = [];
         this.videosSF = [];
+        this.tag = [];
+        this.area = [];
+        this.lista = [];
         this.usuario = JSON.parse(localStorage.getItem('user'));
         this.produtos = JSON.parse(localStorage.getItem('produtos'));
         console.log(this.produtos);
@@ -936,11 +937,20 @@ class ListComponent {
     filtro(codigo) {
         var videos = this.filtrei;
         console.log(videos);
-        if (videos.filter(i => i.Codigo_de_Division === this.uname.nativeElement.value)) {
-            this.filtrai = videos.filter(i => i.Codigo_de_Division === this.uname.nativeElement.value);
+        this.tag = videos.filter(i => String(i.tags).indexOf(this.uname.nativeElement.value) >= 0);
+        this.area = videos.filter(i => String(i.area_terapeutica).indexOf(this.uname.nativeElement.value) >= 0);
+        console.log("Resultado em tag" + JSON.stringify(this.tag));
+        console.log("Rsultado em area" + JSON.stringify(this.area));
+        if (JSON.stringify(this.area) == '[]') {
+            this.filtrai = this.tag;
+            if (JSON.stringify(this.tag) == '[]') {
+                this.filtrai = this.area;
+            }
         }
         else {
-            this.filtrai = this.filtrei;
+            this.filtrai = videos.filter(i => String(i.tags).indexOf(this.uname.nativeElement.value)
+                >= 0) && videos.filter(i => String(i.area_terapeutica).indexOf(this.uname.nativeElement.value) >= 0);
+            console.log("tem os dois" + this.filtrai);
         }
         console.log(codigo);
     }
@@ -1400,10 +1410,14 @@ class VideoComponent {
     }
     close() {
         this.dialogRef.close('Pizza!');
+        // area terapeutica do video no analytics
+        //calculo de porcentagem
+        //
         this.percentage = localStorage.getItem('percentual');
         console.log(this.percentage);
         if (this.percentage = !null) {
-            this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video, this.percentage, 'User:' + this.views.usuario + ', ' + 'Mud ID:' + this.views.mudId + ', ' + 'Date:' + this.date);
+            this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video, this.percentage, 'User:' +
+                this.views.usuario + ', ' + 'Mud ID:' + this.views.mudId + ', ' + 'Date:' + this.date);
             this.usuarioView = [{
                     Pais: this.views.Pais,
                     Codigo_de_Division: this.views.Codigo_de_Division,

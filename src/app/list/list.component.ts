@@ -26,6 +26,9 @@ export class ListComponent implements OnInit {
   divisions: any = [];
   produtos: any = [];
   videosSF: any = [];
+  tag: any = [];
+  area: any = [];
+    lista :any =[]
   filtrei
   filtrai
   opc
@@ -111,6 +114,7 @@ info(items:any): void{
     });
     }
   ngOnInit(): void {
+
   }
 
   home(){
@@ -120,15 +124,23 @@ info(items:any): void{
 
   var videos = this.filtrei;
       console.log(videos)
-          if(videos.filter(i => i.Codigo_de_Division === this.uname.nativeElement.value)){
-               this.filtrai = videos.filter(i => i.Codigo_de_Division === this.uname.nativeElement.value);
-                
+      this.tag = videos.filter(i => String(i.tags).indexOf(this.uname.nativeElement.value) >= 0 )
+      this.area = videos.filter(i => String(i.area_terapeutica).indexOf(this.uname.nativeElement.value) >= 0 )
+      console.log("Resultado em tag" + JSON.stringify(this.tag))
+      console.log("Rsultado em area" + JSON.stringify(this.area))
+      if(JSON.stringify(this.area) == '[]'){
+          this.filtrai =  this.tag
+          if(JSON.stringify(this.tag) == '[]'){
+             this.filtrai =  this.area
+
+          }
       }else{
-       this.filtrai = this.filtrei;
+        this.filtrai = videos.filter(i => String(i.tags).indexOf(this.uname.nativeElement.value)
+         >= 0 ) && videos.filter(i => String(i.area_terapeutica).indexOf(this.uname.nativeElement.value) >= 0 )
+        console.log("tem os dois" + this.filtrai)
 
       }
-
-       
+      
     console.log(codigo)
 
 
