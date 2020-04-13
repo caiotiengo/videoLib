@@ -1,24 +1,15 @@
 
 <mat-toolbar color="#dac84c">
 	
-	<mat-menu #appMenu="matMenu">
-  		<button mat-menu-item  (click)="home()">Home</button>
-  		<button mat-menu-item  (click)="videoss()">Vídeos</button>
-	</mat-menu>
 
-<button gsk1 type="button" class="btn btn-light" [matMenuTriggerFor]="appMenu">
-	  <i class="fas fa-bars"></i> Menu
-</button>
-<span style="    border-left: 2px solid white;
-    margin-left: 1%;
-    height: 50px;" ></span>
+<span></span>
   <span><img src="/assets/gsk_branco.png"></span>
 
   <!-- This fills the remaining space of the current row -->
   <span class="example-fill-remaining-space">	</span>
   <p style="margin-top: 18px;
     margin-bottom: 1rem;
-    margin-right: 15px;">Olá, {{usuario.Nombre_del_representa}}</p>
+    margin-right: 15px;">Hi, {{usuario.Nombre_del_representa}}</p>
 
 </mat-toolbar>
 
@@ -29,18 +20,19 @@
 
 	<mat-card-title>
 		<div>
-			<h1>GSK VideoLIB</h1>	
+			<h1>GSK Video Library</h1>	
 		</div>
 		
 	</mat-card-title>
-	<mat-card-subtitle>	
-		<p>Assista aos videos da GSK pela nossa plataforma.</p>
+	<mat-card-subtitle style="text-align: center !important; ">	
+		<input class="form-control"  style="    border-radius: 25px;   width: 75%;  margin-top: 5%;  margin-left: auto;    text-align: center;    margin-right: auto;    box-shadow: 3px 3px #cecdcd;" id="passcode" placeholder="Search" #passcode aria-describedby="search"><br/>
+		<button #uname type="button" id="uname" value="{{divisions.Codigo_de_Division}}" (click)="filtro(divisions.Codigo_de_Division)" class="btn btn-dark"> Search </button>
 	</mat-card-subtitle>
 </mat-card>
 
 <div class="container colors">
 
-	<h1>Para você!</h1>
+	<!--h1>Para você!</h1>
 	<mat-card-subtitle style="text-align-last: center !important; " *ngIf="divisionUser.length >= 1">		
 		<div class="btn-group" role="group" aria-label="Basic example">
 			<label style="margin-right: 10px;">			
@@ -58,15 +50,16 @@
 		
 		</div>
 
-	</mat-card-subtitle>
+	</mat-card-subtitle-->
 
 	
-  <div class="row" style="">
+  <div class="container" style="text-align: -webkit-center;">
+  <div class="row"  >
     <div class="col-xl" >
     	<ul  class="list-group">
-    			<li style="list-style-type: none;" *ngFor="let items of filtrei">
+    			<li style="list-style-type: none;" *ngFor="let items of filtrai">
 
-					<div class="card card-videos" *ngIf="items.Codigo_de_Division == usuario.Codigo_de_Division" style="width:100%; margin-right: 5px; height: auto; ">
+					<div class="card card-videos" *ngIf="items.Pais == usuario.Pais" style="width:100%; margin-right: 5px; height: auto; ">
 			 
 		  				<div class="card-body">
 		  					<div class="row">
@@ -74,11 +67,12 @@
 		  						<video id="mainVideo" width="100%" height="auto" style="border: 2px solid black;"  nocontrols  preload="yes">
 										<source [src]="items.URL | secureUrl" autostart="false" type="video/mp4">
 									</video>
-								</div><div class="col-sm">					
+								</div>
+								<div class="col-sm">					
 		    								<h5 class="card-title">{{items.Nombre_del_video}}</h5>
-		    								<h6 class="card-subtitle mb-2 text-muted">{{items.Codigo_de_Division}}  | {{items.area_terapeutica}}</h6>
+		    								<h6 class="card-subtitle mb-2 text-muted">{{items.Codigo_de_Division}} | {{items.area_terapeutica}}</h6>
 		    								<p class="card-text">{{items.Description}}</p>
-									<button type="button" style="margin-right: 3%" (click)="info(items)"  class="btn btn-dark">Watch</button>
+									<button type="button" style="margin-right: 3%" (click)="info(items)" class="btn btn-dark">Watch</button>
 									</div>
 									</div>	
 		  				</div>
@@ -89,7 +83,4 @@
 	</div>
   </div>
 </div>
-
-<nav class="navbar sticky-bottom navbar-light bg-light">
-  <a class="navbar-brand" href="#">GSK - GlaxoSmithKline</a>
-</nav>
+</div>

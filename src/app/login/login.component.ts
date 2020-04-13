@@ -110,8 +110,9 @@ export class LoginComponent implements OnInit {
        
 // .toUpperCase() lembrar de usar quando atualizar o banco verdadeiro
     console.log(this.uname.nativeElement.value)
-     if(this.users.find(i => i.MudId === this.uname.nativeElement.value)){
-       this.usuario = this.users.find(i => i.MudId === this.uname.nativeElement.value);
+     if(this.users.find(i => i.MudId.toUpperCase() === this.uname.nativeElement.value.toUpperCase())){
+
+       this.usuario = this.users.find(i => i.MudId.toUpperCase() === this.uname.nativeElement.value.toUpperCase());
        console.log(this.usuario)
        localStorage.setItem('user', JSON.stringify(this.usuario))  
            this.router.navigateByUrl('/home')

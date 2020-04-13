@@ -47,64 +47,27 @@ export class VideoComponent implements OnInit {
           //
             this.percentage = localStorage.getItem('percentual')
             
-            console.log(this.percentage)
-            if(this.percentage =! null){
+        
                this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video, this.percentage, 'User:' + 
-                 this.views.usuario + ', ' + 'Mud ID:' + this.views.mudId + ', ' + 'Date:' + this.date )      
+                 this.views.usuario + ', ' + 'Mud ID:' + this.views.mudId + ', ' + 'Date:' + this.date + ','+ 'Area_Terapeutica:'+ 
+                 this.views.area_terapeutica +','+'Pais:'+ this.views.Pais )      
                
-
-               this.usuarioView = [{
-                 Pais: this.views.Pais,
-                 Codigo_de_Division: this.views.Codigo_de_Division,
-                 Nombre_del_video: this.views.Nombre_del_video,
-                 division_description: this.views.division_description,
-                 Description: this.views.Description,
-                 Root: this.views.Root,
-                 URL: this.views.URL,
-                 usuario: this.views.Nombre_del_representa,
-                 mudId: this.views.MudId,
-                 disclaimer: this.views.disclaimer}]
-
-               localStorage.setItem('dadoOffline',JSON.stringify(this.usuarioView)) 
-               this.dadoOffline = JSON.parse(localStorage.getItem('dadoOffline'))
-             //  console.log(this.dadoOffline)
-               this.Offline = this.dadoOffline.concat(this.usuarioView);
-        //       console.log(this.Offline)     
-                
-
-               
-            }else{
-             // console.log(this.percentage)
-              this.usuarioView.push({
-                 Pais: this.views.Pais,
-                 Codigo_de_Division: this.views.Codigo_de_Division,
-                 Nombre_del_video: this.views.Nombre_del_video,
-                 division_description: this.views.division_description,
-                 Description: this.views.Description,
-                 Root: this.views.Root,
-                 URL: this.views.URL,
-                 usuario: this.views.Nombre_del_representa,
-                 mudId: this.views.MudId,
-                 disclaimer: this.views.disclaimer})
-            }
-           
+          
     }
 
     setCurrentTime(data){
 
       let mainVideo = <HTMLMediaElement>document.getElementById('mainVideo');
-      this.percentual = Math.floor(((data.target.currentTime/mainVideo.duration) *100)) + '%';
+      this.percentual = Math.floor(((data.target.currentTime/data.target.duration) *100)) + '%';
 
-     //     this.currentTime = data.target.currentTime;
-    // console.log(this.currentTime)
+     //this.currentTime = data.target.currentTime;
+     //console.log(this.currentTime)
+     //console.log(data.target.duration)
       this.timePercentual = localStorage.setItem('percentual', this.percentual)
-      if(this.timePercentual =! null){
-        
-      //  console.log(this.timePercentual)
+      if(this.timePercentual =! null){  
+          //console.log(this.timePercentual)
       }
-     // console.log(this.percentual)
-      
-
+          console.log(this.percentual)
     }
 
     info(items:any): void{
@@ -113,7 +76,8 @@ export class VideoComponent implements OnInit {
       width: '100%',
       data: { info_txt: items.info_txt}
       });
-//    this.googleAnalyticsService.eventTracker("video", dialogRef.componentInstance.data.Nombre_del_video,  dialogRef.componentInstance.data.usuario )
+    this.googleAnalyticsService.eventTracker("video", dialogRef.componentInstance.data.Nombre_del_video, 
+     dialogRef.componentInstance.data.usuario )
   }
     
 }

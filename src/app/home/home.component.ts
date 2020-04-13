@@ -20,7 +20,7 @@ import { MatMenuTrigger } from '@angular/material/menu';
 
 export class HomeComponent implements OnInit {
       @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
-
+ @ViewChild('passcode') uname;
 	public allList:any =[];
   result: any = [];
 	link
@@ -37,8 +37,11 @@ export class HomeComponent implements OnInit {
 
   videosSF: any = [];
     divisionUser: any = [];
-
+     tag: any = [];
+  area: any = [];
+    lista :any =[]
   filtrei
+  filtrai
   video
 dividiu:any = [];
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,public dialog: MatDialog,public googleAnalyticsService: NgGoogleAnalyticsTracker,private router: Router,private sanitizer: DomSanitizer, 
@@ -68,7 +71,7 @@ dividiu:any = [];
        }
 
      
-       this.filtrei = this.videos
+       this.filtrai = this.videos
        this.division = this.divisions.sort((a, b) => b.index - a.index);
        
        this.codigo = this.produtos
@@ -97,17 +100,17 @@ dividiu:any = [];
 
 
 
-   filtro(codigo: any){
+   filtri(codigo: any){
 
       var videos = this.videos;
       console.log(videos)
           if(videos.filter(i => i.Codigo_de_Division === codigo)){
-               this.filtrei = videos.filter(i => i.Codigo_de_Division === codigo);
+               this.filtrai = videos.filter(i => i.Codigo_de_Division === codigo);
                this.codigo = this.produtos.filter(i => i.Codigo_de_Division === codigo);
                console.log(this.codigo)
-               console.log(this.filtrei)
+               console.log(this.filtrai)
       }else{
-              this.filtrei = this.videos;
+              this.filtrai = this.videos;
 
       }
 
@@ -140,5 +143,30 @@ dividiu:any = [];
     this.views = JSON.parse(localStorage.getItem('video')) 
     localStorage.removeItem('percentual')
 //    this.googleAnalyticsService.eventTracker("video", dialogRef.componentInstance.data.Nombre_del_video,  dialogRef.componentInstance.data.usuario )
+  }
+ filtro(codigo: any){
+
+  var videos = this.filtrai;
+      console.log(videos)
+      this.tag = videos.filter(i => String(i.tags.toUpperCase()).indexOf(this.uname.nativeElement.value.toUpperCase()) >= 0 )
+      this.area = videos.filter(i => String(i.area_terapeutica.toUpperCase()).indexOf(this.uname.nativeElement.value.toUpperCase()) >= 0 )
+      console.log("Resultado em tag" + JSON.stringify(this.tag))
+      console.log("Rsultado em area" + JSON.stringify(this.area))
+      if(JSON.stringify(this.area) == '[]'){
+          this.filtrai =  this.tag
+          if(JSON.stringify(this.tag) == '[]'){
+             this.filtrai =  this.area
+
+          }
+      }else{
+        this.filtrai = videos.filter(i => String(i.tags.toUpperCase()).indexOf(this.uname.nativeElement.value.toUpperCase())
+         >= 0 ) && videos.filter(i => String(i.area_terapeutica.toUpperCase()).indexOf(this.uname.nativeElement.value.toUpperCase()) >= 0 )
+        console.log("tem os dois" + this.filtrai)
+
+      }
+      
+    console.log(codigo)
+
+
   }
 }

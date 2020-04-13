@@ -76,6 +76,20 @@ info(items:any): void{
                }
       });
    // console.log(items)
+   /*
+
+        diemsiones
+        - Video
+        - Mudid
+        - Country
+        - Therapy Area
+
+        Metricas
+
+        - % video visto
+        - tiempo de vido visto
+
+   */
         localStorage.removeItem('percentual')
 
   }
