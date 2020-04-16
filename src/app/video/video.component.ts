@@ -11,7 +11,7 @@ import {InfoComponent} from '../info/info.component';
   styleUrls: ['./video.component.scss']
 })
 export class VideoComponent implements OnInit {
-   percentual: string;
+   percentual: number;
    current
    currentTime: number;
    views: any = [];
@@ -48,22 +48,22 @@ export class VideoComponent implements OnInit {
             this.percentage = localStorage.getItem('percentual')
             
         
-               this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video, this.percentage, 'User:' + 
-                 this.views.usuario + ', ' + 'Mud ID:' + this.views.mudId + ', ' + 'Date:' + this.date + ','+ 'Area_Terapeutica:'+ 
-                 this.views.area_terapeutica +','+'Pais:'+ this.views.Pais )      
-               
+               this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video + ';'+
+                 'Pais:'+ this.views.Pais, 'Area_Terapeutica:'+ 
+                 this.views.area_terapeutica, 'User:' + 
+                 this.views.usuario + '; ' + 'Mud ID:' + this.views.mudId + ';' + 'Date:' + this.date , Number(this.percentage))      
           
     }
 
     setCurrentTime(data){
 
       let mainVideo = <HTMLMediaElement>document.getElementById('mainVideo');
-      this.percentual = Math.floor(((data.target.currentTime/data.target.duration) *100)) + '%';
+      this.percentual = Math.round(((data.target.currentTime/data.target.duration) * 10000))/10000;
 
      //this.currentTime = data.target.currentTime;
      //console.log(this.currentTime)
      //console.log(data.target.duration)
-      this.timePercentual = localStorage.setItem('percentual', this.percentual)
+      this.timePercentual = localStorage.setItem('percentual', this.percentual.toString())
       if(this.timePercentual =! null){  
           //console.log(this.timePercentual)
       }

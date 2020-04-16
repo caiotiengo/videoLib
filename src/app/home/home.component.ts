@@ -156,7 +156,10 @@ dividiu:any = [];
           this.filtrai =  this.tag
           if(JSON.stringify(this.tag) == '[]'){
              this.filtrai =  this.area
-
+            if(JSON.stringify(this.tag) && JSON.stringify(this.area) == '[]'){
+              this.filtrai
+              alert('0 Results')
+            }
           }
       }else{
         this.filtrai = videos.filter(i => String(i.tags.toUpperCase()).indexOf(this.uname.nativeElement.value.toUpperCase())

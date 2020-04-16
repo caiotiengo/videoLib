@@ -1085,6 +1085,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
             if (JSON.stringify(this.tag) == '[]') {
               this.filtrai = this.area;
+
+              if (JSON.stringify(this.tag) && JSON.stringify(this.area) == '[]') {
+                this.filtrai;
+                alert('0 Results');
+              }
             }
           } else {
             this.filtrai = videos.filter(function (i) {
@@ -2555,17 +2560,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           //
 
           this.percentage = localStorage.getItem('percentual');
-          this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video, this.percentage, 'User:' + this.views.usuario + ', ' + 'Mud ID:' + this.views.mudId + ', ' + 'Date:' + this.date + ',' + 'Area_Terapeutica:' + this.views.area_terapeutica + ',' + 'Pais:' + this.views.Pais);
+          this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video + ';' + 'Pais:' + this.views.Pais, 'Area_Terapeutica:' + this.views.area_terapeutica, 'User:' + this.views.usuario + '; ' + 'Mud ID:' + this.views.mudId + ';' + 'Date:' + this.date, Number(this.percentage));
         }
       }, {
         key: "setCurrentTime",
         value: function setCurrentTime(data) {
           var mainVideo = document.getElementById('mainVideo');
-          this.percentual = Math.floor(data.target.currentTime / data.target.duration * 100) + '%'; //this.currentTime = data.target.currentTime;
+          this.percentual = Math.round(data.target.currentTime / data.target.duration * 10000) / 10000; //this.currentTime = data.target.currentTime;
           //console.log(this.currentTime)
           //console.log(data.target.duration)
 
-          this.timePercentual = localStorage.setItem('percentual', this.percentual);
+          this.timePercentual = localStorage.setItem('percentual', this.percentual.toString());
 
           if (this.timePercentual = !null) {//console.log(this.timePercentual)
           }
