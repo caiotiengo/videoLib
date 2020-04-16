@@ -14,4 +14,8 @@ export class InfoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+ close(){
+        this.dialogRef.close('Pizza!');
+         
+    }
 }
