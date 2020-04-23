@@ -25,8 +25,8 @@
 		
 	</mat-card-title>
 	<mat-card-subtitle style="text-align: center !important; ">	
-		<input class="form-control"  style="    border-radius: 25px;   width: 75%;  margin-top: 5%;  margin-left: auto;    text-align: center;    margin-right: auto;    box-shadow: 3px 3px #cecdcd;" id="passcode" placeholder="Search" #passcode aria-describedby="search"><br/>
-		<button #uname type="button" id="uname" value="{{divisions.Codigo_de_Division}}" (click)="filtro(divisions.Codigo_de_Division)" class="btn btn-dark"> Search </button>
+		<input class="form-control"  style="    border-radius: 25px;   width: 75%;  margin-top: 5%;  margin-left: auto;    text-align: center;    margin-right: auto;    box-shadow: 3px 3px #cecdcd;" id="passcode" (keyup)="filtro($event)"  placeholder="Search" #passcode aria-describedby="search"><br/>
+		<!--button #uname type="button" id="uname" (click)="filtro()" class="btn btn-dark"> Search </button-->
 	</mat-card-subtitle>
 </mat-card>
 

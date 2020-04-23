@@ -41,6 +41,7 @@ export class HomeComponent implements OnInit {
   area: any = [];
     lista :any =[]
   filtrei
+  mymodel
   filtrai
   video
 dividiu:any = [];
@@ -120,6 +121,8 @@ dividiu:any = [];
   }
 
   info(items:any): void{
+   
+
     let dialogRef = this.dialog.open(VideoComponent, {
       height: '100%',
       width: '100%',
@@ -139,37 +142,34 @@ dividiu:any = [];
                }
       });
     localStorage.setItem('video', JSON.stringify(dialogRef.componentInstance.data))
-    //console.log(dialogRef.componentInstance.data)
-    this.views = JSON.parse(localStorage.getItem('video')) 
+    console.log(dialogRef.componentInstance.data)
+    this.views = localStorage.getItem('video') 
     localStorage.removeItem('percentual')
-//    this.googleAnalyticsService.eventTracker("video", dialogRef.componentInstance.data.Nombre_del_video,  dialogRef.componentInstance.data.usuario )
   }
- filtro(codigo: any){
-
-  var videos = this.filtrai;
-      console.log(videos)
-      this.tag = videos.filter(i => String(i.tags.toUpperCase()).indexOf(this.uname.nativeElement.value.toUpperCase()) >= 0 )
-      this.area = videos.filter(i => String(i.area_terapeutica.toUpperCase()).indexOf(this.uname.nativeElement.value.toUpperCase()) >= 0 )
-      console.log("Resultado em tag" + JSON.stringify(this.tag))
-      console.log("Rsultado em area" + JSON.stringify(this.area))
-      if(JSON.stringify(this.area) == '[]'){
-          this.filtrai =  this.tag
-          if(JSON.stringify(this.tag) == '[]'){
-             this.filtrai =  this.area
-            if(JSON.stringify(this.tag) && JSON.stringify(this.area) == '[]'){
-              this.filtrai
-              alert('0 Results')
-            }
-          }
-      }else{
-        this.filtrai = videos.filter(i => String(i.tags.toUpperCase()).indexOf(this.uname.nativeElement.value.toUpperCase())
-         >= 0 ) && videos.filter(i => String(i.area_terapeutica.toUpperCase()).indexOf(this.uname.nativeElement.value.toUpperCase()) >= 0 )
-        console.log("tem os dois" + this.filtrai)
-
-      }
+ filtro(event: any){
       
-    console.log(codigo)
+     this.area = this.videos.filter(i => 
+       String(i.area_terapeutica.toUpperCase()).indexOf(event.target.value.toUpperCase()) >= 0 )
+     this.tag = this.videos.filter(i => String(i.tags.toUpperCase()).indexOf(event.target.value.toUpperCase()) >= 0 )
+    // this.filtrai = this.tag
+      if(this.filtrai != []){
+         
+        this.filtrai = this.area;
+       // console.log(this.filtrai)
+        if(this.filtrai.length == 0){
+           this.filtrai = this.tag
+           // console.log(this.filtrai)
+        }
+      }else{
+
+       this.filtrai = this.videos;    
+        
+      }
+ // console.log(JSON.stringify(this.area))
+      //console.log("Rsultado em area" + JSON.stringify(this.area)) 
+  //  console.log(this.area)
 
 
   }
+
 }
