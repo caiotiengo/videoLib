@@ -25,6 +25,8 @@ export class VideoComponent implements OnInit {
    dadoOffline:any = []
    Offline:any = []
    
+    disclaimerVideo: any =[]
+   
   constructor(public dialogRef: MatDialogRef<VideoComponent>,@Inject(MAT_DIALOG_DATA) public data: any,
     public dialog: MatDialog, public googleAnalyticsService: NgGoogleAnalyticsTracker,
     private http: HttpClient) {
@@ -32,16 +34,17 @@ export class VideoComponent implements OnInit {
     //console.log(this.views)
     //console.log(mainVideo)
     //console.log(dialogRef.componentInstance.data)
-    //console.log(this.percentual)
+//    console.log(this.disclaimers)
     setTimeout(function(){
           this.views = JSON.parse(localStorage.getItem('video'));
-           console.log(this.views)
-        },500)
+          // console.log(this.views.Pais)
+
+        },200)
 
     var date = new Date()
     this.date = date.getDate()+'/'+date.getUTCMonth()+'/'+date.getFullYear()
-    console.log(this.date)
-   
+   // console.log(this.date)
+
 
    }
 
@@ -72,7 +75,7 @@ this.views = JSON.parse(localStorage.getItem('video'));
              + this.views.Pais, this.percentage+'%' +' ; '+ this.duration +' ; '+
               this.fullTime, this.views.mudId + ' ; ' + this.views.usuario+ ' ; '+ this.views.area_terapeutica)
                 // console.log(Number(this.percentage))     
-                 console.log(this.views.Nombre_del_video)     
+                // console.log(this.views.Nombre_del_video)     
                  localStorage.clear()
 
           }else{

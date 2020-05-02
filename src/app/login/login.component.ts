@@ -20,7 +20,8 @@ export class LoginComponent implements OnInit {
   result2: any = [];
   result3: any = [];
   result4: any = [];
-
+qualquer:any = []
+qualquer2:any = []
   status = '';
   users: any = [];	
   mudId	
@@ -43,11 +44,15 @@ export class LoginComponent implements OnInit {
          this.status = connect ? 'internet ativa': 'internet desativada';
          console.log(this.status)
        })
+       var d = new Date();
+       var n = d.getDate() 
+       var dia = localStorage.setItem("date", String(n) )
+       localStorage.clear()
 
        if(localStorage.getItem('users') == null){
            this.data().then(data => {
               this.result = data.valueOf();
-              console.log(this.result.users[0].MUD_ID);
+             // console.log(this.result.users[0].MUD_ID);
               this.users = this.result.users;
               localStorage.setItem('users', JSON.stringify(this.users))
                
@@ -60,7 +65,7 @@ export class LoginComponent implements OnInit {
        if(localStorage.getItem('divisions') == null){
            this.data2().then(data =>{
               this.result2 = data.valueOf();
-              console.log(this.result2.division)
+             // console.log(this.result2.division)
               this.divisions = this.result2.division.sort((A, B) => A.Descripcion_de_Division - B.Descripcion_de_Division);
               localStorage.setItem('divisions', JSON.stringify(this.divisions))
 
@@ -73,7 +78,7 @@ export class LoginComponent implements OnInit {
        if(localStorage.getItem('videos') == null){
            this.data3().then(data =>{
               this.result3 = data.valueOf();
-              console.log(this.result3.videos)
+              //console.log(this.result3.videos)
               this.videos = this.result3.videos
               localStorage.setItem('videos', JSON.stringify(this.videos))
           })
@@ -86,7 +91,7 @@ export class LoginComponent implements OnInit {
      if(localStorage.getItem('produtos') == null){
            this.data4().then(data =>{
               this.result4 = data.valueOf();
-              console.log(this.result4.produtos)
+              //console.log(this.result4.produtos)
               this.produtos = this.result4.produtos
               localStorage.setItem('produtos', JSON.stringify(this.produtos))
 
@@ -98,7 +103,8 @@ export class LoginComponent implements OnInit {
           console.log(this.produtos)
        }
     
-   
+  
+
 
   }
 
@@ -113,13 +119,13 @@ export class LoginComponent implements OnInit {
      if(this.users.find(i => i.MudId.toUpperCase() === this.uname.nativeElement.value.toUpperCase())){
 
        this.usuario = this.users.find(i => i.MudId.toUpperCase() === this.uname.nativeElement.value.toUpperCase());
-       console.log(this.usuario)
+       //console.log(this.usuario)
        localStorage.setItem('user', JSON.stringify(this.usuario))  
            this.router.navigateByUrl('/home')
        localStorage.setItem('division', JSON.stringify(this.usuario.Codigo_de_Division))    
-    console.log('foi')
+   // console.log('foi')
     }else{
-    console.log('mentira')
+    //console.log('mentira')
   }
   }
   data(){
@@ -132,7 +138,7 @@ export class LoginComponent implements OnInit {
       return new Promise(resolve => {
       this.http.get<any[]>('https://gskvideolib.azure-api.net/users').subscribe(data => {
         resolve(data);
-        console.log(data);
+       // console.log(data);
         this.users = data;
       }, err => {
         console.log(err);
@@ -150,14 +156,13 @@ export class LoginComponent implements OnInit {
       return new Promise(resolve => {
       this.http.get<any[]>('https://gskvideolib.azure-api.net/division').subscribe(data => {
         resolve(data);
-        console.log(data);
+       // console.log(data);
         this.divisoes = data;
       }, err => {
         console.log(err);
       });
     });
     }
- 
 
 
 data3(){
@@ -170,13 +175,14 @@ data3(){
       return new Promise(resolve => {
       this.http.get<any[]>('https://gskvideolib.azure-api.net/videos').subscribe(data => {
         resolve(data);
-        console.log(data);
+       // console.log(data);
         this.videos = data;
       }, err => {
         console.log(err);
       });
     });
     }
+
 
 
 data4(){
@@ -189,7 +195,7 @@ data4(){
       return new Promise(resolve => {
       this.http.get<any[]>('https://gskvideolib.azure-api.net/produtos').subscribe(data => {
         resolve(data);
-        console.log(data);
+        //console.log(data);
         this.produtos = data;
       }, err => {
         console.log(err);

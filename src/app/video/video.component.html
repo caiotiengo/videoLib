@@ -12,11 +12,11 @@
 							</video>
 					</div>	
 		    		<h5 class="card-title">{{data.Nombre_del_video}}</h5>
-		    		<h6 class="card-subtitle mb-2 text-muted">{{data.Codigo_de_Division}} | {{data.area_terapeutica}}</h6>
+		    		<h6 class="card-subtitle mb-2 text-muted">{{data.area_terapeutica}}</h6>
 		    		<p class="card-text">{{data.Description}}</p>
-		    		<p style="font-size: xx-small;
-    color: gray;">{{data.disclaimer}}</p>
-    			<a style="text-decoration: none"  href="{{data.link_produto}}" target="_blank">
+
+		    		<p style="font-size: xx-small;color: gray;">{{data.disclaimer}}</p>
+    				<a style="text-decoration: none"  href="{{data.link_produto}}" target="_blank">
 					<button type="button" style="margin-right: 3%" class="btn btn-dark">Produto</button>
 				</a>
 					<button type="button" class="btn btn-dark" (click)="info(data)">Info</button>

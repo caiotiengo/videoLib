@@ -821,99 +821,73 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     var _c0 = ["passcode"];
 
-    function HomeComponent_li_21_div_1_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r17 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 16);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 17);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 10);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 18);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "video", 19);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "source", 20);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](6, "secureUrl");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 18);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "h5", 21);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "h6", 22);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "p", 23);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "button", 24);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HomeComponent_li_21_div_1_Template_button_click_14_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r17);
-
-          var items_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
-
-          var ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-
-          return ctx_r15.info(items_r13);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Watch");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var items_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](6, 5, items_r13.URL), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r13.Nombre_del_video);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", items_r13.Codigo_de_Division, " | ", items_r13.area_terapeutica, "");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r13.Description);
-      }
-    }
-
     function HomeComponent_li_21_Template(rf, ctx) {
       if (rf & 1) {
+        var _r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li", 14);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, HomeComponent_li_21_div_1_Template, 16, 7, "div", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 15);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 16);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 10);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 17);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "video", 18);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "source", 19);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](7, "secureUrl");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 17);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "h5", 20);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "h6", 21);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "p", 22);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "button", 23);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HomeComponent_li_21_Template_button_click_15_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r15);
+
+          var items_r13 = ctx.$implicit;
+
+          var ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          return ctx_r14.info(items_r13);
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Watch");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -921,11 +895,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       if (rf & 2) {
         var items_r13 = ctx.$implicit;
 
-        var ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](7, 4, items_r13.URL), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", items_r13.Pais == ctx_r12.usuario.Pais);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r13.Nombre_del_video);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r13.area_terapeutica);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](items_r13.Description);
       }
     }
 
@@ -958,30 +942,54 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.area = [];
         this.lista = [];
         this.dividiu = [];
+        this.disclaimers = [{
+          "Pais": "BR",
+          "disclaimer": "Material destinado exclusivamente para profissionais de saúde habilitados a prescrever ou dispensar medicamentos. Recomenda-se a leitura da bula e da monografia do produto, antes da prescrição de qualquer medicamento. A bula completa do medicamento e outras informações estão à disposição sob solicitação ao departamento de Informações Médicas (DDG 0800 701 22 33). Para notificar informações de segurança, incluindo eventos adversos ocorridos durante o uso de medicamentos da GlaxoSmithKline/Stiefel, entre em contato diretamente com o Departamento de Farmacovigilância da empresa pelo e-mail farmacovigilancia@gsk.com ou através do representante do grupo de empresas GSK. As marcas registradas pertencem ou são licenciadas ao grupo de empresas GSK.Este vídeo é de propriedade GSK, a reprodução deste é proibida sem o consentimento da empresa. Estrada dos Bandeirantes, 8464 - Jacarepaguá – Rio de Janeiro – RJ - CEP: 22783-110 - CNPJ: 33247743/0001-10."
+        }, {
+          "Pais": "AR",
+          "disclaimer": "La información para prescribir completa está disponible a pedido en la Dirección Médica de GlaxoSmithKline Argentina S.A Carlos Casares 3690 B1644BCD – Victoria – Bs. As. Tel.: 011-4725-8900.Para reportar eventos adversos por favor comunicarse a los teléfonos 0800-220-4752 / 011-4725-8900.Este material está destinado exclusivamente para uso de los Médicos/profesionales de la salud"
+        }, {
+          "Pais": "CR",
+          "disclaimer": "Elaborado por GSK. Para mayor información, reporte de eventos adversos o quejas de producto contacte a GSK al correo electronico fv.aecaricam@gsk.com o a los teléfonos: Costa Rica: (506)4055-4242 • El Salvador: (503)2136-7801, Guatemala: (502)2376-1930 • Nicaragua: (505) 27222215 • Panamá: (507)833-6768 • Honduras: (504)2540-1638 • República Dominicana: +1 (829) 956-6335. Oficinas GSK, Oceania Business Plaza Torre 1000 piso 34, Panamá, República de Panamá, C.A. Derechos reservados para GSK. La información para prescribir completa está disponible a solicitud del profesional de la salud. Este medicamento requiere receta médica.  Marcas registradas son propiedad y/o licenciadas por el grupo de Compañías GSK. Material exclusivo para profesionales de la salud. "
+        }, {
+          "Pais": "ES",
+          "disclaimer": "Elaborado por GSK. Para mayor información, reporte de eventos adversos o quejas de producto contacte a GSK al correo electronico fv.aecaricam@gsk.com o a los teléfonos: Costa Rica: (506)4055-4242 • El Salvador: (503)2136-7801, Guatemala: (502)2376-1930 • Nicaragua: (505) 27222215 • Panamá: (507)833-6768 • Honduras: (504)2540-1638 • República Dominicana: +1 (829) 956-6335. Oficinas GSK, Oceania Business Plaza Torre 1000 piso 34, Panamá, República de Panamá, C.A. Derechos reservados para GSK. La información para prescribir completa está disponible a solicitud del profesional de la salud. Este medicamento requiere receta médica.  Marcas registradas son propiedad y/o licenciadas por el grupo de Compañías GSK. Material exclusivo para profesionales de la salud. "
+        }, {
+          "Pais": "CO",
+          "disclaimer": "Si usted desea mayor información o  reportar una situación clínica desfavorable ocurrida durante el uso de un producto de GlaxoSmithKline, favor comunicarse al teléfono 01 8000 11 86 86, o a través de página web  GSKpro https://gskpro.com/es-co/report-adverse-event/ o escribir al correo electrónico: programa.dirmedica@gsk.com. GlaxoSmithKline Colombia S.A., Calle 26 # 69B-45 Edificio Bogotá Corporate Center Piso 9. Solicite mayor información científica de nuestros productos en nuestro servicio de información médica, a través del email mila@gsk.com. Este material es de uso exclusivo para profesionales de la salud."
+        }, {
+          "Pais": "LSP",
+          "disclaimer": "La información para prescribir completa de nuestros productos se encuentra disponible en nuestra página web: Chile: www.gskpro.com/es-cl. Ecuador: www.gskpro.com/es-ec. Perú: www.gskpro.com/es-pe. Mayor información de nuestros productos disponible a través de nuestro servicio de información médica: mila@gsk.com. \r\nPara reportar eventos adversos o quejas de producto contacte a GSK a los teléfonos/e-mail: Chile: (56-2) 23829000 opción 4 o al correo electrónico farmacovigilancia.chile@gsk.com. Ecuador: (593-2) 2994700 extensión 5 o al correo electrónico farmacovigilancia.ecuador@gsk.com. Perú (51-1)2119700 o al correo electrónico farmacovigilancia.peru@gsk.com. Direcciones: GlaxoSmithKline Chile Ltda.: Andrés Bello 2687 Piso 19, Las Condes, Santiago. GlaxoSmithKline Ecuador S.A.: Edificio Electroecuatoriana, Av. 10 de Agosto y Naciones Unidas, Quito. GlaxoSmithKline Perú S.A.: Av. Javier Prado Oeste 995, Lima-Perú. \r\nDerechos reservados para GSK. La reproducción completa o parcial de este material está prohibida. Material exclusivo para entregar a profesionales de la salud que ejercen en Chile y/o Ecuador. Material exclusivo para entregar a profesionales de la salud que prescriben en Perú. © 2020 Grupo de Compañías GSK."
+        }, {
+          "Pais": "MX",
+          "disclaimer": "Para consultar la información para prescribir favor de dirigirse al sitio https://gskpro.com. También puede solicitarla al teléfono 800 APOYAME (276-9263) o directamente al representante médico que lo visita. Favor de reportar cualquier sospecha de reacción adversa o queja de producto al 800APOYAME (276-9263) y/o farmacovigilancia.mx@gsk.com \r\nFecha de preparación: XXXX/2020  Reg. No. XXXXXX  No. Doc. Content Lab: XXXXXXXX Aviso N° Entrada: XXXXXXXX. GlaxoSmithKline México, S.A de C.V, Calz. México-Xochimilco N° 4900, Col. San Lorenzo Huipulco, CP.14370, Tlalpan, Ciudad de México. Las marcas son propiedad de o licenciadas al grupo de compañías GSK © 2020 Grupo de compañías GSK o sus licenciantes. "
+        }, {
+          "Pais": "UR",
+          "disclaimer": "La información para prescribir completa se obtiene solicitándolo a Departamento Médico de GlaxoSmithKline Uruguay S.A. Salto 1105, Montevideo, Uruguay. Este material está destinado exclusivamente para uso de los médicos.\r\nFarmacovigilancia: ante el conocimiento de un posible evento adverso con alguno de los productos de GlaxoSmithKline, comunicarse con nuestro Departamento Médico al 24198333 int 182 ó uy.farmacovigilancia@gsk.com.\r\nDerechos de Autor©2020 del Grupo de Compañías GlaxoSmithKline.\r\nLas marcas mencionadas son Marcas Registradas del Grupo de Compañías GlaxoSmithKline."
+        }];
         this.usuario = JSON.parse(localStorage.getItem('user'));
         this.divisions = JSON.parse(localStorage.getItem('divisions'));
         this.videos = JSON.parse(localStorage.getItem('videos'));
-        this.produtos = JSON.parse(localStorage.getItem('produtos'));
-        console.log(this.usuario);
-        console.log(this.division);
-        console.log(this.videos);
-        console.log(this.produtos); //this.filtrei = JSON.parse(localStorage.getItem('videos'));
+        this.produtos = JSON.parse(localStorage.getItem('produtos')); // console.log(this.usuario)
+        //   console.log(this.division)
+        // console.log(this.videos)
+        // console.log(this.produtos)
+        // console.log(this.disclaimers.find(i=> i.Pais === this.usuario.Pais))
+        //this.filtrei = JSON.parse(localStorage.getItem('videos'));
         //console.log(this.filtrei)
 
         this.divisionUser = this.divisions.filter(function (i) {
           return i.Codigo_de_Division === _this3.usuario.Codigo_de_Division;
+        }); //console.log(this.divisionUser.map(i => {return i.Descripcion_de_Division}))
+
+        this.dividiu = this.divisionUser.map(function (i) {
+          return i.Descripcion_de_Division;
         });
-        console.log(this.divisionUser);
-        console.log(this.divisionUser.length);
+        var videosUsuario = this.videos.filter(function (i) {
+          return _this3.dividiu.includes(i.area_terapeutica);
+        }); // console.log(videosUsuario)
 
-        if (this.divisionUser.length > 1) {
-          this.dividiu = this.divisionUser[0];
-          console.log(this.dividiu);
-        } else {
-          this.dividiu = this.divisionUser;
-        }
-
-        this.filtrai = this.videos;
+        this.filtrai = videosUsuario;
         this.division = this.divisions.sort(function (a, b) {
           return b.index - a.index;
         });
@@ -1033,13 +1041,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             console.log(this.filtrai);
           } else {
             this.filtrai = this.videos;
-          }
+          } //console.log(codigo)
 
-          console.log(codigo);
         }
       }, {
         key: "info",
         value: function info(items) {
+          var _this4 = this;
+
+          var disclaimer = this.disclaimers.find(function (i) {
+            return i.Pais === _this4.usuario.Pais;
+          });
           var dialogRef = this.dialog.open(_video_video_component__WEBPACK_IMPORTED_MODULE_1__["VideoComponent"], {
             height: '100%',
             width: '100%',
@@ -1048,29 +1060,36 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               Codigo_de_Division: items.Codigo_de_Division,
               Nombre_del_video: items.Nombre_del_video,
               division_description: items.division_description,
-              Description: items.Description,
               Root: items.Root,
               URL: items.URL,
               usuario: this.usuario.Nombre_del_representa,
               mudId: this.usuario.MudId,
-              disclaimer: items.disclaimer,
               area_terapeutica: items.area_terapeutica,
               link_produto: items.link_produto,
-              info_txt: items.info_txt
+              disclaimer: disclaimer.disclaimer
             }
           });
-          localStorage.setItem('video', JSON.stringify(dialogRef.componentInstance.data));
-          console.log(dialogRef.componentInstance.data);
+          localStorage.setItem('video', JSON.stringify(dialogRef.componentInstance.data)); //  console.log(dialogRef.componentInstance.data)
+
           this.views = localStorage.getItem('video');
           localStorage.removeItem('percentual');
         }
       }, {
         key: "filtro",
         value: function filtro(event) {
-          this.area = this.videos.filter(function (i) {
+          var _this5 = this;
+
+          this.dividiu = this.divisionUser.map(function (i) {
+            return i.Descripcion_de_Division;
+          });
+          var videosUsuario = this.videos.filter(function (i) {
+            return _this5.dividiu.includes(i.area_terapeutica);
+          }); //        console.log(videosUsuario)
+
+          this.area = videosUsuario.filter(function (i) {
             return String(i.area_terapeutica.toUpperCase()).indexOf(event.target.value.toUpperCase()) >= 0;
           });
-          this.tag = this.videos.filter(function (i) {
+          this.tag = videosUsuario.filter(function (i) {
             return String(i.tags.toUpperCase()).indexOf(event.target.value.toUpperCase()) >= 0;
           }); // this.filtrai = this.tag
 
@@ -1081,7 +1100,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               this.filtrai = this.tag; // console.log(this.filtrai)
             }
           } else {
-            this.filtrai = this.videos;
+            this.filtrai = videosUsuario;
           } // console.log(JSON.stringify(this.area))
           //console.log("Rsultado em area" + JSON.stringify(this.area)) 
           //  console.log(this.area)
@@ -1115,7 +1134,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       },
       decls: 22,
       vars: 2,
-      consts: [["color", "#dac84c"], ["src", "/assets/gsk_branco.png"], [1, "example-fill-remaining-space"], [2, "margin-top", "18px", "margin-bottom", "1rem", "margin-right", "15px"], [1, "transparent-card"], [2, "text-align", "center !important"], ["id", "passcode", "placeholder", "Search", "aria-describedby", "search", 1, "form-control", 2, "border-radius", "25px", "width", "75%", "margin-top", "5%", "margin-left", "auto", "text-align", "center", "margin-right", "auto", "box-shadow", "3px 3px #cecdcd", 3, "keyup"], ["passcode", ""], [1, "container", "colors"], [1, "container", 2, "text-align", "-webkit-center"], [1, "row"], [1, "col-xl"], [1, "list-group"], ["style", "list-style-type: none;", 4, "ngFor", "ngForOf"], [2, "list-style-type", "none"], ["class", "card card-videos", "style", "width:100%; margin-right: 5px; height: auto; ", 4, "ngIf"], [1, "card", "card-videos", 2, "width", "100%", "margin-right", "5px", "height", "auto"], [1, "card-body"], [1, "col-sm"], ["id", "mainVideo", "width", "100%", "height", "auto", "nocontrols", "", "preload", "yes", 2, "border", "2px solid black"], ["autostart", "false", "type", "video/mp4", 3, "src"], [1, "card-title"], [1, "card-subtitle", "mb-2", "text-muted"], [1, "card-text"], ["type", "button", 1, "btn", "btn-dark", 2, "margin-right", "3%", 3, "click"]],
+      consts: [["color", "#dac84c"], ["src", "/assets/gsk_branco.png"], [1, "example-fill-remaining-space"], [2, "margin-top", "18px", "margin-bottom", "1rem", "margin-right", "15px"], [1, "transparent-card"], [2, "text-align", "center !important"], ["id", "passcode", "placeholder", "Search", "aria-describedby", "search", 1, "form-control", 2, "border-radius", "25px", "width", "75%", "margin-top", "5%", "margin-left", "auto", "text-align", "center", "margin-right", "auto", "box-shadow", "3px 3px #cecdcd", 3, "keyup"], ["passcode", ""], [1, "container", "colors"], [1, "container", 2, "text-align", "-webkit-center"], [1, "row"], [1, "col-xl"], [1, "list-group"], ["style", "list-style-type: none;", 4, "ngFor", "ngForOf"], [2, "list-style-type", "none"], [1, "card", "card-videos", 2, "width", "100%", "margin-right", "5px", "height", "auto"], [1, "card-body"], [1, "col-sm"], ["id", "mainVideo", "width", "100%", "height", "auto", "nocontrols", "", "preload", "yes", 2, "border", "2px solid black"], ["autostart", "false", "type", "video/mp4", 3, "src"], [1, "card-title"], [1, "card-subtitle", "mb-2", "text-muted"], [1, "card-text"], ["type", "button", 1, "btn", "btn-dark", 2, "margin-right", "3%", 3, "click"]],
       template: function HomeComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-toolbar", 0);
@@ -1180,7 +1199,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "ul", 12);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](21, HomeComponent_li_21_Template, 2, 1, "li", 13);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](21, HomeComponent_li_21_Template, 17, 6, "li", 13);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1203,7 +1222,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.filtrai);
         }
       },
-      directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_8__["MatToolbar"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCardSubtitle"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"]],
+      directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_8__["MatToolbar"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCardSubtitle"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgForOf"]],
       pipes: [_secure_url_pipe__WEBPACK_IMPORTED_MODULE_11__["SecureUrlPipe"]],
       styles: [".transparent-card[_ngcontent-%COMP%] {\n  height: 28% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9DOlxcVXNlcnNcXGN0Mjk3MTU0XFxPbmVEcml2ZSAtIEdTS1xcRGVza3RvcFxcQ2Fpb0RFVkxvY2FsXFx2aWRlb0xpYi9zcmNcXGFwcFxcaG9tZVxcaG9tZS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Msc0JBQUE7QUNDRCIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi50cmFuc3BhcmVudC1jYXJke1xyXG5cdGhlaWdodDoyOCUgIWltcG9ydGFudDtcclxuXHJcbn0iLCIudHJhbnNwYXJlbnQtY2FyZCB7XG4gIGhlaWdodDogMjglICFpbXBvcnRhbnQ7XG59Il19 */"]
     });
@@ -1566,7 +1585,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*#__PURE__*/
     function () {
       function ListComponent(data, router, dialog, http) {
-        var _this4 = this;
+        var _this6 = this;
 
         _classCallCheck(this, ListComponent);
 
@@ -1590,9 +1609,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         if (localStorage.getItem('videos') == null) {
           this.data1().then(function (data) {
-            _this4.result = data.valueOf();
-            console.log(_this4.result.videos);
-            _this4.filtrei = _this4.result.videos;
+            _this6.result = data.valueOf();
+            console.log(_this6.result.videos);
+            _this6.filtrei = _this6.result.videos;
           });
         } else {
           this.filtrei = JSON.parse(localStorage.getItem('videos'));
@@ -1646,16 +1665,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "data1",
         value: function data1() {
-          var _this5 = this;
+          var _this7 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
           });
           return new Promise(function (resolve) {
-            _this5.http.get('https://gskvideolib.azure-api.net/videos').subscribe(function (data) {
+            _this7.http.get('https://gskvideolib.azure-api.net/videos').subscribe(function (data) {
               resolve(data);
               console.log(data);
-              _this5.videos = data;
+              _this7.videos = data;
             }, function (err) {
               console.log(err);
             });
@@ -1664,16 +1683,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "data2",
         value: function data2() {
-          var _this6 = this;
+          var _this8 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
           });
           return new Promise(function (resolve) {
-            _this6.http.get('https://gskvideolib.azure-api.net/division').subscribe(function (data) {
+            _this8.http.get('https://gskvideolib.azure-api.net/division').subscribe(function (data) {
               resolve(data);
               console.log(data);
-              _this6.videos = data;
+              _this8.videos = data;
             }, function (err) {
               console.log(err);
             });
@@ -1690,15 +1709,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "filtro",
         value: function filtro(codigo) {
-          var _this7 = this;
+          var _this9 = this;
 
           var videos = this.filtrei;
           console.log(videos);
           this.tag = videos.filter(function (i) {
-            return String(i.tags).indexOf(_this7.uname.nativeElement.value) >= 0;
+            return String(i.tags).indexOf(_this9.uname.nativeElement.value) >= 0;
           });
           this.area = videos.filter(function (i) {
-            return String(i.area_terapeutica).indexOf(_this7.uname.nativeElement.value) >= 0;
+            return String(i.area_terapeutica).indexOf(_this9.uname.nativeElement.value) >= 0;
           });
           console.log("Resultado em tag" + JSON.stringify(this.tag));
           console.log("Rsultado em area" + JSON.stringify(this.area));
@@ -1711,9 +1730,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             }
           } else {
             this.filtrai = videos.filter(function (i) {
-              return String(i.tags).indexOf(_this7.uname.nativeElement.value) >= 0;
+              return String(i.tags).indexOf(_this9.uname.nativeElement.value) >= 0;
             }) && videos.filter(function (i) {
-              return String(i.area_terapeutica).indexOf(_this7.uname.nativeElement.value) >= 0;
+              return String(i.area_terapeutica).indexOf(_this9.uname.nativeElement.value) >= 0;
             });
             console.log("tem os dois" + this.filtrai);
           }
@@ -2006,7 +2025,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*#__PURE__*/
     function () {
       function LoginComponent(router, connectionService, db, http) {
-        var _this8 = this;
+        var _this10 = this;
 
         _classCallCheck(this, LoginComponent);
 
@@ -2019,6 +2038,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.result2 = [];
         this.result3 = [];
         this.result4 = [];
+        this.qualquer = [];
+        this.qualquer2 = [];
         this.status = '';
         this.users = [];
         this.usuario = [];
@@ -2031,20 +2052,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.showLoading = false; //30 seconds
 
         setTimeout(function (x) {
-          _this8.shouldDisable = false;
-          _this8.showLoading = true;
+          _this10.shouldDisable = false;
+          _this10.showLoading = true;
         }, 2000);
         this.connectionService.monitor().subscribe(function (connect) {
-          _this8.status = connect ? 'internet ativa' : 'internet desativada';
-          console.log(_this8.status);
+          _this10.status = connect ? 'internet ativa' : 'internet desativada';
+          console.log(_this10.status);
         });
+        var d = new Date();
+        var n = d.getDate();
+        var dia = localStorage.setItem("date", String(n));
+        localStorage.clear();
 
         if (localStorage.getItem('users') == null) {
           this.data().then(function (data) {
-            _this8.result = data.valueOf();
-            console.log(_this8.result.users[0].MUD_ID);
-            _this8.users = _this8.result.users;
-            localStorage.setItem('users', JSON.stringify(_this8.users));
+            _this10.result = data.valueOf(); // console.log(this.result.users[0].MUD_ID);
+
+            _this10.users = _this10.result.users;
+            localStorage.setItem('users', JSON.stringify(_this10.users));
           });
         } else {
           this.users = JSON.parse(localStorage.getItem('users'));
@@ -2053,12 +2078,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         if (localStorage.getItem('divisions') == null) {
           this.data2().then(function (data) {
-            _this8.result2 = data.valueOf();
-            console.log(_this8.result2.division);
-            _this8.divisions = _this8.result2.division.sort(function (A, B) {
+            _this10.result2 = data.valueOf(); // console.log(this.result2.division)
+
+            _this10.divisions = _this10.result2.division.sort(function (A, B) {
               return A.Descripcion_de_Division - B.Descripcion_de_Division;
             });
-            localStorage.setItem('divisions', JSON.stringify(_this8.divisions));
+            localStorage.setItem('divisions', JSON.stringify(_this10.divisions));
           });
         } else {
           this.divisions = JSON.parse(localStorage.getItem('divisions'));
@@ -2067,10 +2092,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         if (localStorage.getItem('videos') == null) {
           this.data3().then(function (data) {
-            _this8.result3 = data.valueOf();
-            console.log(_this8.result3.videos);
-            _this8.videos = _this8.result3.videos;
-            localStorage.setItem('videos', JSON.stringify(_this8.videos));
+            _this10.result3 = data.valueOf(); //console.log(this.result3.videos)
+
+            _this10.videos = _this10.result3.videos;
+            localStorage.setItem('videos', JSON.stringify(_this10.videos));
           });
         } else {
           this.videos = JSON.parse(localStorage.getItem('videos'));
@@ -2079,10 +2104,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         if (localStorage.getItem('produtos') == null) {
           this.data4().then(function (data) {
-            _this8.result4 = data.valueOf();
-            console.log(_this8.result4.produtos);
-            _this8.produtos = _this8.result4.produtos;
-            localStorage.setItem('produtos', JSON.stringify(_this8.produtos));
+            _this10.result4 = data.valueOf(); //console.log(this.result4.produtos)
+
+            _this10.produtos = _this10.result4.produtos;
+            localStorage.setItem('produtos', JSON.stringify(_this10.produtos));
           });
         } else {
           this.produtos = JSON.parse(localStorage.getItem('produtos'));
@@ -2096,39 +2121,37 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "entrar",
         value: function entrar() {
-          var _this9 = this;
+          var _this11 = this;
 
           // .toUpperCase() lembrar de usar quando atualizar o banco verdadeiro
           console.log(this.uname.nativeElement.value);
 
           if (this.users.find(function (i) {
-            return i.MudId.toUpperCase() === _this9.uname.nativeElement.value.toUpperCase();
+            return i.MudId.toUpperCase() === _this11.uname.nativeElement.value.toUpperCase();
           })) {
             this.usuario = this.users.find(function (i) {
-              return i.MudId.toUpperCase() === _this9.uname.nativeElement.value.toUpperCase();
-            });
-            console.log(this.usuario);
+              return i.MudId.toUpperCase() === _this11.uname.nativeElement.value.toUpperCase();
+            }); //console.log(this.usuario)
+
             localStorage.setItem('user', JSON.stringify(this.usuario));
             this.router.navigateByUrl('/home');
-            localStorage.setItem('division', JSON.stringify(this.usuario.Codigo_de_Division));
-            console.log('foi');
-          } else {
-            console.log('mentira');
-          }
+            localStorage.setItem('division', JSON.stringify(this.usuario.Codigo_de_Division)); // console.log('foi')
+          } else {//console.log('mentira')
+            }
         }
       }, {
         key: "data",
         value: function data() {
-          var _this10 = this;
+          var _this12 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
           });
           return new Promise(function (resolve) {
-            _this10.http.get('https://gskvideolib.azure-api.net/users').subscribe(function (data) {
-              resolve(data);
-              console.log(data);
-              _this10.users = data;
+            _this12.http.get('https://gskvideolib.azure-api.net/users').subscribe(function (data) {
+              resolve(data); // console.log(data);
+
+              _this12.users = data;
             }, function (err) {
               console.log(err);
             });
@@ -2137,16 +2160,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "data2",
         value: function data2() {
-          var _this11 = this;
+          var _this13 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
           });
           return new Promise(function (resolve) {
-            _this11.http.get('https://gskvideolib.azure-api.net/division').subscribe(function (data) {
-              resolve(data);
-              console.log(data);
-              _this11.divisoes = data;
+            _this13.http.get('https://gskvideolib.azure-api.net/division').subscribe(function (data) {
+              resolve(data); // console.log(data);
+
+              _this13.divisoes = data;
             }, function (err) {
               console.log(err);
             });
@@ -2155,16 +2178,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "data3",
         value: function data3() {
-          var _this12 = this;
+          var _this14 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
           });
           return new Promise(function (resolve) {
-            _this12.http.get('https://gskvideolib.azure-api.net/videos').subscribe(function (data) {
-              resolve(data);
-              console.log(data);
-              _this12.videos = data;
+            _this14.http.get('https://gskvideolib.azure-api.net/videos').subscribe(function (data) {
+              resolve(data); // console.log(data);
+
+              _this14.videos = data;
             }, function (err) {
               console.log(err);
             });
@@ -2173,16 +2196,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "data4",
         value: function data4() {
-          var _this13 = this;
+          var _this15 = this;
 
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Ocp-Apim-Subscription-Key': 'cf003685795b4f709d6c1e3b745f86ca'
           });
           return new Promise(function (resolve) {
-            _this13.http.get('https://gskvideolib.azure-api.net/produtos').subscribe(function (data) {
-              resolve(data);
-              console.log(data);
-              _this13.produtos = data;
+            _this15.http.get('https://gskvideolib.azure-api.net/produtos').subscribe(function (data) {
+              resolve(data); //console.log(data);
+
+              _this15.produtos = data;
             }, function (err) {
               console.log(err);
             });
@@ -2536,18 +2559,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.usuarioView = [];
         this.dadoOffline = [];
         this.Offline = [];
+        this.disclaimerVideo = [];
         var mainVideo = document.getElementById('mainVideo'); //console.log(this.views)
         //console.log(mainVideo)
         //console.log(dialogRef.componentInstance.data)
-        //console.log(this.percentual)
+        //    console.log(this.disclaimers)
 
         setTimeout(function () {
-          this.views = JSON.parse(localStorage.getItem('video'));
-          console.log(this.views);
-        }, 500);
+          this.views = JSON.parse(localStorage.getItem('video')); // console.log(this.views.Pais)
+        }, 200);
         var date = new Date();
-        this.date = date.getDate() + '/' + date.getUTCMonth() + '/' + date.getFullYear();
-        console.log(this.date);
+        this.date = date.getDate() + '/' + date.getUTCMonth() + '/' + date.getFullYear(); // console.log(this.date)
       }
 
       _createClass(VideoComponent, [{
@@ -2575,8 +2597,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           if (this.percentage > 0) {
             this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video + ' ; ' + this.views.Pais, this.percentage + '%' + ' ; ' + this.duration + ' ; ' + this.fullTime, this.views.mudId + ' ; ' + this.views.usuario + ' ; ' + this.views.area_terapeutica); // console.log(Number(this.percentage))     
+            // console.log(this.views.Nombre_del_video)     
 
-            console.log(this.views.Nombre_del_video);
             localStorage.clear();
           } else {
             console.log("0 percentage");
@@ -2648,7 +2670,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       type: VideoComponent,
       selectors: [["app-video"]],
       decls: 22,
-      vars: 9,
+      vars: 8,
       consts: [["type", "button", 1, "btn", "btn-light", 3, "click"], [1, "card-body"], [1, "cor-div"], [1, "embed-responsive", "embed-responsive-16by9"], ["id", "mainVideo", "onclick", "this.paused ? this.play() : this.pause();", "width", "320", "height", "240", "controls", "", "preload", "yes", "playsinline", "", 3, "timeupdate"], ["autostart", "true", "type", "", 3, "src"], [1, "card-title"], [1, "card-subtitle", "mb-2", "text-muted"], [1, "card-text"], [2, "font-size", "xx-small", "color", "gray"], ["target", "_blank", 2, "text-decoration", "none", 3, "href"], ["type", "button", 1, "btn", "btn-dark", 2, "margin-right", "3%"], ["type", "button", 1, "btn", "btn-dark", 3, "click"]],
       template: function VideoComponent_Template(rf, ctx) {
         if (rf & 1) {
@@ -2734,7 +2756,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         if (rf & 2) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](7, 7, ctx.data.URL), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](7, 6, ctx.data.URL), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
 
@@ -2742,7 +2764,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", ctx.data.Codigo_de_Division, " | ", ctx.data.area_terapeutica, "");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.data.area_terapeutica);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
