@@ -38,7 +38,7 @@ export class AppComponent {
           });
         })
       
-        this.router.navigateByUrl('/access')
+        //this.router.navigateByUrl('/access')
     
   
       }

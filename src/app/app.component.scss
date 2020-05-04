@@ -1,0 +1,16 @@
+@media (min-width: 992px) { 
+
+	.mat-toolbar {
+		img {
+    	max-width: 15%;
+		}
+	}
+
+}
+
+@media (min-width: 1200px) { 
+
+	.mat-toolbar img {
+    	max-width: 15%;
+	}
+}

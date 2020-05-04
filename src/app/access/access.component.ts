@@ -14,9 +14,9 @@ export class AccessComponent implements OnInit {
   	var person = prompt("Digite o código de acesso:", "");
   	if (person == null || person == "") {
   	  alert("You don't have access to this website. Please contact the administrator. ")
-		window.location.href = 'https://myconnect.gsk.com/';
+		//window.location.href = 'https://myconnect.gsk.com/';
 
-  	} else if(person == "GSK123" || person == "gsk123") {
+  	} else if(person.toUpperCase() == "GSK123") {
    	 	this.router.navigateByUrl('/login')
   	}else {
   		  	  alert("You don't have access to this website. Please contact the administrator. ")

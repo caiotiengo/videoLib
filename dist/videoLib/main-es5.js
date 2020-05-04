@@ -78,9 +78,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         var person = prompt("Digite o código de acesso:", "");
 
         if (person == null || person == "") {
-          alert("You don't have access to this website. Please contact the administrator. ");
-          window.location.href = 'https://myconnect.gsk.com/';
-        } else if (person == "GSK123" || person == "gsk123") {
+          alert("You don't have access to this website. Please contact the administrator. "); //window.location.href = 'https://myconnect.gsk.com/';
+        } else if (person.toUpperCase() == "GSK123") {
           this.router.navigateByUrl('/login');
         } else {
           alert("You don't have access to this website. Please contact the administrator. ");
@@ -199,6 +198,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     "./src/app/login/login.component.ts");
 
     var routes = [{
+      path: '',
+      component: _access_access_component__WEBPACK_IMPORTED_MODULE_4__["AccessComponent"]
+    }, {
       path: 'home',
       component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
     }, {
@@ -322,8 +324,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           gtag('config', 'UA-159221095-1', {
             'page_path': event.urlAfterRedirects
           });
-        });
-        this.router.navigateByUrl('/access');
+        }); //this.router.navigateByUrl('/access')
       }
 
       _createClass(AppComponent, [{
@@ -358,7 +359,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }
       },
       directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterOutlet"]],
-      styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJ9 */"]
+      styles: ["@media (min-width: 992px) {\n  .mat-toolbar[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n    max-width: 15%;\n  }\n}\n@media (min-width: 1200px) {\n  .mat-toolbar[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n    max-width: 15%;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxjdDI5NzE1NFxcT25lRHJpdmUgLSBHU0tcXERlc2t0b3BcXENhaW9ERVZMb2NhbFxcdmlkZW9MaWIvc3JjXFxhcHBcXGFwcC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBR0U7SUFDRyxjQUFBO0VDREg7QUFDRjtBRE1BO0VBRUM7SUFDSSxjQUFBO0VDTEg7QUFDRiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBtZWRpYSAobWluLXdpZHRoOiA5OTJweCkgeyBcclxuXHJcblx0Lm1hdC10b29sYmFyIHtcclxuXHRcdGltZyB7XHJcbiAgICBcdG1heC13aWR0aDogMTUlO1xyXG5cdFx0fVxyXG5cdH1cclxuXHJcbn1cclxuXHJcbkBtZWRpYSAobWluLXdpZHRoOiAxMjAwcHgpIHsgXHJcblxyXG5cdC5tYXQtdG9vbGJhciBpbWcge1xyXG4gICAgXHRtYXgtd2lkdGg6IDE1JTtcclxuXHR9XHJcbn1cclxuIiwiQG1lZGlhIChtaW4td2lkdGg6IDk5MnB4KSB7XG4gIC5tYXQtdG9vbGJhciBpbWcge1xuICAgIG1heC13aWR0aDogMTUlO1xuICB9XG59XG5AbWVkaWEgKG1pbi13aWR0aDogMTIwMHB4KSB7XG4gIC5tYXQtdG9vbGJhciBpbWcge1xuICAgIG1heC13aWR0aDogMTUlO1xuICB9XG59Il19 */"]
     });
     /*@__PURE__*/
 
@@ -1224,7 +1225,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       },
       directives: [_angular_material_toolbar__WEBPACK_IMPORTED_MODULE_8__["MatToolbar"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCardSubtitle"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgForOf"]],
       pipes: [_secure_url_pipe__WEBPACK_IMPORTED_MODULE_11__["SecureUrlPipe"]],
-      styles: [".transparent-card[_ngcontent-%COMP%] {\n  height: 28% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9DOlxcVXNlcnNcXGN0Mjk3MTU0XFxPbmVEcml2ZSAtIEdTS1xcRGVza3RvcFxcQ2Fpb0RFVkxvY2FsXFx2aWRlb0xpYi9zcmNcXGFwcFxcaG9tZVxcaG9tZS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Msc0JBQUE7QUNDRCIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi50cmFuc3BhcmVudC1jYXJke1xyXG5cdGhlaWdodDoyOCUgIWltcG9ydGFudDtcclxuXHJcbn0iLCIudHJhbnNwYXJlbnQtY2FyZCB7XG4gIGhlaWdodDogMjglICFpbXBvcnRhbnQ7XG59Il19 */"]
+      styles: [".transparent-card[_ngcontent-%COMP%] {\n  height: 28% !important;\n}\n\n@media (min-width: 992px) {\n  .transparent-card[_ngcontent-%COMP%] {\n    height: 55% !important;\n  }\n\n  .mat-toolbar[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n    max-width: 15%;\n  }\n}\n\n@media (min-width: 1200px) {\n  .transparent-card[_ngcontent-%COMP%] {\n    height: 55% !important;\n  }\n\n  .mat-toolbar[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n    max-width: 15%;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9DOlxcVXNlcnNcXGN0Mjk3MTU0XFxPbmVEcml2ZSAtIEdTS1xcRGVza3RvcFxcQ2Fpb0RFVkxvY2FsXFx2aWRlb0xpYi9zcmNcXGFwcFxcaG9tZVxcaG9tZS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Msc0JBQUE7QUNDRDs7QURLQTtFQUVDO0lBQ0Msc0JBQUE7RUNIQTs7RURNRDtJQUNJLGNBQUE7RUNISDtBQUNGOztBRE1BO0VBRUU7SUFDQyxzQkFBQTtFQ0xEOztFRFFBO0lBQ0csY0FBQTtFQ0xIO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9ob21lL2hvbWUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudHJhbnNwYXJlbnQtY2FyZHtcclxuXHRoZWlnaHQ6MjglICFpbXBvcnRhbnQ7XHJcblxyXG59XHJcblxyXG5cclxuXHJcbkBtZWRpYSAobWluLXdpZHRoOiA5OTJweCkgeyBcclxuXHJcblx0LnRyYW5zcGFyZW50LWNhcmR7XHJcblx0XHRoZWlnaHQ6NTUlICFpbXBvcnRhbnQ7XHJcblxyXG5cdH1cclxuXHQubWF0LXRvb2xiYXIgaW1nIHtcclxuICAgIFx0bWF4LXdpZHRoOiAxNSU7XHJcblx0fVxyXG59XHJcblxyXG5AbWVkaWEgKG1pbi13aWR0aDogMTIwMHB4KSB7IFxyXG5cclxuXHRcdC50cmFuc3BhcmVudC1jYXJke1xyXG5cdFx0XHRoZWlnaHQ6NTUlICFpbXBvcnRhbnQ7XHJcblxyXG5cdFx0fVxyXG5cdFx0Lm1hdC10b29sYmFyIGltZyB7XHJcbiAgICBcdG1heC13aWR0aDogMTUlO1xyXG5cdH1cclxufVxyXG4iLCIudHJhbnNwYXJlbnQtY2FyZCB7XG4gIGhlaWdodDogMjglICFpbXBvcnRhbnQ7XG59XG5cbkBtZWRpYSAobWluLXdpZHRoOiA5OTJweCkge1xuICAudHJhbnNwYXJlbnQtY2FyZCB7XG4gICAgaGVpZ2h0OiA1NSUgIWltcG9ydGFudDtcbiAgfVxuXG4gIC5tYXQtdG9vbGJhciBpbWcge1xuICAgIG1heC13aWR0aDogMTUlO1xuICB9XG59XG5AbWVkaWEgKG1pbi13aWR0aDogMTIwMHB4KSB7XG4gIC50cmFuc3BhcmVudC1jYXJkIHtcbiAgICBoZWlnaHQ6IDU1JSAhaW1wb3J0YW50O1xuICB9XG5cbiAgLm1hdC10b29sYmFyIGltZyB7XG4gICAgbWF4LXdpZHRoOiAxNSU7XG4gIH1cbn0iXX0= */"]
     });
     /*@__PURE__*/
 

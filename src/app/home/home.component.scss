@@ -2,3 +2,27 @@
 	height:28% !important;
 
 }
+
+
+
+@media (min-width: 992px) { 
+
+	.transparent-card{
+		height:55% !important;
+
+	}
+	.mat-toolbar img {
+    	max-width: 15%;
+	}
+}
+
+@media (min-width: 1200px) { 
+
+		.transparent-card{
+			height:55% !important;
+
+		}
+		.mat-toolbar img {
+    	max-width: 15%;
+	}
+}

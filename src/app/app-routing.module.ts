@@ -6,6 +6,7 @@ import { AccessComponent } from './access/access.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes =[
+		{path:'', component:AccessComponent},
   		{ path: 'home', component: HomeComponent },
   		{ path: 'list', component: ListComponent },
   	    { path: 'login', component: LoginComponent },
