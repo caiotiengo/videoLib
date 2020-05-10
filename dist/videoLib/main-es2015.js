@@ -1451,15 +1451,15 @@ class VideoComponent {
                  this.views.usuario + '; ' + 'Mud ID:' + this.views.mudId + ';' + 'Date:' + this.date , Number(this.percentage))
 
         */
-        if (this.percentage > 0) {
+        if (this.percentage >= 1) {
             this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video + ' ; '
                 + this.views.Pais, this.percentage + '%' + ' ; ' + this.duration + ' ; ' +
                 this.fullTime, this.views.mudId + ' ; ' + this.views.usuario + ' ; ' + this.views.area_terapeutica);
-            // console.log(Number(this.percentage))     
-            // console.log(this.views.Nombre_del_video)     
+            console.log(Number(this.percentage));
+            console.log(this.views.Nombre_del_video);
             localStorage.clear();
         }
-        else {
+        else if (this.percentage = 0) {
             console.log("0 percentage");
         }
     }
@@ -1496,9 +1496,9 @@ class VideoComponent {
         // console.log(tempo)
         this.timePercentual = localStorage.setItem('percentual', this.percentual.toString());
         if (this.timePercentual = !null) {
-            //console.log(this.timePercentual)
+            console.log(this.timePercentual);
         }
-        // console.log(this.percentual)
+        console.log(this.percentual);
     }
     info(items) {
         let dialogRef = this.dialog.open(_info_info_component__WEBPACK_IMPORTED_MODULE_2__["InfoComponent"], {
@@ -1510,7 +1510,7 @@ class VideoComponent {
     }
 }
 VideoComponent.ɵfac = function VideoComponent_Factory(t) { return new (t || VideoComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ng_google_analytics__WEBPACK_IMPORTED_MODULE_3__["NgGoogleAnalyticsTracker"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"])); };
-VideoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: VideoComponent, selectors: [["app-video"]], decls: 22, vars: 8, consts: [["type", "button", 1, "btn", "btn-light", 3, "click"], [1, "card-body"], [1, "cor-div"], [1, "embed-responsive", "embed-responsive-16by9"], ["id", "mainVideo", "onclick", "this.paused ? this.play() : this.pause();", "width", "320", "height", "240", "controls", "", "preload", "yes", "playsinline", "", 3, "timeupdate"], ["autostart", "true", "type", "", 3, "src"], [1, "card-title"], [1, "card-subtitle", "mb-2", "text-muted"], [1, "card-text"], [2, "font-size", "xx-small", "color", "gray"], ["target", "_blank", 2, "text-decoration", "none", 3, "href"], ["type", "button", 1, "btn", "btn-dark", 2, "margin-right", "3%"], ["type", "button", 1, "btn", "btn-dark", 3, "click"]], template: function VideoComponent_Template(rf, ctx) { if (rf & 1) {
+VideoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: VideoComponent, selectors: [["app-video"]], decls: 20, vars: 8, consts: [["type", "button", 1, "btn", "btn-light", 3, "click"], [1, "card-body"], [1, "cor-div"], [1, "embed-responsive", "embed-responsive-16by9"], ["id", "mainVideo", "onclick", "this.paused ? this.play() : this.pause();", "width", "320", "height", "240", "controls", "", "preload", "yes", "playsinline", "", 3, "timeupdate"], ["autostart", "true", "type", "", 3, "src"], [1, "card-title"], [1, "card-subtitle", "mb-2", "text-muted"], [1, "card-text"], [2, "font-size", "xx-small", "color", "gray"], ["target", "_blank", 2, "text-decoration", "none", 3, "href"], ["type", "button", 1, "btn", "btn-dark", 2, "margin-right", "3%"]], template: function VideoComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function VideoComponent_Template_button_click_0_listener($event) { return ctx.close(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "x");
@@ -1541,10 +1541,6 @@ VideoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "button", 11);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "Produto");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "button", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function VideoComponent_Template_button_click_20_listener($event) { return ctx.info(ctx.data); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Info");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
