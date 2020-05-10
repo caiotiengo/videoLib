@@ -2588,7 +2588,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           //calculo de porcentagem
           //
 
-          this.percentage = localStorage.getItem('percentual');
           /*
                  this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video + ';'+
                    'Pais:'+ this.views.Pais, 'Area_Terapeutica:'+
@@ -2596,12 +2595,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                    this.views.usuario + '; ' + 'Mud ID:' + this.views.mudId + ';' + 'Date:' + this.date , Number(this.percentage))
             */
 
-          if (this.percentage >= 1) {
+          if (this.timePercentual > 0) {
+            this.percentage = localStorage.getItem('percentual');
             this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video + ' ; ' + this.views.Pais, this.percentage + '%' + ' ; ' + this.duration + ' ; ' + this.fullTime, this.views.mudId + ' ; ' + this.views.usuario + ' ; ' + this.views.area_terapeutica);
             console.log(Number(this.percentage));
             console.log(this.views.Nombre_del_video);
             localStorage.clear();
-          } else if (this.percentage = 0) {
+          } else if (this.timePercentual = 0) {
             console.log("0 percentage");
           }
         }
@@ -2642,11 +2642,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           this.timePercentual = localStorage.setItem('percentual', this.percentual.toString());
 
-          if (this.timePercentual = !null) {
-            console.log(this.timePercentual);
-          }
+          if (this.timePercentual = !null) {} // console.log(this.timePercentual)
+          //  console.log(this.percentual)
 
-          console.log(this.percentual);
         }
       }, {
         key: "info",

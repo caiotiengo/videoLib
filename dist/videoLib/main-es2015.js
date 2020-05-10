@@ -1443,7 +1443,6 @@ class VideoComponent {
         // area terapeutica do video no analytics
         //calculo de porcentagem
         //
-        this.percentage = localStorage.getItem('percentual');
         /*
                this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video + ';'+
                  'Pais:'+ this.views.Pais, 'Area_Terapeutica:'+
@@ -1451,7 +1450,8 @@ class VideoComponent {
                  this.views.usuario + '; ' + 'Mud ID:' + this.views.mudId + ';' + 'Date:' + this.date , Number(this.percentage))
 
         */
-        if (this.percentage >= 1) {
+        if (this.timePercentual > 0) {
+            this.percentage = localStorage.getItem('percentual');
             this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video + ' ; '
                 + this.views.Pais, this.percentage + '%' + ' ; ' + this.duration + ' ; ' +
                 this.fullTime, this.views.mudId + ' ; ' + this.views.usuario + ' ; ' + this.views.area_terapeutica);
@@ -1459,7 +1459,7 @@ class VideoComponent {
             console.log(this.views.Nombre_del_video);
             localStorage.clear();
         }
-        else if (this.percentage = 0) {
+        else if (this.timePercentual = 0) {
             console.log("0 percentage");
         }
     }
@@ -1496,9 +1496,9 @@ class VideoComponent {
         // console.log(tempo)
         this.timePercentual = localStorage.setItem('percentual', this.percentual.toString());
         if (this.timePercentual = !null) {
-            console.log(this.timePercentual);
+            // console.log(this.timePercentual)
         }
-        console.log(this.percentual);
+        //  console.log(this.percentual)
     }
     info(items) {
         let dialogRef = this.dialog.open(_info_info_component__WEBPACK_IMPORTED_MODULE_2__["InfoComponent"], {

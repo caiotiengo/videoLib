@@ -55,13 +55,12 @@ export class VideoComponent implements OnInit {
   }
    close(){
    
-this.views = JSON.parse(localStorage.getItem('video'));
+    this.views = JSON.parse(localStorage.getItem('video'));
            console.log(this.views)
         this.dialogRef.close('Pizza!');
           // area terapeutica do video no analytics
           //calculo de porcentagem
           //
-            this.percentage = localStorage.getItem('percentual')
             
         /*
                this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video + ';'+
@@ -70,7 +69,9 @@ this.views = JSON.parse(localStorage.getItem('video'));
                  this.views.usuario + '; ' + 'Mud ID:' + this.views.mudId + ';' + 'Date:' + this.date , Number(this.percentage))
 
         */
-          if(this.percentage >= 1){
+          if(this.timePercentual > 0){
+            this.percentage = localStorage.getItem('percentual')
+
             this.googleAnalyticsService.eventTracker(this.views.Nombre_del_video + ' ; '
              + this.views.Pais, this.percentage+'%' +' ; '+ this.duration +' ; '+
               this.fullTime, this.views.mudId + ' ; ' + this.views.usuario+ ' ; '+ this.views.area_terapeutica)
@@ -78,7 +79,7 @@ this.views = JSON.parse(localStorage.getItem('video'));
                  console.log(this.views.Nombre_del_video)     
                  localStorage.clear()
 
-          }else if(this.percentage = 0){
+          }else if(this.timePercentual = 0){
             console.log("0 percentage")
           }
           
@@ -120,9 +121,9 @@ this.views = JSON.parse(localStorage.getItem('video'));
      // console.log(tempo)
       this.timePercentual = localStorage.setItem('percentual', this.percentual.toString());
       if(this.timePercentual =! null){  
-          console.log(this.timePercentual)
+         // console.log(this.timePercentual)
       }
-         console.log(this.percentual)
+       //  console.log(this.percentual)
     }
 
     info(items:any): void{
