@@ -138,7 +138,7 @@ qualquer2:any = []
       return new Promise(resolve => {
       this.http.get<any[]>('https://gskvideolib.azure-api.net/users').subscribe(data => {
         resolve(data);
-       // console.log(data);
+        console.log(data);
         this.users = data;
       }, err => {
         console.log(err);

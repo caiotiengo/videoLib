@@ -42,6 +42,8 @@ class AccessComponent {
     constructor(router) {
         this.router = router;
         var txt;
+        const isIEOrEdge = /msie\s|trident\/|edge\//i.test(window.navigator.userAgent);
+        console.log(isIEOrEdge);
         var person = prompt("Digite o código de acesso:", "");
         if (person == null || person == "") {
             alert("You don't have access to this website. Please contact the administrator. ");
@@ -1209,7 +1211,7 @@ class LoginComponent {
         return new Promise(resolve => {
             this.http.get('https://gskvideolib.azure-api.net/users').subscribe(data => {
                 resolve(data);
-                // console.log(data);
+                console.log(data);
                 this.users = data;
             }, err => {
                 console.log(err);

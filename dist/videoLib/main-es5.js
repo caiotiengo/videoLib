@@ -75,6 +75,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.router = router;
         var txt;
+        var isIEOrEdge = /msie\s|trident\/|edge\//i.test(window.navigator.userAgent);
+        console.log(isIEOrEdge);
         var person = prompt("Digite o código de acesso:", "");
 
         if (person == null || person == "") {
@@ -2150,8 +2152,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           });
           return new Promise(function (resolve) {
             _this12.http.get('https://gskvideolib.azure-api.net/users').subscribe(function (data) {
-              resolve(data); // console.log(data);
-
+              resolve(data);
+              console.log(data);
               _this12.users = data;
             }, function (err) {
               console.log(err);
